@@ -9,6 +9,7 @@
 			</div>
 			<div class="menu">
 				<ul>
+					<li><button>Profile</button></li>
 					<li><button>Project</button></li>
 					<li><button>Movie</button></li>
 					<li><button>Drama</button></li>

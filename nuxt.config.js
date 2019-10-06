@@ -22,8 +22,14 @@ module.exports = {
   */
   build: {
     babel: {
-      plugins: ['@babel/plugin-syntax-dynamic-import'],
+      plugins: [
+        '@babel/plugin-syntax-dynamic-import',
+      ],
     },
+    vender: [
+      'eventsource-polyfill',
+      'babel-polyfill'
+    ],
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
@@ -35,6 +41,9 @@ module.exports = {
       }
     }
   },
+  plugins: [
+    { src: './plugins/firebase.js', ssr: false }
+  ],
   modules: ['nuxt-sass-resources-loader'],
   css: ['~/assets/css/normalize.css']
 }
