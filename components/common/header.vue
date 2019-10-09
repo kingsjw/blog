@@ -11,9 +11,9 @@
 				<ul>
 					<li><button>Profile</button></li>
 					<li><button>Project</button></li>
-					<li><button>Movie</button></li>
+					<li><button @click="$router.push('/movie')">Movie</button></li>
 					<li><button>Drama</button></li>
-					<li><button>Travel</button></li>
+					<li><button @click="$router.push('/travel')">Travel</button></li>
 				</ul>
 			</div>
 		</div>

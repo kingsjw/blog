@@ -9,9 +9,11 @@ if (!firebase.apps.length) {
 			projectId: 'kingsjw7-f7e06',
 			storageBucket: 'kingsjw7-f7e06.appspot.com',
 			messagingSenderId: '349102047118',
-    };
-    firebase.initializeApp(config);
-    firebase.firestore().settings({timestampsInSnapshots: true});
+		};
+		firebase.initializeApp(config);
+		// const setting = { timestampsInSnapshots: true };
+		// const store = firebase.firestore();
+    // store.settings(setting);
 }
 const fireDb = firebase.firestore();
 export { fireDb };

@@ -10,6 +10,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ],
     link: [
+      { rel: "stylesheet", href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Material+Icons' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
@@ -42,9 +43,28 @@ module.exports = {
     }
   },
   plugins: [
-    { src: './plugins/firebase.js', ssr: false }
+    { src: './plugins/firebase.js', ssr: false },
+    { src: './plugins/vue-material.js', ssr: false }
   ],
   modules: ['nuxt-sass-resources-loader'],
-  css: ['~/assets/css/normalize.css']
-}
+  css: [
+    '~/assets/css/normalize.css',
+  ],
+  router: {
+    extendRoutes(routes, resolve) {
+      let parent = routes.find(route => route.path === '/travel');
+      parent.children = [];
+      parent.children.push({
+        name: 'travel-edit',
+        path: ':popFlag?',
+      });
+      parent = routes.find(route => route.path === '/movie');
+      parent.children = [];
+      parent.children.push({
+        name: 'movie-edit',
+        path: ':popFlag?',
+      });
+    },
+  },
+};
 
