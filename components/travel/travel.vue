@@ -2,9 +2,11 @@
 	<div class="travel">
 		<div class="wrap">
 			<p class="title">Travel is refresh</p>
-			<div v-if="$route.params.popFlag === 'edit'" class="list">asdasd</div>
+			<editForm v-if="$route.params.popFlag === 'edit'">
+			</editForm>
 		</div>
 		<edit
+			v-if="$route.params.popFlag !== 'edit'"
 			@click.native="edit()"
 		/>
 	</div>
@@ -12,10 +14,12 @@
 
 <script>
 	import edit from '../../components/common/edit-btn.vue';
+	import editForm from '../../components/common/edit-list.vue';
 
 	export default {
 		components: {
 			edit,
+			editForm,
 		},
 		methods: {
 			edit() {

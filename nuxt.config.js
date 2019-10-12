@@ -28,6 +28,7 @@ module.exports = {
       ],
     },
     vender: [
+      'vue2-editor',
       'eventsource-polyfill',
       'babel-polyfill'
     ],
@@ -44,7 +45,8 @@ module.exports = {
   },
   plugins: [
     { src: './plugins/firebase.js', ssr: false },
-    { src: './plugins/vue-material.js', ssr: false }
+    { src: './plugins/vue-material.js', ssr: false },
+    { src: './plugins/vue2-editor.js', ssr: false }
   ],
   modules: ['nuxt-sass-resources-loader'],
   css: [
