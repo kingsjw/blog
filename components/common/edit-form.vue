@@ -12,6 +12,7 @@
 	import Firebase from 'firebase';
 
 	export default {
+		props: ['flag'],
 		data() {
 			return {
 				title: '',
@@ -98,14 +99,16 @@
 					this.putImage().then(() => {
 						this.getImage().then((url) => {
 							this.setData().then((submitData) => {
-								const id = db.collection("travel").doc().id;
+								const id = db.collection(this.flag).doc().id;
 								const data = submitData;
 								data.thumbnail = url;
-								db.collection("travel").doc(id).set(data).then(() => {
+								db.collection(this.flag).doc(id).set(data).then(() => {
 									// const data = Object.assign({ id: id }, submitData);
 									console.log("Document successfully written!");
+									this.$router.push({ params: { popFlag: '' } });
 								}).catch((error) => {
 									console.error("Error writing document: ", error);
+									alert('실패');
 								});
 							});
 						});
