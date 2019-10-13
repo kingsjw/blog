@@ -20,7 +20,7 @@
 
 <style lang="scss" scoped>
 	.list{
-		width: calc((100% / 3));
+		width: calc((100% / 3) - 22px);
 		height: 520px;
 		border: 1px solid #eee;
 		border-radius: 2px;
@@ -33,7 +33,7 @@
 		}
 		.thumbnail{
 			width: 100%;
-			height: 80%;
+			height: 82%;
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;

@@ -1,70 +1,45 @@
 <template>
-	<div class="travel">
+	<div class="travelList">
 		<div class="wrap">
 			<p class="title">Travel is refresh</p>
-			<editForm
-				v-if="$route.params.popFlag === 'edit'"
-				:flag="'travel'"
-				></editForm>
-				<div
-					v-if="$route.params.popFlag !== 'edit'"
-					class="list-wrap"
-				>
-					<list
-						v-for="(val, index) in list"
-						:key="index"
-						:list="val"
-					></list>
-				</div>
+			<div
+				v-if="$route.params.popFlag !== 'edit'"
+				class="list-wrap"
+			>
+				<list
+					v-for="(val, index) in listData"
+					:key="index"
+					:list="val"
+					@click.native="selectView(val.id)"
+				></list>
+			</div>
 		</div>
-		<edit
-			v-if="$route.params.popFlag !== 'edit'"
-			@click.native="edit()"
-		/>
 	</div>
 </template>
 
 <script>
-	import edit from '../../components/common/edit-btn.vue';
-	import editForm from '../../components/common/edit-form.vue';
 	import list from './list.vue';
-	import Firebase from 'firebase';
 
 	export default {
+		props: ['listData'],
 		components: {
-			edit,
-			editForm,
 			list,
 		},
-		data() {
-			return {
-				list: [],
-			};
-		},
 		methods: {
-			getTravelList() {
-				const db = Firebase.firestore();
-				db.collection('travel').orderBy("date", "desc").get().then((querySnapshot) => {
-					querySnapshot.forEach((doc) => {
-						const data = Object.assign({ id: doc.id }, doc.data());
-						console.log(data);
-						this.list.push(data);
-					});
-				});
-			},
-			edit() {
-				this.$router.push({ params: { popFlag: 'edit' } });
+			selectView(id) {
+				this.$emit('selectView', id);
 			},
 		},
 		mounted() {
-			this.getTravelList();
+			this.$emit('getData');
 		},
 	};
 </script>
 
 <style lang="scss" scoped>
-	.travel{
+	.travelList{
 		width: 100%;
+		margin-bottom: 60px;
 		.wrap{
 			width: 1200px;
 			margin: 0 auto;
@@ -77,9 +52,14 @@
 			.list-wrap{
 				width: 100%;
 				display: flex;
+				flex-basis: 33.33%;
+				flex-wrap: wrap;
 				.list{
 					margin-left: 30px;
-					&:first-of-type{
+					&:nth-child(n + 4) {
+						margin-top: 30px;
+					}
+					&:nth-child(3n + 1){
 						margin-left: 0;
 					}
 				}
