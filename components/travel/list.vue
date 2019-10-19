@@ -1,7 +1,7 @@
 <template>
 	<div class="list">
 		<div
-			:style="{ backgroundImage: `url(${list.thumbnail})` }"
+			:style="{ backgroundImage: `url('${list.thumbnail}')` }"
 			class="thumbnail"></div>
 			<div>
 				<div class="info">

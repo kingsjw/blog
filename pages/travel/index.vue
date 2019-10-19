@@ -1,9 +1,9 @@
 <template>
 	<div class="travel">
-		<editForm
+		<createForm
 			v-if="$route.params.popFlag === 'edit'"
 			:flag="'travel'"
-		></editForm>
+		></createForm>
 		<listView
 			v-else-if="$route.params.popFlag === 'view'"
 			:data="list"
@@ -16,7 +16,7 @@
 			@selectView="selectView"
 		/>
 		<edit
-			v-if="$route.params.popFlag !== 'edit'"
+			v-if="!$route.params.popFlag"
 			@click.native="edit()"
 		/>
 	</div>
@@ -25,7 +25,7 @@
 <script>
 	import Firebase from 'firebase';
 	import travelList from '../../components/travel/travel.vue';
-	import editForm from '../../components/common/edit-form.vue';
+	import createForm from '../../components/common/formControl.vue';
 	import listView from '../../components/common/list-view.vue';
 	import edit from '../../components/common/edit-btn.vue';
 
@@ -34,6 +34,7 @@
 			travelList,
 			listView,
 			edit,
+			createForm,
 		},
 		data() {
 			return {
