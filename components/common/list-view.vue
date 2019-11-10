@@ -2,7 +2,7 @@
 	<div class="list-view">
 		<div
 			v-if="!editMode"
-			class="contents" v-html="data.contents"
+			class="contents markdown-body" v-html="data.contents"
 		></div>
 		<editForm
 			v-else
@@ -44,6 +44,7 @@
 </script>
 
 <style lang="scss" scoped>
+	@import 'github-markdown-css/github-markdown.css';
 	@import 'vue-material/dist/vue-material.min.css';
 	@import 'vue-material/dist/theme/default.css';
 	.list-view{

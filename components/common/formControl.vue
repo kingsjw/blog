@@ -81,7 +81,7 @@
 					const imageData = [...imageHtml].map(v => v.currentSrc);
 					function dataURLtoFile(dataurl, filename) {
 						const arr = dataurl.split(',');
-						const mime = arr[0].match(/:(.*?);/)[1];
+						const mime = arr[0] && arr[0].match(/:(.*?);/) ? arr[0].match(/:(.*?);/)[1] : null;
 						const bstr = atob(arr[1]);
 						let n = bstr.length, u8arr = new Uint8Array(n);
 						while(n--){

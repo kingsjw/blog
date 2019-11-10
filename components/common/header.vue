@@ -9,10 +9,10 @@
 			</div>
 			<div class="menu">
 				<ul>
-					<li><button>Profile</button></li>
+					<!-- <li><button>Profile</button></li>
 					<li><button>Project</button></li>
 					<li><button @click="$router.push('/movie')">Movie</button></li>
-					<li><button>Drama</button></li>
+					<li><button>Drama</button></li> -->
 					<li><button @click="$router.push('/travel')">Travel</button></li>
 				</ul>
 			</div>

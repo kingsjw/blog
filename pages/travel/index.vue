@@ -16,7 +16,7 @@
 			@selectView="selectView"
 		/>
 		<edit
-			v-if="!$route.params.popFlag"
+			v-if="!$route.params.popFlag && $store.state.user.isLogin"
 			@click.native="edit()"
 		/>
 	</div>
