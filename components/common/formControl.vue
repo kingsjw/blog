@@ -125,7 +125,7 @@
 										}).catch((error) => {
 											console.error("Error writing document: ", error);
 											alert('실패');
-										});	
+										});
 									} else {
 										db.collection(this.flag).doc(this.data.id).update(data).then(() => {
 											console.log("Document successfully update!");

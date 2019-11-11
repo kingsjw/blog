@@ -12,6 +12,7 @@
 		<!-- {{data}} -->
 		<div class="btn-wrap">
 			<md-button
+        v-if="$store.state.user.isLogin"
 				@click="editMode = !editMode"
 				class="md-dense md-primary">{{ editMode ? '취소' : '수정'}}</md-button>
 		</div>

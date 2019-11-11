@@ -1,5 +1,8 @@
 <template>
-	<div class="travelList">
+	<div
+    v-if="init"
+    class="travelList"
+  >
 		<div class="wrap">
 			<p class="title">Travel is refresh</p>
 			<div
@@ -25,6 +28,11 @@
 		components: {
 			list,
 		},
+    data() {
+		  return {
+		    init: false,
+      };
+    },
 		methods: {
 			selectView(id) {
 				this.$emit('selectView', id);
@@ -32,6 +40,9 @@
 		},
 		mounted() {
 			this.$emit('getData');
+			this.$nextTick(() => {
+			  this.init = true;
+      });
 		},
 	};
 </script>
