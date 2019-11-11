@@ -9,10 +9,10 @@
 			</div>
 			<div class="menu">
 				<ul>
-					<!-- <li><button>Profile</button></li>
-					<li><button>Project</button></li>
-					<li><button @click="$router.push('/movie')">Movie</button></li>
-					<li><button>Drama</button></li> -->
+          <li><button @click="$router.push('/profile')">Profile</button></li>
+					<!--<li><button>Project</button></li>-->
+					<!--<li><button @click="$router.push('/movie')">Movie</button></li>-->
+					<!--<li><button>Drama</button></li> -->
 					<li><button @click="$router.push('/travel')">Travel</button></li>
 				</ul>
 			</div>
@@ -22,7 +22,7 @@
 
 <style lang="scss" scoped>
 	header{
-		width: 100%;	
+		width: 100%;
 		height: 80px;
 		display: flex;
 		justify-content: center;
