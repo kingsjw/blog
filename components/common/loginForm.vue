@@ -56,6 +56,7 @@ export default {
     }
   }
   .pop{
+    z-index: 9;
     position: fixed;
     top: 0;
     right: 0;

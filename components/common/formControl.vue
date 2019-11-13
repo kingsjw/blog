@@ -58,10 +58,12 @@
 			},
 			setThumbnail() {
 				const storageRef = Firebase.storage().ref();
-
+				if (this.mode === 'edit') {
+          this.removeImage([this.data.thumbnail]);
+        }
 				return this.mode !== 'edit' || (this.mode === 'edit' && this.thumbnail !== null) ?
-					storageRef.child(`images/${this.thumbnail.name}`).put(this.thumbnail).then(() => {
-						return storageRef.child(`images/${this.thumbnail.name}`).getDownloadURL();
+					storageRef.child(`images/${this.flag}/${this.thumbnail.name}`).put(this.thumbnail).then(() => {
+						return storageRef.child(`images/${this.flag}/${this.thumbnail.name}`).getDownloadURL();
 					})
 					: new Promise((resolve) => {
 							resolve(this.data.thumbnail);
@@ -71,6 +73,7 @@
 				const contentsData = this.formData.contents;
 				const regExp = /<(\img)([^>]*)>/gi;
 				let img = contentsData.match(regExp);
+        let cdnUrl = [];
 				if (img && img.length > 0) {
 					const storageRef = Firebase.storage().ref();
 					const temp = document.createElement('div');
@@ -79,9 +82,13 @@
 					}
 					const imageHtml = temp.getElementsByTagName('img');
 					const imageData = [...imageHtml].map(v => v.currentSrc);
+          function isBase64(str) {
+            const exp = /^([A-Za-z0-9+/]{4})*([A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{2}==)?$/;
+            return exp.test(str);
+          }
 					function dataURLtoFile(dataurl, filename) {
 						const arr = dataurl.split(',');
-						const mime = arr[0] && arr[0].match(/:(.*?);/) ? arr[0].match(/:(.*?);/)[1] : null;
+						const mime = arr[0].match(/:(.*?);/)[1];
 						const bstr = atob(arr[1]);
 						let n = bstr.length, u8arr = new Uint8Array(n);
 						while(n--){
@@ -91,33 +98,53 @@
 					}
 					const file = [];
 					const date = new Date();
-					// const replaceImgData = [];
 					for (let x = 0; x < imageData.length; x += 1) {
-						file.push(dataURLtoFile(imageData[x], `${date.getMilliseconds()}${x}`));
+					  if (isBase64(imageData[x])) {
+              file.push(dataURLtoFile(imageData[x], `${date.getMilliseconds()}${x}`));
+            } else {
+					    file.push(imageData[x]);
+            }
 					}
+					if (this.mode !== 'create') {
+					  console.log(this.data.imgArr);
+					  this.removeImage(this.data.imgArr);
+          }
 					for (let x = 0; x < file.length; x += 1) {
-						storageRef.child(`images/${file[x].name}`).put(file[x]).then(() => {
-							storageRef.child(`images/${file[x].name}`).getDownloadURL().then((url) =>{
-								this.formData.contents = this.formData.contents.replace(img[x], `<img src="${url}">`);
-							});
-						});
+            if (isBase64(imageData[x])) {
+              storageRef.child(`images/${this.flag}/${file[x].name}`).put(file[x]).then(() => {
+                storageRef.child(`images/${this.flag}/${file[x].name}`).getDownloadURL().then((url) => {
+                  this.formData.contents = this.formData.contents.replace(img[x], `<img src="${url}">`);
+                  cdnUrl.push(url);
+                });
+              });
+            } else {
+              this.formData.contents = this.formData.contents.replace(img[x], `<img src="${imageData[x]}">`);
+              cdnUrl.push(imageData[x]);
+            }
 					}
 				}
 				return new Promise((resolve) => {
-					resolve(this.formData.contents);
+					resolve({ contents: this.formData.contents, cdnUrl});
 				});
 			},
+      removeImage(imgArr) {
+        const storageRef = Firebase.storage().ref();
+        for (let x = 0; x < imgArr.length; x += 1) {
+          storageRef.child(`images/${this.flag}/${imgArr[x]}`) ? storageRef.child(`images/${this.flag}/${imgArr[x]}`).delete() : '';
+        }
+      },
 			submit() {
 				const db = Firebase.firestore();
-				this.uploadContentsImage().then((contents) => {
-					this.formData.contents = contents;
+				this.uploadContentsImage().then((contentsData) => {
+					this.formData.contents = contentsData.contents;
 						this.setThumbnail().then((url) => {
 							// console.log(url);
 								this.setData().then((submitData) => {
 									const data = submitData;
 									data.thumbnail = url;
+									data.imgArr = contentsData.cdnUrl;
 									if (this.mode === 'create') {
-										const id = db.collection(this.flag).doc().id
+										const id = db.collection(this.flag).doc().id;
 										db.collection(this.flag).doc(id).set(data).then(() => {
 											// const data = Object.assign({ id: id }, submitData);
 											console.log("Document successfully written!");
@@ -127,6 +154,7 @@
 											alert('실패');
 										});
 									} else {
+									  console.log(data);
 										db.collection(this.flag).doc(this.data.id).update(data).then(() => {
 											console.log("Document successfully update!");
 											this.$router.push({ params: { popFlag: '' } });
