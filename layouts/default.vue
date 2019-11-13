@@ -1,5 +1,11 @@
 <template>
-  <div>
+  <div
+    :class="{
+      scrollDown,
+      scrollDownTop,
+      scrollWeb,
+    }"
+  >
     <Header></Header>
     <nuxt/>
 		<loginForm
@@ -31,9 +37,36 @@
         authLoad: false,
 				userData: null,
 				openPop: false,
+        scrollDown: false,
+        scrollDownTop: false,
+        scrollWeb: false,
       };
     },
     methods: {
+      bodyScroll() {
+        const scrollY = (window.pageYOffset || document.documentElement.scrollTop);
+        if (this.lastScroll < scrollY) {
+          this.scrollDown = true;
+          this.scrollDownTop = true;
+          if (scrollY < 30) {
+            this.scrollDownTop = false;
+          }
+        } else {
+          this.scrollDown = false;
+          this.scrollDownTop = false;
+        }
+        if (scrollY <= 0) {
+          this.scrollDown = false;
+          this.scrollDownTop = false;
+          this.scrollWeb = false;
+        } else {
+          this.scrollWeb = true;
+        }
+        if (scrollY + window.outerHeight > document.body.clientHeight - 50) {
+          this.scrollDown = false;
+        }
+        this.lastScroll = scrollY;
+      },
 			login(user) {
 				this.openPop = false;
 				if (user.userId && user.userPw) {
@@ -67,6 +100,7 @@
 			},
     },
     mounted() {
+      window.addEventListener('scroll', this.bodyScroll);
       Firebase.auth().onAuthStateChanged((user) => {
 				this.authLoad = true;
 				if (user) {

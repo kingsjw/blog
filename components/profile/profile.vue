@@ -1,19 +1,94 @@
 <template>
 	<div class="profile">
     <div class="intro">
-      <div class="profile-img"></div>
-      <div class="info-wrap">
-        <div class="name">Seo Jae Woo</div>
-        <div class="info-text">hi! im software engineer.</div>
+      <div class="personal">
+        <div class="profile-img"></div>
+        <div class="info-wrap">
+          <div class="name">Seo Jae Woo</div>
+          <div class="info-text">hi! im software engineer.</div>
+        </div>
+      </div>
+      <div class="info-list">
+        <div class="title">State</div>
+        <div class="list-wrap">
+          <div class="list">
+            <div class="name">Company</div>
+            <div class="info">Bringprice korea</div>
+          </div>
+          <div class="list">
+            <div class="name">Position</div>
+            <div class="info">Front-end Developer</div>
+          </div>
+        </div>
+      </div>
+      <div class="info-list contact">
+        <div class="title">Contact Information</div>
+        <div class="list-wrap">
+          <div class="list">
+            <div class="name">Email</div>
+            <div class="info">Kingsjw7@gmail.com</div>
+          </div>
+          <div class="list">
+            <div class="name">Phone Number</div>
+            <div class="info">Request via email</div>
+          </div>
+          <div class="list">
+            <div class="name">Address</div>
+            <div class="info">Seoul Republic of korea</div>
+          </div>
+        </div>
+      </div>
+      <div class="info-list skills">
+        <div class="title">Skills</div>
+        <div class="list-wrap">
+          <div class="list">
+            <div class="name">Software engineering</div>
+            <div class="info">
+              <div class="clip">Java Script</div>
+              <div class="clip">Nuxt.js</div>
+              <div class="clip">Vue.js</div>
+              <div class="clip">Node.js</div>
+              <div class="clip">Amazone Aws</div>
+              <div class="clip">Java</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="project">
+      <portfolios
+        :projectList="projectList"
+        @getProject="getProjectList"
+      ></portfolios>
     </div>
 	</div>
 </template>
 
 <script>
+import Firebase from 'firebase';
+import portfolios from './portfolios.vue';
+
 export default {
+  components: {
+    portfolios,
+  },
+  data() {
+    return {
+      projectList: [],
+    };
+  },
+  methods: {
+    getProjectList() {
+      const db = Firebase.firestore();
+      db.collection('project').orderBy("date", "desc").get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          const data = Object.assign({ id: doc.id }, doc.data());
+          console.log(data);
+          this.projectList.push(data);
+        });
+      });
+    },
+  },
 };
 </script>
 
@@ -22,36 +97,76 @@ export default {
 		width: 1200px;
     height: calc(100vh - 80px);
 		margin: 0 auto;
-    position: relative;
     .intro{
       width: 300px;
       height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
+      position: fixed;
+      top: 80px;
+      left: calc(50% - 600px);
       bottom: 0;
       box-shadow: 2px 0 2px -2px rgba(0,0,0,0.2);
-      .profile-img{
-        width: 65px;
-        height: 65px;
-        background-color: #ccc;
-        border-radius: 50px;
-        margin: 15px auto;
+      .title{
+        font-size: 16px;
+        font-weight: bold;
+        color: #000;
       }
-      .info-wrap{
-        text-align: center;
-        .name{
-          font-weight: 500;
-          font-size: 16px;
+      .personal{
+        .profile-img{
+          width: 65px;
+          height: 65px;
+          background-color: #ccc;
+          border-radius: 50px;
+          margin: 15px auto;
         }
-        .info-text{
-          font-size: 12px;
-          color: #939499;
+        .info-wrap{
+          text-align: center;
+          .name{
+            font-weight: 500;
+            font-size: 16px;
+          }
+          .info-text{
+            font-size: 12px;
+            color: #939499;
+          }
+        }
+      }
+      .info-list{
+        margin-top: 40px;
+        .list-wrap{
+          margin-top: 12px;
+          .list{
+            margin-top: 18px;
+            &:first-of-type{
+              margin-top: 0;
+            }
+            .name{
+              color: #939499;
+              font-size: 12px;
+            }
+            .info{
+              margin-top: 5px;
+              font-size: 14px;
+            }
+            .clip{
+              padding: 4px 10px;
+              background-color: #ff5252;
+              color: #fff;
+              border-radius: 16px;
+              margin-left: 4px;
+              display: inline-block;
+              margin-top: 6px;
+              &:first-of-type{
+                margin-left: 0;
+              }
+            }
+          }
         }
       }
     }
     .project{
-      float: right;
+      width: 800px;
+      position: absolute;
+      left: calc(50% - 280px);
     }
     &::after{
       clear: both;
