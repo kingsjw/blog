@@ -83,7 +83,6 @@ export default {
       db.collection('project').orderBy("date", "desc").get().then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
           const data = Object.assign({ id: doc.id }, doc.data());
-          console.log(data);
           this.projectList.push(data);
         });
       });
