@@ -1,7 +1,7 @@
 <template>
 	<div class="list">
 		<div
-			:style="{ backgroundImage: `url('${list.thumbnail}')` }"
+			:style="thumbnail ? { backgroundImage: `url(${thumbnail})`} : {}"
 			class="thumbnail"></div>
 			<div>
 				<div class="info">
@@ -13,9 +13,25 @@
 </template>
 
 <script>
+  import Firebase from 'firebase';
+
 	export default {
 		props: ['list'],
-	};
+    data() {
+		  return {
+		    thumbnail: '',
+      };
+    },
+    methods: {
+		  async getImage() {
+        const storeageRef = Firebase.storage().ref();
+        this.thumbnail = await storeageRef.child(`images/travel/${this.list && this.list.imgArr.length > 0 ? this.list.imgArr[0] : ''}`).getDownloadURL();
+      },
+    },
+    mounted() {
+		  this.getImage();
+    },
+  };
 </script>
 
 <style lang="scss" scoped>
