@@ -11,7 +11,7 @@
         </legend>
         <legend>
             <label>password</label>
-            <input v-bind:value="pw" v-on:input="pw = $event.target.value" type="password">
+            <input v-bind:value="pw" v-on:input="pw = $event.target.value" type="password" @keyup.enter="login">
         </legend>
         </div>
         <div class="btn-wrap">

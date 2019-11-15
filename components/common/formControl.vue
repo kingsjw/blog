@@ -25,6 +25,7 @@
 				formData,
 				mode: this.data ? 'edit' : 'create',
 				init: false,
+        formImage: [],
 			};
 		},
 		methods: {
@@ -47,12 +48,16 @@
               await this.uploadImage(file, file.name);
               const url = await this.getImageUrl(file.name);
               replaceContentsData = contentsData.replace(img[x], `<img src="${url}">`);
-              cdnUrl.push(file.name);
+              cdnUrl.push({ name: file.name, url: url});
               // await this.removeImage(this.data.imgArr);
+              this.formImage.push(url);
             } else {
               replaceContentsData = contentsData.replace(img[x], `<img src="${imageData[x]}">`);
+              this.formImage.push(imageData[x]);
             }
           }
+        } else {
+          replaceContentsData = this.formData.contents;
         }
         function dataURLtoFile(dataurl, filename) {
           const arr = dataurl.split(',');
@@ -80,12 +85,9 @@
         const exp = /data:image\/([a-zA-Z]*);base64,([^\"]*)/g;
         return exp.test(str);
       },
-      async removeImage(imgArr) {
+      async removeImage(fileName) {
         const storageRef = Firebase.storage().ref();
-        for (let x = 0; x < imgArr.length; x += 1) {
-          // console.log(storageRef.child(`images/${this.flag}/${imgArr[x]}`));
-          storageRef.child(`images/${this.flag}/${imgArr[x]}`) ? await storageRef.child(`images/${this.flag}/${imgArr[x]}`).delete() : '';
-        }
+        storageRef.child(`images/${this.flag}/${fileName}`) ? await storageRef.child(`images/${this.flag}/${fileName}`).delete() : '';
       },
       async submit() {
 			  const db = Firebase.firestore();
@@ -99,6 +101,7 @@
             date: new Date()
           };
           const rs = await this.replaceContentsImage();
+          console.log(rs);
           submitData.contents = rs.data;
           if (this.mode === 'create') {
             if (rs.cdnUrl && rs.cdnUrl.length > 0) {
@@ -111,8 +114,24 @@
               });
             this.$router.push({params: {popFlag: ''}});
           } else {
-            //update
             submitData.imgArr = rs.cdnUrl && rs.cdnUrl.length > 0 ? rs.cdnUrl : this.data.imgArr;
+            //update
+            if (this.formImage && this.formImage.length > 0) {
+              for (let x = 0; x < this.data.imgArr.length; x += 1) {
+                for (let y = 0; y < this.formImage.length; y += 1) {
+                  if (this.data.imgArr[x].url !== this.formImage[y]) {
+                    this.removeImage(this.data.imgArr[x].name);
+                    submitData.imgArr = submitData.imgArr.filter(val => val.name !== this.data.imgArr[x].name);
+                  }
+                }
+              }
+            } else {
+              for (let x = 0; x < this.data.imgArr.length; x += 1) {
+                this.removeImage(this.data.imgArr[x].name);
+              }
+              submitData.imgArr = [];
+            }
+            console.log(submitData);
             db.collection(this.flag).doc(this.data.id).update(submitData).then(() => {
               console.log("Document successfully update!");
               this.$router.push({params: {popFlag: ''}});
