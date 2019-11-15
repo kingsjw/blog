@@ -44,7 +44,7 @@
           const imageData = [...imageHtml].map(v => v.currentSrc);
           for (let x = 0; x < imageData.length; x += 1) {
             if (this.isBase64(imageData[x])) {
-              const file = dataURLtoFile(imageData[x], new Date().getMilliseconds());
+              const file = dataURLtoFile(imageData[x], Date.now());
               await this.uploadImage(file, file.name);
               const url = await this.getImageUrl(file.name);
               replaceContentsData = contentsData.replace(img[x], `<img src="${url}">`);
