@@ -32,7 +32,7 @@
 			async replaceContentsImage() {
 				let replaceContentsData = this.formData.contents;
 				const regExp = /<(\img)([^>]*)>/gi;
-				let img = contentsData.match(regExp);
+				let img = replaceContentsData.match(regExp);
         let cdnUrl = [];
         if (img && img.length > 0) {
           const temp = document.createElement('div');
@@ -48,12 +48,12 @@
               const url = await this.getImageUrl(file.name);
               cdnUrl.push({ name: file.name, url: url});
               // console.log(replaceContentsData.indexOf(img[x]));
-              replaceContentsData = replaceContentsData.replace(imageData[x], `<img src='${url}'>`);
+              replaceContentsData = replaceContentsData.replace(imageData[x], url);
               // console.log(replaceContentsData.match(regExp));
               // await this.removeImage(this.data.imgArr);
               this.formImage.push(url);
             } else {
-              replaceContentsData = replaceContentsData.replace(img[x], `<img src='${imageData[x]}'>`);
+              replaceContentsData = replaceContentsData.replace(img[x], imageData[x]);
               this.formImage.push(imageData[x]);
             }
           }
@@ -98,7 +98,7 @@
             title: this.formData.title,
             contents: '',
             imgArr: [],
-            writer: 'Master',
+            writer: 'kingsjw7',
             date: new Date()
           };
           const rs = await this.replaceContentsImage();
@@ -113,7 +113,7 @@
             }).catch((e) => {
                 console.log(e);
               });
-            // this.$router.push({params: {popFlag: ''}});
+            this.$router.push({params: {popFlag: ''}});
           } else {
             submitData.imgArr = rs.cdnUrl && rs.cdnUrl.length > 0 ? rs.cdnUrl : this.data.imgArr;
             //update

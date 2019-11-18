@@ -34,12 +34,11 @@
 				editMode: false,
 			};
 		},
-		mounted() {
+		async mounted() {
 			const db = Firebase.firestore();
-			db.collection(this.flag).doc(this.$route.query.id).get().then((doc) => {
-				const data = Object.assign({ id: doc.id }, doc.data());
-				this.data = data;
-			});
+			const doc = await db.collection(this.flag).doc(this.$route.query.id).get();
+      const data = Object.assign({ id: doc.id }, doc.data());
+      this.data = data;
 		},
 	};
 </script>
@@ -51,6 +50,9 @@
 	.list-view{
 		width: 1200px;
 		margin: 0 auto;
+    .contents{
+      margin-top: 30px;
+    }
 		.btn-wrap{
 			margin-top: 30px;
 			display: flex;
