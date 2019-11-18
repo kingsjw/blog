@@ -30,10 +30,9 @@
 		},
 		methods: {
 			async replaceContentsImage() {
-				const contentsData = this.formData.contents;
+				let replaceContentsData = this.formData.contents;
 				const regExp = /<(\img)([^>]*)>/gi;
 				let img = contentsData.match(regExp);
-				let replaceContentsData = '';
         let cdnUrl = [];
         if (img && img.length > 0) {
           const temp = document.createElement('div');
@@ -47,12 +46,14 @@
               const file = dataURLtoFile(imageData[x], Date.now());
               await this.uploadImage(file, file.name);
               const url = await this.getImageUrl(file.name);
-              replaceContentsData = contentsData.replace(img[x], `<img src="${url}">`);
               cdnUrl.push({ name: file.name, url: url});
+              // console.log(replaceContentsData.indexOf(img[x]));
+              replaceContentsData = replaceContentsData.replace(imageData[x], `<img src='${url}'>`);
+              // console.log(replaceContentsData.match(regExp));
               // await this.removeImage(this.data.imgArr);
               this.formImage.push(url);
             } else {
-              replaceContentsData = contentsData.replace(img[x], `<img src="${imageData[x]}">`);
+              replaceContentsData = replaceContentsData.replace(img[x], `<img src='${imageData[x]}'>`);
               this.formImage.push(imageData[x]);
             }
           }
@@ -101,18 +102,18 @@
             date: new Date()
           };
           const rs = await this.replaceContentsImage();
-          console.log(rs);
+          // console.log(rs);
           submitData.contents = rs.data;
           if (this.mode === 'create') {
             if (rs.cdnUrl && rs.cdnUrl.length > 0) {
               submitData.imgArr = rs.cdnUrl;
             }
-            // console.log(submitData);
-            db.collection(this.flag).doc(id).set(submitData)
-              .catch((e) => {
+            db.collection(this.flag).doc(id).set(submitData).then(() => {
+              console.log("Document successfully write!");
+            }).catch((e) => {
                 console.log(e);
               });
-            this.$router.push({params: {popFlag: ''}});
+            // this.$router.push({params: {popFlag: ''}});
           } else {
             submitData.imgArr = rs.cdnUrl && rs.cdnUrl.length > 0 ? rs.cdnUrl : this.data.imgArr;
             //update
