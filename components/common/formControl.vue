@@ -53,7 +53,7 @@
               // await this.removeImage(this.data.imgArr);
               this.formImage.push(url);
             } else {
-              replaceContentsData = replaceContentsData.replace(img[x], imageData[x]);
+              replaceContentsData = replaceContentsData.replace(imageData[x], imageData[x]);
               this.formImage.push(imageData[x]);
             }
           }
@@ -117,22 +117,31 @@
           } else {
             submitData.imgArr = rs.cdnUrl && rs.cdnUrl.length > 0 ? rs.cdnUrl : this.data.imgArr;
             //update
+            // console.log(this.formImage);
             if (this.formImage && this.formImage.length > 0) {
-              for (let x = 0; x < this.data.imgArr.length; x += 1) {
-                for (let y = 0; y < this.formImage.length; y += 1) {
-                  if (this.data.imgArr[x].url !== this.formImage[y]) {
-                    this.removeImage(this.data.imgArr[x].name);
-                    submitData.imgArr = submitData.imgArr.filter(val => val.name !== this.data.imgArr[x].name);
-                  }
+              const removeList = [];
+              const imgArr = [];
+              this.data.imgArr.forEach((obj) => {
+                if (this.formImage.indexOf(obj.url) === -1) {
+                  removeList.push(obj);
+                } else {
+                  imgArr.push(obj);
                 }
+              });
+              // console.log(removeList);
+              // console.log(imgArr);
+              removeList.map(url => url);
+              for (let x = 0; x < removeList.length; x += 1) {
+                this.removeImage(removeList[x].name);
               }
+              submitData.imgArr = imgArr;
             } else {
               for (let x = 0; x < this.data.imgArr.length; x += 1) {
                 this.removeImage(this.data.imgArr[x].name);
               }
               submitData.imgArr = [];
             }
-            console.log(submitData);
+            // console.log(submitData);
             db.collection(this.flag).doc(this.data.id).update(submitData).then(() => {
               console.log("Document successfully update!");
               this.$router.push({params: {popFlag: ''}});
