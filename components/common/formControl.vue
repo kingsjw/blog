@@ -130,7 +130,6 @@
               });
               // console.log(removeList);
               // console.log(imgArr);
-              removeList.map(url => url);
               for (let x = 0; x < removeList.length; x += 1) {
                 this.removeImage(removeList[x].name);
               }
