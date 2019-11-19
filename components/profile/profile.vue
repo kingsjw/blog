@@ -44,12 +44,17 @@
           <div class="list">
             <div class="name">Software engineering</div>
             <div class="info">
-              <div class="clip">Java Script</div>
-              <div class="clip">Nuxt.js</div>
-              <div class="clip">Vue.js</div>
-              <div class="clip">Node.js</div>
-              <div class="clip">Amazone Aws</div>
-              <div class="clip">Java</div>
+              <div @click="openUrl('https://www.google.com/search?q=java+script')" class="clip">Java Script</div>
+              <div @click="openUrl('https://www.google.com/search?q=Nuxt.js')" class="clip">Nuxt.js</div>
+              <div @click="openUrl('https://www.google.com/search?q=Vue.js')" class="clip">Vue.js</div>
+              <div @click="openUrl('https://www.google.com/search?q=node.js')" class="clip">Node.js</div>
+              <div @click="openUrl('https://www.google.com/search?q=Bitbucket')" class="clip">Bitbucket</div>
+              <div @click="openUrl('https://www.google.com/search?q=Source+Tree')" class="clip">Sourcetree</div>
+              <div @click="openUrl('https://www.google.com/search?q=jira')" class="clip">jira</div>
+              <div @click="openUrl('https://www.google.com/search?q=git')" class="clip">git</div>
+              <div @click="openUrl('https://www.google.com/search?q=git+hub')" class="clip">git hub</div>
+              <div @click="openUrl('https://www.google.com/search?q=Amazon+Aws')" class="clip">Amazon Aws</div>
+              <div @click="openUrl('https://www.google.com/search?q=Java')" class="clip">Java</div>
             </div>
           </div>
         </div>
@@ -78,6 +83,9 @@ export default {
     };
   },
   methods: {
+    openUrl(url) {
+      window.open(url, '_blank');
+    },
     getProjectList() {
       const db = Firebase.firestore();
       db.collection('project').orderBy("date", "desc").get().then((querySnapshot) => {
@@ -147,6 +155,7 @@ export default {
               font-size: 14px;
             }
             .clip{
+              cursor: pointer;
               padding: 4px 10px;
               background-color: #ff5252;
               color: #fff;
@@ -154,9 +163,17 @@ export default {
               margin-left: 4px;
               display: inline-block;
               margin-top: 6px;
-              &:first-of-type{
-                margin-left: 0;
+              transition: .3s ease;
+              &:hover{
+                background-color: #e73939;
               }
+            }
+          }
+        }
+        &.skills{
+          .list{
+            .info{
+              margin-left: -4px;
             }
           }
         }
