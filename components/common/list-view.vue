@@ -20,6 +20,7 @@
 </template>
 
 <script>
+  import 'github-markdown-css/github-markdown.css';
 	import Firebase from 'firebase';
 	import editForm from './formControl';
 
@@ -44,7 +45,6 @@
 </script>
 
 <style lang="scss" scoped>
-	@import 'github-markdown-css/github-markdown.css';
 	@import 'vue-material/dist/vue-material.min.css';
 	@import 'vue-material/dist/theme/default.css';
 	.list-view{

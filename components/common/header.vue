@@ -49,7 +49,6 @@
       .wrap{
         width: 1200px;
         height: 100%;
-        padding: 0 60px;
         display: flex;
         justify-content: space-between;
         align-items: center;

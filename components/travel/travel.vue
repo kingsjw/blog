@@ -58,6 +58,7 @@
 				font-weight: bold;
 				font-size: 20px;
 				margin-top: 40px;
+        margin-bottom: 10px;
 				color: #494c62;
 			}
 			.list-wrap{
