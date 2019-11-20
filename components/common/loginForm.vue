@@ -113,7 +113,7 @@ export default {
         position: relative;
         font-size: 16px;
         cursor: default;
-        color: #fff;
+        color: #000;
         background-color: #e9e9e9;
       }
     }

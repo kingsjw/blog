@@ -68,10 +68,10 @@
         this.lastScroll = scrollY;
       },
 			login(user) {
-				this.openPop = false;
 				if (user.userId && user.userPw) {
 					Firebase.auth().setPersistence(Firebase.auth.Auth.Persistence.SESSION).then(() => {
 						return Firebase.auth().signInWithEmailAndPassword(user.userId, user.userPw).then(() => {
+              this.openPop = false;
               this.$store.commit('user/loginCheck', true);
             });
 					}).catch((error) => {
