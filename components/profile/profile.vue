@@ -124,6 +124,10 @@ export default {
           background-color: #ccc;
           border-radius: 50px;
           margin: 15px auto;
+          background-image: url(~assets/img/profile.png);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
         }
         .info-wrap{
           text-align: center;

@@ -18,16 +18,16 @@
               <md-button
                 @click="openUrl(data.projectUrl.site)"
                 class="md-raised">site</md-button>
-              <div
-                v-if="$store.state.user.isLogin"
-                class="ctrl-btns">
-                <md-button
-                  @click="$emit('openFixed', index)"
-                  class="md-raised md-primary">Fixed</md-button>
-                <md-button
-                  @click="deleteProject(data.id, index)"
-                  class="md-raised md-accent">Delete</md-button>
-              </div>
+              <!--<div-->
+                <!--v-if="$store.state.user.isLogin"-->
+                <!--class="ctrl-btns">-->
+                <!--<md-button-->
+                  <!--@click="$emit('openFixed', index)"-->
+                  <!--class="md-raised md-primary">Fixed</md-button>-->
+                <!--<md-button-->
+                  <!--@click="deleteProject(data.id, index)"-->
+                  <!--class="md-raised md-accent">Delete</md-button>-->
+              <!--</div>-->
             </div>
           </div>
           <div id="data">
