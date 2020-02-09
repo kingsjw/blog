@@ -1,6 +1,7 @@
 <template>
   <div class="main">
     <div class="wrap">
+      <div class="flog"></div>
       <p class="title">최근 활동</p>
       <div class="newsfeed">
         <p>프로젝트 - 뉴스피드</p>
@@ -31,6 +32,14 @@ export default {
 <style lang="scss" scoped>
   .main{
     .wrap{
+      .flog{
+        width: 100%;
+        height: 500px;
+        background-size: 600px 400px;
+        background-image: url(~assets/img/flog.gif);
+        background-repeat: no-repeat;
+        background-position: center;
+      }
       width: 1200px;
       margin: 0 auto;
       padding-top: 20px;
