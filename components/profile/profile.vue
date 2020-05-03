@@ -61,6 +61,7 @@
       </div>
     </div>
     <div class="project">
+      <div class="title">- projects</div>
       <portfolios
         :projectList="projectList"
         @getProject="getProjectList"
@@ -88,11 +89,12 @@ export default {
     },
     getProjectList() {
       const db = Firebase.firestore();
-      db.collection('project').orderBy("date", "desc").get().then((querySnapshot) => {
+      db.collection('project').orderBy("date", "asc").get().then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
           const data = Object.assign({ id: doc.id }, doc.data());
           this.projectList.push(data);
         });
+        this.$store.commit('profile/saveData', this.projectList);
       });
     },
   },
@@ -187,6 +189,11 @@ export default {
       width: 800px;
       position: absolute;
       left: calc(50% - 280px);
+      .title{
+        margin: 20px 0 0 8px;
+        font-size: 26px;
+        color: #28323c;
+      }
     }
     &::after{
       clear: both;

@@ -6,8 +6,9 @@ module.exports = {
     title: 'kingsjw7 - blog',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' }
+      { name: 'viewport', content: 'width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover' },
+      { hid: 'description', name: 'description', content: 'Nuxt.js project' },
+      { name: 'google-site-verification', content: 'lBJohKMHlGpwP9qnoSEDvOnl4QR56H-2_TYkzC5O9So'}
     ],
     link: [
       { rel: "stylesheet", href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Material+Icons' },

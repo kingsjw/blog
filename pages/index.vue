@@ -1,7 +1,6 @@
 <template>
   <div class="main">
     <div class="wrap">
-      <div class="flog"></div>
       <p class="title">최근 활동</p>
       <div class="newsfeed">
         <p>프로젝트 - 뉴스피드</p>
@@ -19,6 +18,7 @@
         <p>여행 - 뉴스피드</p>
           <!-- 리스트 컴포넌트 -->
       </div>
+      <div class="flog"></div>
     </div>
   </div>
 </template>

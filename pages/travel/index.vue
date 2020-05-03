@@ -86,6 +86,8 @@
 						const data = Object.assign({ id: doc.id }, doc.data());
 						this.list.push(data);
 					});
+          this.$store.commit('travel/saveData', this.list);
+          console.log(this.$store.state.travel.list);
 				});
 			},
 			selectView(id) {

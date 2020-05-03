@@ -40,6 +40,8 @@
         scrollDown: false,
         scrollDownTop: false,
         scrollWeb: false,
+        timeout: '',
+        isMobile: false,
       };
     },
     methods: {
@@ -98,15 +100,45 @@
 				this.$store.commit('user/loginCheck', this.userData);
 				// console.log(this.userData);
 			},
+      resizeWindow(e) {
+        if (this.timeout) {
+          clearTimeout(this.timeout);
+        }
+        this.timeout = setTimeout(() => {
+          if (e.currentTarget.innerWidth <= 768) {
+            this.isMobile = true;
+            this.timeout = '';
+          } else {
+            this.isMobile = false;
+          }
+          this.$store.commit('common/changeDevice', this.isMobile);
+        }, 300);
+      },
     },
     mounted() {
       window.addEventListener('scroll', this.bodyScroll);
+      if (navigator.userAgent.match(/Android/i)
+        || navigator.userAgent.match(/webOS/i)
+        || navigator.userAgent.match(/iPhone/i)
+        || navigator.userAgent.match(/iPad/i)
+        || navigator.userAgent.match(/iPod/i)
+        || navigator.userAgent.match(/BlackBerry/i)
+        || navigator.userAgent.match(/Windows Phone/i)
+      ) {
+        this.isMobile = true;
+      } else {
+        this.isMobile = false;
+      }
+      this.$store.commit('common/changeDevice', this.isMobile);
       Firebase.auth().onAuthStateChanged((user) => {
 				this.authLoad = true;
 				if (user) {
 					this.getUserSession(user);
 				}
     	});
+      this.$nextTick(() => {
+        window.addEventListener('resize', this.resizeWindow);
+      });
     },
   }
 </script>

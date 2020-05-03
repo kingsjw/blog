@@ -3,7 +3,7 @@
     <div class="box">
       <div class="list-wrap">
         <div
-          v-for="(data, index) in projectList"
+          v-for="(data, index) in projectListData"
           :key="index"
           class="list">
           <div class="info-top">
@@ -86,12 +86,26 @@
         colors: ['#f06292', '#a7ffeb', '#81d4fa', '#e040fb'],
       };
     },
+    computed: {
+      projectListData() {
+        let data = [];
+        if (this.projectList && this.projectList.length > 0) {
+          data = this.projectList;
+        } else {
+          data = this.$store.state.profile.project;
+        }
+        return data;
+      },
+    },
     methods: {
       openUrl(url) {
         window.open(url);
       },
       getProjectList() {
-        this.$emit('getProject');
+        if (this.$store.state.profile.project && this.$store.state.profile.project.length <= 0) {
+          console.log('getProfile');
+          this.$emit('getProject');
+        }
       },
       deleteProject(id, index) {
         this.$emit('delProject', id, index);
@@ -113,7 +127,7 @@
   @import 'vue-material/dist/theme/default.css';
   .portfolio-list{
     .list-wrap{
-      padding: 30px 0;
+      padding: 50px 0;
       .list {
         position: relative;
         height: 100%;
@@ -122,7 +136,7 @@
         border-radius: 6px;
         margin-top: 20px;
         border-top: 1px solid #f2f2f2;
-        padding-top: 10px;
+        padding-top: 20px;
         &:first-of-type{
           border-top: none;
           margin-top: 0;

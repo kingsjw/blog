@@ -10,7 +10,7 @@
 				class="list-wrap"
 			>
 				<list
-					v-for="(val, index) in listData"
+					v-for="(val, index) in travelList"
 					:key="index"
 					:list="val"
 					@click.native="selectView(val.id)"
@@ -33,13 +33,26 @@
 		    init: false,
       };
     },
+    computed: {
+		  travelList() {
+		    let data = [];
+		    if (this.listData && this.listData.length > 0) {
+		      data = this.listData;
+        } else {
+		      data = this.$store.state.travel && this.$store.state.travel.list;
+        }
+		    return data;
+      },
+    },
 		methods: {
 			selectView(id) {
 				this.$emit('selectView', id);
 			},
 		},
 		mounted() {
-			this.$emit('getData');
+      if (this.$store.state.travel.list && this.$store.state.travel.list.length <= 0) {
+			  this.$emit('getData');
+      }
 			this.$nextTick(() => {
 			  this.init = true;
       });
