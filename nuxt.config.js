@@ -46,7 +46,6 @@ module.exports = {
   },
   plugins: [
     { src: './plugins/firebase.js', ssr: false },
-    { src: './plugins/vue-material.js', ssr: false },
     { src: './plugins/vue2-editor.js', ssr: false }
   ],
   modules: ['nuxt-sass-resources-loader'],

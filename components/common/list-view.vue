@@ -1,5 +1,5 @@
 <template>
-	<div class="list-view">
+	<div class="list-view" :class="$store.state.common.isMobile ? 'mobile' : ''">
 		<div
 			v-if="!editMode"
 			class="contents markdown-body" v-html="data.contents"
@@ -11,10 +11,12 @@
 		/>
 		<!-- {{data}} -->
 		<div class="btn-wrap">
-			<md-button
+			<button
         v-if="$store.state.user.isLogin"
 				@click="editMode = !editMode"
-				class="md-dense md-primary">{{ editMode ? '취소' : '수정'}}</md-button>
+				class="md-button success">
+        <div>{{ editMode ? '취소' : '수정'}}</div>
+      </button>
 		</div>
 	</div>
 </template>
@@ -45,11 +47,13 @@
 </script>
 
 <style lang="scss" scoped>
-	@import 'vue-material/dist/vue-material.min.css';
-	@import 'vue-material/dist/theme/default.css';
 	.list-view{
 		width: 1200px;
 		margin: 0 auto;
+    padding: 0 12px 40px 12px;
+    &.mobile{
+      width: 100%;
+    }
     .contents{
       margin-top: 30px;
     }

@@ -3,7 +3,9 @@
 		<editForm
 			:formData="formData"
 		/>
-		<md-button @click="submit" class="md-raised md-primary submit-btn">{{ mode === 'create' ? '저장' : '수정'}}</md-button>
+		<button @click="submit" class="md-button success submit-btn">
+      <div>{{ mode === 'create' ? '저장' : '수정'}}</div>
+    </button>
     <div
       v-if="loading"
       class="pop"
@@ -170,8 +172,6 @@
 </script>
 
 <style lang="scss" scoped>
-	@import 'vue-material/dist/vue-material.min.css';
-	@import 'vue-material/dist/theme/default.css';
   .pop{
     position: fixed;
     top: 0;

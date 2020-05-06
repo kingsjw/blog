@@ -6,7 +6,7 @@
       <div class="logo">
         <a href="/">
           kingsjw
-          <p>software enginer</p>
+          <p>software engineer</p>
         </a>
       </div>
       <div class="menu">

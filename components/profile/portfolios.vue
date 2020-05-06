@@ -15,9 +15,12 @@
               <P class="sub-title">{{ data.subTitle }}</P>
             </div>
             <div class="btn-wrap">
-              <md-button
+              <button
                 @click="openUrl(data.projectUrl.site)"
-                class="md-raised">site</md-button>
+                class="md-button"
+              >
+                <div>site</div>
+              </button>
               <!--<div-->
                 <!--v-if="$store.state.user.isLogin"-->
                 <!--class="ctrl-btns">-->
@@ -123,8 +126,6 @@
 
 
 <style lang="scss" scoped>
-  @import 'vue-material/dist/vue-material.min.css';
-  @import 'vue-material/dist/theme/default.css';
   .portfolio-list{
     .list-wrap{
       padding: 50px 0;

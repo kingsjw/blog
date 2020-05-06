@@ -3,7 +3,7 @@
     v-if="init"
     class="travelList"
   >
-		<div class="wrap">
+		<div class="wrap" :class="$store.state.common.isMobile ? 'mobile' : ''">
 			<p class="title">Travel is refresh</p>
 			<div
 				v-if="$route.params.popFlag !== 'edit'"
@@ -67,11 +67,24 @@
 		.wrap{
 			width: 1200px;
 			margin: 0 auto;
+      &.mobile{
+        width: 100%;
+        margin: 0;
+        padding: 0 20px;
+        .list-wrap{
+          display: block;
+          flex-basis: initial;
+          flex-wrap: initial;
+          margin-top: 20px;
+        }
+        .title{
+          margin-top: 10px;
+        }
+      }
 			.title{
 				font-weight: bold;
 				font-size: 20px;
 				margin-top: 40px;
-        margin-bottom: 10px;
 				color: #494c62;
 			}
 			.list-wrap{
@@ -79,15 +92,7 @@
 				display: flex;
 				flex-basis: 33.33%;
 				flex-wrap: wrap;
-				.list{
-					margin-left: 30px;
-					&:nth-child(n + 4) {
-						margin-top: 30px;
-					}
-					&:nth-child(3n + 1){
-						margin-left: 0;
-					}
-				}
+        margin-top: 10px;
 			}
 		}
 	}

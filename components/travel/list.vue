@@ -1,5 +1,5 @@
 <template>
-	<div class="list">
+	<div class="list" :class="$store.state.common.isMobile ? 'mobile' : ''">
 		<div
 			:style="list && list.imgArr && list.imgArr[0] ? { backgroundImage: `url(${list.imgArr[0].url})`} : {}"
 			class="thumbnail"></div>
@@ -13,7 +13,6 @@
 </template>
 
 <script>
-  import Firebase from 'firebase';
 
 	export default {
 		props: ['list'],
@@ -24,15 +23,34 @@
 	.list{
 		width: calc((100% / 3) - 22px);
 		height: 520px;
+    margin-left: 30px;
 		border: 1px solid #eee;
 		border-radius: 2px;
 		overflow: hidden;
 		cursor: pointer;
 		transition: .3s ease;
 		box-shadow: 0 1px 11px 0 rgba(0,0,0,.1);
-		&:hover{
+    &:nth-child(n + 4) {
+      margin-top: 30px;
+    }
+    &:nth-child(3n + 1){
+      margin-left: 0;
+    }
+		&:not(.mobile):hover{
 			transform: scale(1.02);
 		}
+    &.mobile{
+      width: 100%;
+      height: 342px;
+      margin-left: 0;
+      margin-top: 20px;
+      &:first-of-type{
+        margin-top: 0;
+      }
+      .thumbnail{
+        height: 70%;
+      }
+    }
 		.thumbnail{
 			width: 100%;
 			height: 82%;

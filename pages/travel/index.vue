@@ -15,8 +15,9 @@
 			@getData="getTravelList"
 			@selectView="selectView"
 		/>
-		<edit
+		<btn
 			v-if="!$route.params.popFlag && $store.state.user.isLogin"
+      :type="'edit'"
 			@click.native="edit()"
 		/>
 	</div>
@@ -27,13 +28,13 @@
 	import travelList from '../../components/travel/travel.vue';
 	import createForm from '../../components/common/formControl.vue';
 	import listView from '../../components/common/list-view.vue';
-	import edit from '../../components/common/edit-btn.vue';
+  import btn from '../../components/common/generalBtn.vue';
 
 	export default {
 		components: {
 			travelList,
 			listView,
-			edit,
+      btn,
 			createForm,
 		},
 		data() {

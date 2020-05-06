@@ -13,8 +13,9 @@
 			@close-pop="openPop = false"
 			@login="login"
 		/>
-    <loginBtn
+    <btn
 			v-if="authLoad && !$store.state.user.isLogin"
+      :type="'login'"
 			@click.native="openPop = true"
 		/>
   </div>
@@ -23,14 +24,14 @@
 <script>
   import Firebase from 'firebase';
   import Header from '../components/common/header.vue';
-  import loginBtn from '../components/common/loginBtn.vue';
+  import btn from '../components/common/generalBtn.vue';
   import loginForm from '../components/common/loginForm.vue';
 
   export default {
     components: {
 			Header,
 			loginForm,
-      loginBtn,
+      btn,
     },
     data() {
       return {
@@ -153,6 +154,49 @@
     &:focus{
       outline: none;
     }
+  }
+  .md-button{
+    min-width: 88px;
+    height: 36px;
+    color: #000;
+    transition: .4s cubic-bezier(.4,0,.2,1);
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    user-select: none;
+    border-radius: 2px;
+    font-size: 14px;
+    margin: 6px 8px;
+    font-weight: 500;
+    text-transform: uppercase;
+    vertical-align: top;
+    white-space: nowrap;
+    outline: none;
+    &:hover{
+      background-color: #e1e1e1;
+    }
+    &.success{
+      color: #fff;
+      background-color: #448aff;
+      &:hover{
+        background-color: rgba(69, 116, 255, 0.8);
+      }
+    }
+  }
+
+  .fade-enter-active, .fade-leave-active{
+    transition: .3s ease;
+  }
+  .fade-enter, .fade-leave-to{
+    opacity: 0;
+  }
+
+  .slide-left-enter-active, .slide-left-leave-active{
+    transition: transform .4s cubic-bezier(.25,.8,.25,1);
+    will-change: transform,box-shadow;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+  }
+  .slide-left-enter, .slide-left-leave-to
+    /* .slide-leave-active below version 2.1.8 */ {
+    transform: translate3D(-100%,0,0);
   }
 </style>
 

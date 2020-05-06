@@ -1,31 +1,48 @@
 <template>
-  <div class="mobileHeader page-container md-layout-column">
-    <md-toolbar class="md-primary">
-      <md-button class="md-icon-button" @click="showNavigation = true">
-        <md-icon>menu</md-icon>
-      </md-button>
-      <span class="md-title">kingsjw blog</span>
-      <div class="md-toolbar-section-end">
+  <div class="headerWrap">
+    <div class="content">
+      <button
+        v-if="$route.path.split('/') && $route.path.split('/').length < 3"
+        class="menu"
+        @click="showNavigation ? close() : open()"
+      ></button>
+      <button
+        v-else
+        class="menu back"
+        @click="$router.back()"
+      ></button>
+      <div class="title">kingsjw {{ pageName ? `- ${pageName}` : '' }}</div>
+    </div>
+    <transition
+      name="slide-left"
+      mode="out-in"
+    >
+      <div
+        v-if="showNavigation"
+        class="navWrap"
+      >
+        <div class="title">
+          <span @click="home">my topic</span>
+        </div>
+        <div class="pages">
+          <div @click="move('profile')" class="list" :class="pageName.indexOf('profile') !== -1 ? 'active' : ''">
+            <div v-if="pageName.indexOf('profile') === -1" class="icon profile"></div>
+            <div class="name">Profile</div>
+          </div>
+          <div @click="move('travel')" class="list" :class="pageName.indexOf('travel') !== -1 ? 'active' : ''">
+            <div v-if="pageName.indexOf('travel') === -1" class="icon travel"></div>
+            <div class="name">Travel</div>
+          </div>
+        </div>
       </div>
-    </md-toolbar>
-
-    <md-drawer :md-active.sync="showNavigation" md-swipeable class="menu">
-      <md-toolbar class="md-transparent" md-elevation="0">
-        <span class="md-title">my topic</span>
-      </md-toolbar>
-
-      <md-list>
-        <md-list-item @click="$router.push('/profile'), showNavigation = !showNavigation">
-          <md-icon>account_box</md-icon>
-          <span class="md-list-item-text">Profile</span>
-        </md-list-item>
-
-        <md-list-item @click="$router.push('/travel'), showNavigation = !showNavigation">
-          <md-icon>card_travel</md-icon>
-          <span class="md-list-item-text">Travel</span>
-        </md-list-item>
-      </md-list>
-    </md-drawer>
+    </transition>
+    <transition name="fade">
+      <div
+        v-if="showNavigation"
+        @click="close"
+        class="mask"
+      ></div>
+    </transition>
   </div>
 </template>
 
@@ -34,71 +51,136 @@
     data() {
       return {
         showNavigation: false,
-        showSidepanel: false
-      }
+      };
+    },
+    computed: {
+      pageName() {
+        return (this.$route && this.$route.path) ? this.$route.path.split('/')[1] : '';
+      },
+    },
+    methods: {
+      home() {
+        this.showNavigation = false;
+        this.$router.replace('/');
+      },
+      open() {
+        this.showNavigation = true;
+        window.document.body.style.overflowY = 'hidden';
+      },
+      close() {
+        this.showNavigation = false;
+        window.document.body.style.overflowY = '';
+      },
+      move(path) {
+        this.showNavigation = false;
+        this.$router.push(`/${path}`);
+        window.document.body.style.overflowY = '';
+      },
     },
   };
 </script>
 
-<style lang="scss">
-  .mobileHeader{
-    .md-overlay {
+<style lang="scss" scoped>
+  .headerWrap{
+    width: 100%;
+    z-index: 1;
+    .content{
+      padding: 9px 16px;
+      width: 100%;
+      background-color: #816bff;
       position: fixed;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: 5;
-      overflow: hidden;
-      background: rgba(0,0,0,.6);
-      transition: .35s cubic-bezier(.4,0,.2,1);
-      transition-property: opacity;
-      will-change: opacity;
-    }
-
-    .md-list-item-content {
-      min-height: 48px;
-      padding: 4px 16px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      transition: padding .4s cubic-bezier(.25,.8,.25,1);
-      will-change: padding;
+      .title{
+        font-size: 20px;
+        vertical-align: top;
+        margin-left: 20px;
+        color: #fff;
+      }
+      .menu{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        padding: 0 8px;
+        background-size: 24px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(~assets/img/icons/menu.svg);
+        position: relative;
+        outline: none;
+        user-select: none;
+        &.back{
+          background-size: 32px;
+          background-image: url(~assets/img/icons/chevron-left.svg);
+        }
+        &:hover{
+          background-color: #816bff;
+        }
+      }
     }
-    .md-button, .md-button-clean {
-      margin: 0;
-      padding: 0;
-      display: inline-block;
-      position: relative;
-      overflow: hidden;
-      outline: none;
-      background: transparent;
-      border: 0;
-      border-radius: 0;
-      transition: .4s cubic-bezier(.4,0,.2,1);
-      font-family: inherit;
-      line-height: normal;
-      text-decoration: none;
-      vertical-align: top;
-      white-space: nowrap;
+    .navWrap{
+      width: 230px;
+      max-width: calc(100vw - 125px);
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      background-color: #fff;
+      z-index: 2;
+      box-shadow: 0 8px 10px -5px rgba(0,0,0,.2), 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12);
+      .title{
+        width: 100%;
+        font-size: 20px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        padding: 0 16px;
+        span{
+          margin-left: 8px;
+        }
+      }
+      .pages{
+        padding: 8px 0;
+        .list{
+          display: flex;
+          padding: 4px 16px;
+          min-height: 48px;
+          align-items: center;
+          &.active{
+            background-color: rgba(129, 107, 255, 0.4);
+            color: #816bff;
+            font-size: 18px;
+            font-weight: bold;
+          }
+          .icon{
+            width: 24px;
+            height: 24px;
+            background-size: 24px;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-right: 32px;
+            &.profile{
+              background-image: url(~assets/img/icons/account.svg);
+            }
+            &.travel{
+              background-image: url(~assets/img/icons/travel.svg);
+            }
+          }
+          .name {
+            font-size: 14px;
+            line-height: 1.25em;
+          }
+        }
+      }
     }
-  }
-</style>
-
-<style lang="scss" scoped>
-  @import 'vue-material/dist/vue-material.min.css';
-  @import 'vue-material/dist/theme/default.css';
-  .md-drawer {
-    position: fixed;
-  }
-  .md-toolbar.md-theme-default.md-primary {
-    background-color: #816bff;
-  }
-  .page-container {
-    overflow: hidden;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
+    .mask{
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
   }
 </style>
