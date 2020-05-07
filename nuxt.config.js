@@ -54,7 +54,8 @@ module.exports = {
   ],
   router: {
     extendRoutes(routes, resolve) {
-      let parent = routes.find(route => route.path === '/travel');
+      let parent = '';
+      parent = routes.find(route => route.path === '/travel');
       parent.children = [];
       parent.children.push({
         name: 'travel-edit',

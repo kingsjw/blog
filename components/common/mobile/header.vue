@@ -21,8 +21,18 @@
         v-if="showNavigation"
         class="navWrap"
       >
-        <div class="title">
-          <span @click="home">my topic</span>
+        <div class="titleWrap">
+          <span class="title" @click="home">my topic</span>
+          <div
+            v-if="!$store.state.user.isLogin"
+            @click="openLogin"
+            class="login"
+          ></div>
+          <span
+            v-else
+            @click="$emit('logout')"
+            class="logout"
+          >Log out</span>
         </div>
         <div class="pages">
           <div @click="move('profile')" class="list" :class="pageName.indexOf('profile') !== -1 ? 'active' : ''">
@@ -63,6 +73,10 @@
         this.showNavigation = false;
         this.$router.replace('/');
       },
+      openLogin() {
+        this.showNavigation = false;
+        this.$emit('openLogin');
+      },
       open() {
         this.showNavigation = true;
         window.document.body.style.overflowY = 'hidden';
@@ -83,6 +97,7 @@
 <style lang="scss" scoped>
   .headerWrap{
     width: 100%;
+    min-height: 80px;
     z-index: 1;
     .content{
       padding: 9px 16px;
@@ -128,15 +143,27 @@
       background-color: #fff;
       z-index: 2;
       box-shadow: 0 8px 10px -5px rgba(0,0,0,.2), 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12);
-      .title{
+      .titleWrap{
         width: 100%;
-        font-size: 20px;
         height: 64px;
         display: flex;
         align-items: center;
+        justify-content: space-between;
         padding: 0 16px;
-        span{
-          margin-left: 8px;
+        .title {
+          font-size: 20px;
+        }
+        .login {
+          width: 16px;
+          height: 16px;
+          background-image: url(~assets/img/icons/login.png);
+          background-size: 16px;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+        .logout{
+          text-decoration: underline;
+          font-size: 14px;
         }
       }
       .pages{

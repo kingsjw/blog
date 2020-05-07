@@ -1,5 +1,5 @@
 <template>
-	<div class="edit" v-if="init">
+	<div class="edit" v-if="init" :class="$store.state.common.isMobile ? 'mobile' : ''">
 		<editForm
 			:formData="formData"
 		/>
@@ -246,6 +246,11 @@
 	.edit{
 		width: 1200px;
 		margin: 60px auto;
+    &.mobile{
+      width: 100%;
+      margin-top: 20px;
+      padding: 0 20px;
+    }
 		.submit-btn{
 			padding: 0;
 			margin: 20px 10px 0 0;

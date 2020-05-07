@@ -16,21 +16,13 @@
             </div>
             <div class="btn-wrap">
               <button
-                @click="openUrl(data.projectUrl.site)"
+                v-for="(key, index) in Object.keys(data.projectUrl)"
+                :key="index"
+                @click="openUrl(data.projectUrl[key])"
                 class="md-button"
               >
-                <div>site</div>
+                <div>{{ key }}</div>
               </button>
-              <!--<div-->
-                <!--v-if="$store.state.user.isLogin"-->
-                <!--class="ctrl-btns">-->
-                <!--<md-button-->
-                  <!--@click="$emit('openFixed', index)"-->
-                  <!--class="md-raised md-primary">Fixed</md-button>-->
-                <!--<md-button-->
-                  <!--@click="deleteProject(data.id, index)"-->
-                  <!--class="md-raised md-accent">Delete</md-button>-->
-              <!--</div>-->
             </div>
           </div>
           <div id="data">
@@ -102,7 +94,7 @@
     },
     methods: {
       openUrl(url) {
-        window.open(url);
+        window.open(url, '_blank');
       },
       getProjectList() {
         if (this.$store.state.profile.project && this.$store.state.profile.project.length <= 0) {

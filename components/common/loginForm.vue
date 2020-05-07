@@ -3,6 +3,7 @@
   <div
     @click.stop
     id="loginWrapper"
+    :class="$store.state.common.isMobile ? 'mobile' : ''"
   >
     <div
       class="login"
@@ -59,6 +60,10 @@ export default {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
     border: 1px solid #f1f1f1;
     border-radius: 6px;
+    &.mobile{
+      width: 90%;
+      padding: 32px;
+    }
     a{
       color: inherit;
       text-decoration: none;
@@ -88,7 +93,7 @@ export default {
         border-bottom: 2px solid #e9e9e9;
       }
       input:focus{
-        border-bottom: 2px solid #ff5252;
+        border-bottom: 2px solid #816bff;
       }
       .input-password{
         margin-top: 16px;
@@ -104,7 +109,7 @@ export default {
         transition: .3s ease;
       }
       button.active{
-        background-color: #ff5252;
+        background-color: #816bff;
         font-weight: bold;
         color: #fff;
         cursor: pointer;

@@ -2,8 +2,9 @@
 	<div
     v-if="init"
     class="travelList"
+    :class="$store.state.common.isMobile ? 'mobile' : ''"
   >
-		<div class="wrap" :class="$store.state.common.isMobile ? 'mobile' : ''">
+		<div class="wrap">
 			<p class="title">Travel is refresh</p>
 			<div
 				v-if="$route.params.popFlag !== 'edit'"
@@ -63,11 +64,11 @@
 <style lang="scss" scoped>
 	.travelList{
 		width: 100%;
+    margin-top: 120px;
 		margin-bottom: 60px;
-		.wrap{
-			width: 1200px;
-			margin: 0 auto;
-      &.mobile{
+    &.mobile{
+      margin-top: 30px;
+      .wrap{
         width: 100%;
         margin: 0;
         padding: 0 20px;
@@ -81,10 +82,13 @@
           margin-top: 10px;
         }
       }
+    }
+		.wrap{
+			width: 1200px;
+			margin: 0 auto;
 			.title{
 				font-weight: bold;
 				font-size: 20px;
-				margin-top: 40px;
 				color: #494c62;
 			}
 			.list-wrap{

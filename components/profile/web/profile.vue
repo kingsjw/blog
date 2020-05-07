@@ -4,37 +4,36 @@
       <div class="personal">
         <div class="profile-img"></div>
         <div class="info-wrap">
-          <div class="name">Seo Jae Woo</div>
-          <div class="info-text">hi! im software engineer.</div>
+          <div class="name">{{ myInfo.intro.name }}</div>
+          <div class="info-text">{{ myInfo.intro.self }}</div>
+          <div class="social">
+            <div @click="openUrl(myInfo.social.gitHub)" class="gitHub"></div>
+          </div>
         </div>
       </div>
       <div class="info-list">
         <div class="title">State</div>
-        <div class="list-wrap">
+        <div
+          v-for="(key, index) in Object.keys(myInfo.state)"
+          :key="index"
+          class="list-wrap"
+        >
           <div class="list">
-            <div class="name">Company</div>
-            <div class="info">Bringprice korea</div>
-          </div>
-          <div class="list">
-            <div class="name">Position</div>
-            <div class="info">Front-end Developer</div>
+            <div class="name">{{ key }}</div>
+            <div class="info">{{ myInfo.state[key] }}</div>
           </div>
         </div>
       </div>
       <div class="info-list contact">
         <div class="title">Contact Information</div>
-        <div class="list-wrap">
+        <div
+          v-for="(key, index) in Object.keys(myInfo.contact)"
+          :key="index"
+          class="list-wrap"
+        >
           <div class="list">
-            <div class="name">Email</div>
-            <div class="info">Kingsjw7@gmail.com</div>
-          </div>
-          <div class="list">
-            <div class="name">Phone Number</div>
-            <div class="info">Request via email</div>
-          </div>
-          <div class="list">
-            <div class="name">Address</div>
-            <div class="info">Seoul Republic of korea</div>
+            <div class="name">{{ key }}</div>
+            <div class="info">{{ myInfo.contact[key] }}</div>
           </div>
         </div>
       </div>
@@ -44,17 +43,12 @@
           <div class="list">
             <div class="name">Software engineering</div>
             <div class="info">
-              <div @click="openUrl('https://www.google.com/search?q=java+script')" class="clip">Java Script</div>
-              <div @click="openUrl('https://www.google.com/search?q=Nuxt.js')" class="clip">Nuxt.js</div>
-              <div @click="openUrl('https://www.google.com/search?q=Vue.js')" class="clip">Vue.js</div>
-              <div @click="openUrl('https://www.google.com/search?q=node.js')" class="clip">Node.js</div>
-              <div @click="openUrl('https://www.google.com/search?q=Bitbucket')" class="clip">Bitbucket</div>
-              <div @click="openUrl('https://www.google.com/search?q=Source+Tree')" class="clip">Sourcetree</div>
-              <div @click="openUrl('https://www.google.com/search?q=jira')" class="clip">jira</div>
-              <div @click="openUrl('https://www.google.com/search?q=git')" class="clip">git</div>
-              <div @click="openUrl('https://www.google.com/search?q=git+hub')" class="clip">git hub</div>
-              <div @click="openUrl('https://www.google.com/search?q=Amazon+Aws')" class="clip">Amazon Aws</div>
-              <div @click="openUrl('https://www.google.com/search?q=Java')" class="clip">Java</div>
+              <div
+                v-for="(val, index) in myInfo.skills"
+                :key="index"
+                @click="openUrl(val.url)"
+                class="clip"
+              >{{ val.name }}</div>
             </div>
           </div>
         </div>
@@ -75,6 +69,7 @@ import Firebase from 'firebase';
 import portfolios from './portfolios.vue';
 
 export default {
+  props: ['myInfo'],
   components: {
     portfolios,
   },
@@ -140,6 +135,26 @@ export default {
           .info-text{
             font-size: 12px;
             color: #939499;
+          }
+          .social{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 0;
+            .gitHub{
+              width: 24px;
+              height: 24px;
+              border-radius: 50%;
+              background-image: url(~assets/img/icons/gitHub.png);
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-position: center;
+              cursor: pointer;
+              transition: .3s ease;
+              &:hover{
+                opacity: 0.7;
+              }
+            }
           }
         }
       }

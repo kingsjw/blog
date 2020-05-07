@@ -1,12 +1,20 @@
 <template>
   <div
+    v-if="init"
     :class="{
       scrollDown,
       scrollDownTop,
       scrollWeb,
     }"
   >
-    <Header></Header>
+    <HeaderWeb
+      v-if="!$store.state.common.isMobile"
+    ></HeaderWeb>
+    <HeaderMobile
+      v-else
+      @openLogin="openPop = true"
+      @logout="logout"
+    ></HeaderMobile>
     <nuxt/>
 		<loginForm
 			v-if="openPop"
@@ -14,7 +22,7 @@
 			@login="login"
 		/>
     <btn
-			v-if="authLoad && !$store.state.user.isLogin"
+			v-if="authLoad && !$store.state.user.isLogin && !$store.state.common.isMobile"
       :type="'login'"
 			@click.native="openPop = true"
 		/>
@@ -23,18 +31,21 @@
 
 <script>
   import Firebase from 'firebase';
-  import Header from '../components/common/header.vue';
+  import HeaderWeb from '../components/common/web/header.vue';
+  import HeaderMobile from '../components/common/mobile/header.vue';
   import btn from '../components/common/generalBtn.vue';
   import loginForm from '../components/common/loginForm.vue';
 
   export default {
     components: {
-			Header,
+      HeaderWeb,
+      HeaderMobile,
 			loginForm,
       btn,
     },
     data() {
       return {
+        init: false,
         authLoad: false,
 				userData: null,
 				openPop: false,
@@ -50,10 +61,8 @@
         const scrollY = (window.pageYOffset || document.documentElement.scrollTop);
         if (this.lastScroll < scrollY) {
           this.scrollDown = true;
-          this.scrollDownTop = true;
-          if (scrollY < 30) {
-            this.scrollDownTop = false;
-          }
+
+          this.scrollDownTop = scrollY >= 30;
         } else {
           this.scrollDown = false;
           this.scrollDownTop = false;
@@ -96,6 +105,11 @@
 					});
 				}
 			},
+      logout() {
+        Firebase.auth().signOut().then(() => {
+          this.$store.commit('user/loginCheck', false);
+        });
+      },
 			getUserSession(user) {
 				this.userData = JSON.parse(window.sessionStorage.getItem(`firebase:authUser:${user.l}:${user.m}`));
 				this.$store.commit('user/loginCheck', this.userData);
@@ -118,18 +132,13 @@
     },
     mounted() {
       window.addEventListener('scroll', this.bodyScroll);
-      if (navigator.userAgent.match(/Android/i)
+      this.isMobile = !!(navigator.userAgent.match(/Android/i)
         || navigator.userAgent.match(/webOS/i)
         || navigator.userAgent.match(/iPhone/i)
         || navigator.userAgent.match(/iPad/i)
         || navigator.userAgent.match(/iPod/i)
         || navigator.userAgent.match(/BlackBerry/i)
-        || navigator.userAgent.match(/Windows Phone/i)
-      ) {
-        this.isMobile = true;
-      } else {
-        this.isMobile = false;
-      }
+        || navigator.userAgent.match(/Windows Phone/i));
       this.$store.commit('common/changeDevice', this.isMobile);
       Firebase.auth().onAuthStateChanged((user) => {
 				this.authLoad = true;
@@ -138,6 +147,7 @@
 				}
     	});
       this.$nextTick(() => {
+        this.init = true;
         window.addEventListener('resize', this.resizeWindow);
       });
     },

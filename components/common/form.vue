@@ -12,6 +12,11 @@
 </script>
 
 <style lang="scss" scoped>
+  .mobile{
+    .title{
+      width: 100%;
+    }
+  }
 	.title{
 		width: calc(100% - 24px);
 		margin-bottom: 20px;

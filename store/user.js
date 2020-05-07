@@ -5,7 +5,7 @@ export const state = () => ({
 export const mutations = {
   loginCheck(store, flag) {
     const storeState = store;
-    storeState.isLogin = flag !== null && flag !== undefined && flag !== '';
+    storeState.isLogin = flag && flag !== '';
     // console.log(storeState.isLogin);
   },
 };
