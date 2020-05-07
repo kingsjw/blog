@@ -98,7 +98,7 @@
       },
       getProjectList() {
         if (this.$store.state.profile.project && this.$store.state.profile.project.length <= 0) {
-          console.log('getProfile');
+          // console.log('getProfile');
           this.$emit('getProject');
         }
       },

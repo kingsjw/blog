@@ -59,12 +59,16 @@
     </section>
     <section id="project">
       <div class="title">Project</div>
-      <portfolios></portfolios>
+      <portfolios
+        :projectList="projectList"
+        @getProject="getProjectList"
+      ></portfolios>
     </section>
   </div>
 </template>
 
 <script>
+  import Firebase from 'firebase';
   import portfolios from './portfolios';
 
   export default {
@@ -72,9 +76,24 @@
     components: {
       portfolios,
     },
+    data() {
+      return {
+        projectList: [],
+      };
+    },
     methods: {
       openUrl(url) {
         window.open(url, '_blank');
+      },
+      getProjectList() {
+        const db = Firebase.firestore();
+        db.collection('project').orderBy("date", "asc").get().then((querySnapshot) => {
+          querySnapshot.forEach((doc) => {
+            const data = Object.assign({ id: doc.id }, doc.data());
+            this.projectList.push(data);
+          });
+          this.$store.commit('profile/saveData', this.projectList);
+        });
       },
     },
   };

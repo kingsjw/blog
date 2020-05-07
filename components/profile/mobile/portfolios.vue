@@ -20,6 +20,13 @@
           :key="i"
         >{{ `#${x}` }}</span>
       </div>
+      <div class="techStack">
+        <span
+          v-for="(graph, z) in Object.keys(data.positions)"
+          :key="z"
+          class="participation"
+        >#{{ data.positions[graph].name }}: {{ data.positions[graph].val }}%</span>
+      </div>
       <div class="result">
         <div
           v-for="(key, index) in Object.keys(data.projectUrl)"
@@ -51,6 +58,19 @@
       openUrl(url) {
         window.open(url, '_blank');
       },
+      getProjectList() {
+        if (this.$store.state.profile.project && this.$store.state.profile.project.length <= 0) {
+          // console.log('getProfile');
+          this.$emit('getProject');
+        }
+      },
+    },
+    mounted() {
+      this.$nextTick(() => {
+        if (Object.keys(this.projectList).length <= 0) {
+          this.getProjectList();
+        }
+      });
     },
   };
 </script>
