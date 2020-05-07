@@ -64,7 +64,7 @@
 <style lang="scss" scoped>
 	.travelList{
 		width: 100%;
-    margin-top: 120px;
+    margin-top: 40px;
 		margin-bottom: 60px;
     &.mobile{
       margin-top: 30px;
