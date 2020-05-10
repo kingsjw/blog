@@ -2,7 +2,7 @@
   <div class="headerWrap">
     <div class="content">
       <button
-        v-if="$route.path.split('/') && $route.path.split('/').length < 3"
+        v-if="pageDepth.length < 2"
         class="menu"
         @click="showNavigation ? close() : open()"
       ></button>
@@ -64,6 +64,9 @@
       };
     },
     computed: {
+      pageDepth() {
+        return this.$route && this.$route.path ? this.$route.path.split('/').filter(v => v !== '') : [];
+      },
       pageName() {
         return (this.$route && this.$route.path) ? this.$route.path.split('/')[1] : '';
       },
