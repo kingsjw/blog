@@ -18,7 +18,7 @@
     <nuxt/>
 		<loginForm
 			v-if="openPop"
-			@close-pop="openPop = false"
+			@close-pop="closeLogin"
 			@login="login"
 		/>
     <btn
@@ -57,6 +57,10 @@
       };
     },
     methods: {
+      closeLogin() {
+        this.openPop = false;
+        window.document.body.style.overflowY = '';
+      },
       bodyScroll() {
         const scrollY = (window.pageYOffset || document.documentElement.scrollTop);
         if (this.lastScroll < scrollY) {

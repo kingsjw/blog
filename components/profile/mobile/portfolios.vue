@@ -13,7 +13,7 @@
         <div class="title">{{ data.title }}</div>
         <div class="subTitle">{{ data.subTitle }}</div>
       </div>
-      <div class="contents">{{ data.intro }}</div>
+      <div class="contents" v-html="data.intro"></div>
       <div class="techStack">
         <span
           v-for="(x, i) in data.techStack"

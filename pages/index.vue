@@ -1,23 +1,10 @@
 <template>
   <div class="main" :class="$store.state.common.isMobile ? 'mobile' : ''">
     <div class="wrap">
-<!--      <p class="title">최근 활동</p>-->
-<!--      <div class="newsfeed">-->
-<!--        <p>프로젝트 - 뉴스피드</p>-->
-<!--          &lt;!&ndash; 리스트 컴포넌트 &ndash;&gt;-->
-<!--      </div>-->
-<!--      <div class="newsfeed">-->
-<!--        <p>영화 - 뉴스피드</p>-->
-<!--          &lt;!&ndash; 리스트 컴포넌트 &ndash;&gt;-->
-<!--      </div>-->
-<!--      <div class="newsfeed">-->
-<!--        <p>드라마 - 뉴스피드</p>-->
-<!--          &lt;!&ndash; 리스트 컴포넌트 &ndash;&gt;-->
-<!--      </div>-->
-<!--      <div class="newsfeed">-->
-<!--        <p>여행 - 뉴스피드</p>-->
-<!--          &lt;!&ndash; 리스트 컴포넌트 &ndash;&gt;-->
-<!--      </div>-->
+      <div class="titleWrap">
+        <div class="title">Kingsjw blog</div>
+        <div class="subTitle">software engineer 서재우의 일상이 담긴 블로그 입니다.</div>
+      </div>
       <div class="flog"></div>
     </div>
   </div>
@@ -35,6 +22,15 @@ export default {
       .wrap{
         width: 100%;
         padding: 0 20px;
+        .titleWrap{
+          padding: 60px 20px;
+          .title{
+            font-size: 56px;
+          }
+          .subTitle{
+            font-size: 24px;
+          }
+        }
         .flog {
           width: 100%;
           height: 400px;
@@ -46,6 +42,18 @@ export default {
       width: 1200px;
       margin: 0 auto;
       padding-top: 20px;
+      .titleWrap{
+        padding: 140px 40px 120px 40px;
+        .title{
+          font-size: 110px;
+          font-weight: 700;
+        }
+        .subTitle{
+          font-size: 30px;
+          line-height: 160%;
+          color: #40474D;
+        }
+      }
       .flog{
         width: 100%;
         height: 500px;

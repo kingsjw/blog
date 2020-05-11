@@ -25,6 +25,7 @@
               </button>
             </div>
           </div>
+          <div class="explanation" v-html="data.intro"></div>
           <div id="data">
             <div class="graph-wrap">
               <div
@@ -148,7 +149,7 @@
           justify-content: space-between;
           align-items: center;
           .intro {
-            padding: 20px 16px;
+            padding: 20px 16px 8px 16px;
             p {
               margin: 0;
             }
@@ -159,7 +160,7 @@
               color: #4a4a4a;
             }
             .sub-title {
-              font-size: 14px;
+              font-size: 16px;
               line-height: 24px;
               color: #777;
             }
@@ -169,6 +170,13 @@
             overflow: hidden;
             text-overflow: ellipsis;
           }
+        }
+        .explanation{
+          color: #28323c;
+          font-size: 14px;
+          line-height: 20px;
+          vertical-align: baseline;
+          padding: 8px 16px 16px 16px;
         }
         #data {
           width: 100%;

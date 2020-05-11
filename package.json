@@ -2,7 +2,7 @@
   "name": "blog",
   "version": "1.0.0",
   "description": "Nuxt.js project",
-  "author": "ted <kingsjw7@bringprice.com>",
+  "author": "kingsjw <kingsjw7@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "nuxt",
