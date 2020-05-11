@@ -5,7 +5,8 @@
   "author": "ted <kingsjw7@bringprice.com>",
   "private": true,
   "scripts": {
-    "dev": "HOST=0.0.0.0 PORT=8080 nuxt",
+    "dev": "nuxt",
+    "local": "HOST=0.0.0.0 PORT=8080 nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
