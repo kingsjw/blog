@@ -47,10 +47,12 @@ export default {
         .title{
           font-size: 110px;
           font-weight: 700;
+          line-height: 1.4em;
         }
         .subTitle{
-          font-size: 30px;
-          line-height: 160%;
+          margin-top: 10px;
+          font-size: 26px;
+          line-height: 140%;
           color: #40474D;
         }
       }
