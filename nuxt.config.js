@@ -11,7 +11,6 @@ module.exports = {
       { name: 'google-site-verification', content: 'lBJohKMHlGpwP9qnoSEDvOnl4QR56H-2_TYkzC5O9So'}
     ],
     link: [
-      { rel: "stylesheet", href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Material+Icons' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
