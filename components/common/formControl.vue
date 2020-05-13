@@ -154,6 +154,7 @@
             db.collection(this.flag).doc(this.data.id).update(submitData).then(() => {
               console.log("Document successfully update!");
               this.$router.push({params: {popFlag: ''}});
+              this.$emit('complete');
             }).catch((error) => {
               console.error("Error writing document: ", error);
               alert('실패');

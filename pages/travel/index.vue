@@ -3,6 +3,7 @@
 		<createForm
 			v-if="$route.params.popFlag === 'edit'"
 			:flag="'travel'"
+      @complete="getTravelList"
 		></createForm>
 		<listView
 			v-else-if="$route.params.popFlag === 'view'"
@@ -51,8 +52,7 @@
 						const data = Object.assign({ id: doc.id }, doc.data());
 						this.list.push(data);
 					});
-          this.$store.commit('travel/saveData', this.list);
-          console.log(this.$store.state.travel.list);
+          this.$store.commit('post/saveData', { travel: [...this.list] });
 				});
 			},
 			selectView(id) {
@@ -66,6 +66,3 @@
     },
   };
 </script>
-
-<style lang="scss" scoped>
-</style>
