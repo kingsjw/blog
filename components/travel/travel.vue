@@ -22,7 +22,7 @@
 </template>
 
 <script>
-	import list from './list.vue';
+	import list from '../common/list.vue';
 
 	export default {
 		props: ['listData'],
@@ -40,7 +40,7 @@
 		    if (this.listData && this.listData.length > 0) {
 		      data = this.listData;
         } else {
-		      data = this.$store.state.travel && this.$store.state.travel.list;
+		      data = this.$store.state.post && this.$store.state.post.travel;
         }
 		    return data;
       },
@@ -51,7 +51,7 @@
 			},
 		},
 		mounted() {
-      if (this.$store.state.travel.list && this.$store.state.travel.list.length <= 0) {
+      if (this.$store.state.post.travel && this.$store.state.post.travel.length <= 0) {
 			  this.$emit('getData');
       }
 			this.$nextTick(() => {

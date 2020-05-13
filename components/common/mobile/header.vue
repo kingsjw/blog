@@ -39,6 +39,10 @@
             <div v-if="pageName.indexOf('profile') === -1" class="icon profile"></div>
             <div class="name">Profile</div>
           </div>
+          <div @click="move('movie')" class="list" :class="pageName.indexOf('movie') !== -1 ? 'active' : ''">
+            <div v-if="pageName.indexOf('movie') === -1" class="icon movie"></div>
+            <div class="name">Movie</div>
+          </div>
           <div @click="move('travel')" class="list" :class="pageName.indexOf('travel') !== -1 ? 'active' : ''">
             <div v-if="pageName.indexOf('travel') === -1" class="icon travel"></div>
             <div class="name">Travel</div>
@@ -191,6 +195,9 @@
             margin-right: 32px;
             &.profile{
               background-image: url(~assets/img/icons/account.svg);
+            }
+            &.movie{
+              background-image: url(~assets/img/icons/movie.svg);
             }
             &.travel{
               background-image: url(~assets/img/icons/travel.svg);

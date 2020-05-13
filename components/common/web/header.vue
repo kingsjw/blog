@@ -13,8 +13,8 @@
         <div class="menu">
           <ul>
             <li><button @click="$router.push('/profile')">Profile</button></li>
-            <!--<li><button @click="$router.push('/movie')">Movie</button></li>-->
-            <!--<li><button>Drama</button></li> -->
+            <!--<li><button>Tech</button></li> -->
+            <li><button @click="$router.push('/movie')">Movie</button></li>
             <li><button @click="$router.push('/travel')">Travel</button></li>
           </ul>
         </div>
