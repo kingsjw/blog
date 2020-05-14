@@ -55,7 +55,7 @@
 			width: 100%;
 			height: 82%;
 			background-size: cover;
-			background-position: center;
+			background-position: center 0;
 			background-repeat: no-repeat;
 		}
 		.info{

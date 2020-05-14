@@ -51,7 +51,6 @@
       },
     },
     mounted() {
-      console.log(this.$store.state.post.movie);
       if (this.$store.state.post.movie && this.$store.state.post.movie.length <= 0) {
         this.$emit('getData');
       }
