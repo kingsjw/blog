@@ -12,10 +12,10 @@
         </div>
         <div class="menu">
           <ul>
-            <li><button @click="$router.push('/profile')">Profile</button></li>
+            <li><button @click="$router.push('/profile')" :class="$route.path && $route.path.indexOf('profile') >= 0 ? 'active' : ''">Profile</button></li>
             <!--<li><button>Tech</button></li> -->
-            <li><button @click="$router.push('/movie')">Movie</button></li>
-            <li><button @click="$router.push('/travel')">Travel</button></li>
+            <li><button @click="$router.push('/movie')" :class="$route.path && $route.path.indexOf('movie') >= 0 ? 'active' : ''">Movie</button></li>
+            <li><button @click="$router.push('/travel')" :class="$route.path && $route.path.indexOf('travel') >= 0 ? 'active' : ''">Travel</button></li>
           </ul>
         </div>
       </div>
@@ -82,6 +82,9 @@
               font-weight: 800;
               white-space: nowrap;
               height: 36px;
+              &.active{
+                color: #816bff;
+              }
               &:hover{
                 color: #816bff;
               }
