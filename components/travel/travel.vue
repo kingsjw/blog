@@ -6,10 +6,12 @@
   >
 		<div class="wrap">
 			<p class="title">Travel is refresh</p>
-			<div
-				v-if="$route.params.popFlag !== 'edit'"
-				class="list-wrap"
-			>
+      <div v-if="loading" class="itemWrap">
+        <listLoading
+          v-for="x in 3" :key="x"
+        ></listLoading>
+      </div>
+			<div v-else class="itemWrap">
 				<list
 					v-for="(val, index) in travelList"
 					:key="index"
@@ -23,11 +25,13 @@
 
 <script>
 	import list from '../common/list.vue';
+	import listLoading from '../loading/list.vue';
 
 	export default {
-		props: ['listData'],
+		props: ['listData', 'loading'],
 		components: {
 			list,
+			listLoading,
 		},
     data() {
 		  return {
@@ -72,7 +76,7 @@
         width: 100%;
         margin: 0;
         padding: 0 20px;
-        .list-wrap{
+        .itemWrap{
           display: block;
           flex-basis: initial;
           flex-wrap: initial;
@@ -91,12 +95,12 @@
 				font-size: 20px;
 				color: #494c62;
 			}
-			.list-wrap{
+			.itemWrap{
 				width: 100%;
 				display: flex;
 				flex-basis: 33.33%;
 				flex-wrap: wrap;
-        margin-top: 10px;
+        margin-top: 20px;
 			}
 		}
 	}

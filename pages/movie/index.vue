@@ -13,6 +13,7 @@
     <movieList
       v-else
       :listData="list"
+      :loading="loading"
       @getData="getMovieList"
       @selectView="selectView"
     ></movieList>
@@ -40,12 +41,14 @@
     },
     data() {
       return {
+        loading: false,
         list: [],
       };
     },
     methods: {
       getMovieList() {
         const db = Firebase.firestore();
+        this.loading = true;
         db.collection('movie').orderBy("date", "desc").get().then((querySnapshot) => {
           this.list = [];
           querySnapshot.forEach((doc) => {
@@ -53,8 +56,9 @@
             this.list.push(data);
           });
           this.$store.commit('post/saveData', { movie: [...this.list] });
+          this.loading = false;
         });
-        console.log('영화 부름');
+        // console.log('영화 부름');
       },
       selectView(id) {
         this.$router.push({ params: { popFlag: 'view' }, query: { id } });

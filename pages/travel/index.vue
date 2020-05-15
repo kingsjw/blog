@@ -13,6 +13,7 @@
 		<travelList
 			v-else
 			:listData="list"
+			:loading="loading"
 			@getData="getTravelList"
 			@selectView="selectView"
 		/>
@@ -41,18 +42,21 @@
 		data() {
 			return {
 				list: [],
+				loading: false,
 			};
 		},
 		methods: {
 			getTravelList() {
 				const db = Firebase.firestore();
+				this.loading = true;
 				db.collection('travel').orderBy("date", "desc").get().then((querySnapshot) => {
 					this.list = [];
 					querySnapshot.forEach((doc) => {
 						const data = Object.assign({ id: doc.id }, doc.data());
 						this.list.push(data);
 					});
-          this.$store.commit('post/saveData', { travel: [...this.list] });
+					this.$store.commit('post/saveData', { travel: [...this.list] });
+					this.loading = false;
 				});
 			},
 			selectView(id) {
