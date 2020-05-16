@@ -1,7 +1,8 @@
 <template>
   <div class="portfolio-list">
     <div class="box">
-      <div class="list-wrap">
+      <portfoliosLoading v-if="loading"></portfoliosLoading>
+      <div v-else class="list-wrap">
         <div
           v-for="(data, index) in projectListData"
           :key="index"
@@ -74,9 +75,14 @@
 </template>
 
 <script>
+  import portfoliosLoading from './portfoliosLoading.vue';
+
   export default {
     name: 'portfolios',
-    props: ['projectList'],
+    props: ['projectList', 'loading'],
+    components: {
+      portfoliosLoading,
+    },
     data() {
       return {
         colors: ['#f06292', '#a7ffeb', '#81d4fa', '#e040fb'],
