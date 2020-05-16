@@ -1,48 +1,58 @@
 <template>
   <div class="portfolios">
-    <div
-      v-for="(data, index) in projectListData"
-      :key="index"
-      class="card"
-    >
+    <portfoliosLoading
+      v-if="loading"
+    ></portfoliosLoading>
+    <div v-else>
       <div
-        class="projectImg"
-        :style="{ backgroundImage: `url(${data.image})` }"
-      ></div>
-      <div class="titleWrap">
-        <div class="title">{{ data.title }}</div>
-        <div class="subTitle">{{ data.subTitle }}</div>
-      </div>
-      <div class="contents" v-html="data.intro"></div>
-      <div class="techStack">
-        <span
-          v-for="(x, i) in data.techStack"
-          :key="i"
-        >{{ `#${x}` }}</span>
-      </div>
-      <div class="techStack">
-        <span
-          v-for="(graph, z) in Object.keys(data.positions)"
-          :key="z"
-          class="participation"
-        >#{{ data.positions[graph].name }}: {{ data.positions[graph].val }}%</span>
-      </div>
-      <div class="result">
+        v-for="(data, index) in projectListData"
+        :key="index"
+        class="card"
+      >
         <div
-          v-for="(key, index) in Object.keys(data.projectUrl)"
-          :key="index"
-          @click="openUrl(data.projectUrl[key])"
-          class="icon"
-          :class="key"
+          class="projectImg"
+          :style="{ backgroundImage: `url(${data.image})` }"
         ></div>
+        <div class="titleWrap">
+          <div class="title">{{ data.title }}</div>
+          <div class="subTitle">{{ data.subTitle }}</div>
+        </div>
+        <div class="contents" v-html="data.intro"></div>
+        <div class="techStack">
+          <span
+            v-for="(x, i) in data.techStack"
+            :key="i"
+          >{{ `#${x}` }}</span>
+        </div>
+        <div class="techStack">
+          <span
+            v-for="(graph, z) in Object.keys(data.positions)"
+            :key="z"
+            class="participation"
+          >#{{ data.positions[graph].name }}: {{ data.positions[graph].val }}%</span>
+        </div>
+        <div class="result">
+          <div
+            v-for="(key, index) in Object.keys(data.projectUrl)"
+            :key="index"
+            @click="openUrl(data.projectUrl[key])"
+            class="icon"
+            :class="key"
+          ></div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+  import portfoliosLoading from './portfoliosLoading.vue';
+
   export default {
-    props: ['projectList'],
+    props: ['projectList', 'loading'],
+    components: {
+      portfoliosLoading,
+    },
     computed: {
       projectListData() {
         let data = [];

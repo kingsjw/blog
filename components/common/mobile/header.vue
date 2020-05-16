@@ -104,7 +104,7 @@
 <style lang="scss" scoped>
   .headerWrap{
     width: 100%;
-    min-height: 80px;
+    min-height: 60px;
     z-index: 1;
     .content{
       padding: 9px 16px;

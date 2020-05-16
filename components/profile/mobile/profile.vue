@@ -60,6 +60,7 @@
     <section id="project">
       <div class="title">Project</div>
       <portfolios
+        :loading="loading"
         :projectList="projectList"
         @getProject="getProjectList"
       ></portfolios>
@@ -78,6 +79,7 @@
     },
     data() {
       return {
+        loading: false,
         projectList: [],
       };
     },
@@ -87,12 +89,14 @@
       },
       getProjectList() {
         const db = Firebase.firestore();
+        this.loading = true;
         db.collection('project').orderBy("date", "asc").get().then((querySnapshot) => {
           querySnapshot.forEach((doc) => {
             const data = Object.assign({ id: doc.id }, doc.data());
             this.projectList.push(data);
           });
           this.$store.commit('profile/saveData', this.projectList);
+          this.loading = false;
         });
       },
     },
