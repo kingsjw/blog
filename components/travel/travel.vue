@@ -1,6 +1,5 @@
 <template>
 	<div
-    v-if="init"
     class="travelList"
     :class="$store.state.common.isMobile ? 'mobile' : ''"
   >
@@ -33,11 +32,6 @@
 			list,
 			listLoading,
 		},
-    data() {
-		  return {
-		    init: false,
-      };
-    },
     computed: {
 		  travelList() {
 		    let data = [];
@@ -58,9 +52,6 @@
       if (this.$store.state.post.travel && this.$store.state.post.travel.length <= 0) {
 			  this.$emit('getData');
       }
-			this.$nextTick(() => {
-			  this.init = true;
-      });
 		},
 	};
 </script>
