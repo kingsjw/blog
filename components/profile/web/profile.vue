@@ -139,6 +139,7 @@ export default {
           }
           .info-text{
             font-size: 12px;
+            margin-top: 4px;
             color: #939499;
           }
           .social{
@@ -147,8 +148,8 @@ export default {
             align-items: center;
             padding: 8px 0;
             .gitHub{
-              width: 24px;
-              height: 24px;
+              width: 20px;
+              height: 20px;
               border-radius: 50%;
               background-image: url(~assets/img/icons/gitHub.png);
               background-size: cover;

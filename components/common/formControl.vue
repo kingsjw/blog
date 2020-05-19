@@ -40,8 +40,8 @@
 		methods: {
 			async replaceContentsImage() {
 				let replaceContentsData = this.formData.contents;
-				const regExp = /<(\img)([^>]*)>/gi;
-				let img = replaceContentsData.match(regExp);
+				const imageRegExp = /<(\img)([^>]*)>/gi;
+				let img = replaceContentsData.match(imageRegExp);
         let cdnUrl = [];
         if (img && img.length > 0) {
           const temp = document.createElement('div');
@@ -58,8 +58,7 @@
               cdnUrl.push({ name: file.name, url: url});
               // console.log(replaceContentsData.indexOf(img[x]));
               replaceContentsData = replaceContentsData.replace(imageData[x], url);
-              // console.log(replaceContentsData.match(regExp));
-              // await this.removeImage(this.data.imgArr);
+              // console.log(replaceContentsData.match(imageRegExp));
               this.formImage.push(url);
             } else {
               replaceContentsData = replaceContentsData.replace(imageData[x], imageData[x]);
@@ -118,12 +117,14 @@
             if (rs.cdnUrl && rs.cdnUrl.length > 0) {
               submitData.imgArr = rs.cdnUrl;
             }
+            // console.log(submitData);
             db.collection(this.flag).doc(id).set(submitData).then(() => {
               console.log("Document successfully write!");
             }).catch((e) => {
                 console.log(e);
               });
-            this.$router.push({params: {popFlag: ''}});
+            this.$emit('complete');
+            this.$router.push(`/${this.flag}`, {params: {popFlag: ''}});
           } else {
             submitData.imgArr = rs.cdnUrl && rs.cdnUrl.length > 0 ? rs.cdnUrl : this.data.imgArr;
             //update
@@ -153,8 +154,8 @@
             // console.log(submitData);
             db.collection(this.flag).doc(this.data.id).update(submitData).then(() => {
               console.log("Document successfully update!");
-              this.$router.push({params: {popFlag: ''}});
               this.$emit('complete');
+              this.$router.push(`/${this.flag}`, {params: {popFlag: ''}});
             }).catch((error) => {
               console.error("Error writing document: ", error);
               alert('실패');
