@@ -1,8 +1,10 @@
 <template>
 	<div class="list" :class="$store.state.common.isMobile ? 'mobile' : ''">
 		<div
-			:style="list && list.imgArr && list.imgArr[0] ? { backgroundImage: `url(${list.imgArr[0].url})`} : {}"
+			v-if="list && list.mainImage && list.mainImage.url"
+			:style="{ backgroundImage: `url(${list.mainImage.url})`}"
 			class="thumbnail"></div>
+			<div v-else class="errorImage"></div>
 			<div>
 				<div class="info">
 					<div class="title">{{list.title}}</div>
@@ -50,12 +52,24 @@
       .thumbnail{
         height: 70%;
       }
+			.errorImage{
+				height: 70%;
+				background-size: 38%;
+			}
     }
 		.thumbnail{
 			width: 100%;
 			height: 82%;
 			background-size: cover;
 			background-position: center 0;
+			background-repeat: no-repeat;
+		}
+		.errorImage{
+			width: 100%;
+			height: 82%;
+			background-image: url('https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Fno-image.png?alt=media&token=b92dd35f-3bb6-4f70-b809-3015ae981df7');
+			background-size: 80%;
+			background-position: center;
 			background-repeat: no-repeat;
 		}
 		.info{

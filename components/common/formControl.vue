@@ -3,6 +3,21 @@
 		<editForm
 			:formData="formData"
 		/>
+    <div class="mainImageSet">
+      <div v-if="data && data.mainImage">
+        <div v-if="mainImageFixFlag">
+          메인 이미지(수정): <input type="file" @change="onFileChange">
+          <span @click="mainImageFixFlag = false" class="cancelBtn">취소</span>
+        </div>
+        <div v-else class="mainImage" :style="{ backgroundImage: `url(${data.mainImage.url})` }">
+          <span @click="mainImageFixFlag = true" class="fixBtn">수정</span>
+        </div>
+      </div>
+      <div v-else>
+        메인 이미지:
+        <input type="file" @change="onFileChange">
+      </div>
+    </div>
 		<button @click="submit" class="md-button success submit-btn">
       <div>{{ mode === 'create' ? '저장' : '수정'}}</div>
     </button>
@@ -35,9 +50,15 @@
 				mode: this.data ? 'edit' : 'create',
 				init: false,
         formImage: [],
+        mainImageFixFlag: false,
+        mainImageFile: '',
 			};
 		},
 		methods: {
+      onFileChange(e) {
+        const files = e.target.files || e.dataTransfer.files;
+        this.mainImageFile =  files && files.length ? files[0] : '';
+      },
 			async replaceContentsImage() {
 				let replaceContentsData = this.formData.contents;
 				const imageRegExp = /<(\img)([^>]*)>/gi;
@@ -108,14 +129,26 @@
             contents: '',
             imgArr: [],
             writer: 'kingsjw7',
-            date: new Date()
+            mainImage: {
+              name: '',
+              url: '',
+            },
+            date: new Date(),
           };
-          const rs = await this.replaceContentsImage();
-          // console.log(rs);
-          submitData.contents = rs.data;
+          if (this.mainImageFile) {
+            const imageName = Date.now();
+            await this.uploadImage(this.mainImageFile, imageName);
+            submitData.mainImage = {
+              name: imageName,
+              url: await this.getImageUrl(imageName),
+            };
+          }
+          const replaceImage = await this.replaceContentsImage();
+          // console.log(replaceImage);
+          submitData.contents = replaceImage.data;
           if (this.mode === 'create') {
-            if (rs.cdnUrl && rs.cdnUrl.length > 0) {
-              submitData.imgArr = rs.cdnUrl;
+            if (replaceImage.cdnUrl && replaceImage.cdnUrl.length > 0) {
+              submitData.imgArr = replaceImage.cdnUrl;
             }
             // console.log(submitData);
             db.collection(this.flag).doc(id).set(submitData).then(() => {
@@ -124,11 +157,14 @@
                 console.log(e);
               });
             this.$emit('complete');
-            this.$router.push(`/${this.flag}`, {params: {popFlag: ''}});
+            this.$router.push(`/${this.flag}`, { params: {popFlag: ''} });
           } else {
-            submitData.imgArr = rs.cdnUrl && rs.cdnUrl.length > 0 ? rs.cdnUrl : this.data.imgArr;
+            submitData.imgArr = replaceImage.cdnUrl && replaceImage.cdnUrl.length > 0 ? replaceImage.cdnUrl : this.data.imgArr;
             //update
             // console.log(this.formImage);
+            if (this.mainImageFile && this.data && this.data.mainImage) {
+              this.removeImage(this.data.mainImage.name);
+            }
             if (this.formImage && this.formImage.length > 0) {
               const removeList = [];
               const imgArr = [];
@@ -155,7 +191,7 @@
             db.collection(this.flag).doc(this.data.id).update(submitData).then(() => {
               console.log("Document successfully update!");
               this.$emit('complete');
-              this.$router.push(`/${this.flag}`, {params: {popFlag: ''}});
+              this.$router.push(`/${this.flag}`, { params: {popFlag: ''} });
             }).catch((error) => {
               console.error("Error writing document: ", error);
               alert('실패');
@@ -174,6 +210,48 @@
 </script>
 
 <style lang="scss" scoped>
+  .mainImageSet{
+    .cancelBtn{
+      cursor: pointer;
+    }
+    .mainImage{
+      width: 300px;
+      height: 200px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .fixBtn{
+        display: none;
+        cursor: pointer;
+        color: #fff;
+        z-index: 1;
+        text-decoration: underline;
+      }
+      &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        transition: .3s ease;
+      }
+      &:hover{
+        .fixBtn{
+          display: block;
+        }
+        &::after{
+          opacity: 1;
+        }
+      }
+    }
+  }
   .pop{
     position: fixed;
     top: 0;
