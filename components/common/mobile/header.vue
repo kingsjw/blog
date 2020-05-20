@@ -184,7 +184,6 @@
           padding: 4px 16px;
           min-height: 48px;
           align-items: center;
-          justify-content: space-between;
           &.active{
             background-color: rgba(129, 107, 255, 0.4);
             color: #816bff;
