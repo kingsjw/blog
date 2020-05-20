@@ -10,13 +10,13 @@
       :data="list"
       :flag="'movie'"
     />
-    <movieList
+    <listWrap
       v-else
       :listData="list"
       :loading="loading"
       @getData="getMovieList"
       @selectView="selectView"
-    ></movieList>
+    ></listWrap>
     <btn
       v-if="!$route.params.popFlag && $store.state.user.isLogin"
       :type="'edit'"
@@ -26,9 +26,9 @@
 </template>
 
 <script>
-  import createForm from '../../components/common/formControl.vue';
-  import listView from '../../components/common/list-view.vue';
-  import movieList from '../../components/movie/movieList.vue';
+  import listWrap from '../../components/post/listWrap.vue';
+	import createForm from '../../components/post/formControl.vue';
+	import listView from '../../components/post/list-view.vue';
   import btn from '../../components/common/generalBtn.vue';
   import Firebase from "firebase";
 
@@ -47,7 +47,7 @@
     components: {
       createForm,
       listView,
-      movieList,
+      listWrap,
       btn,
     },
     data() {

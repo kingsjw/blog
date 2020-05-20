@@ -22,6 +22,17 @@
 </script>
 
 <style lang="scss" scoped>
+	.tech{
+		.list{
+			.thumbnail{
+					width: 100%;
+					height: 82%;
+					background-size: contain;
+					background-position: center;
+					background-repeat: no-repeat;
+			}
+		}
+	}
 	.list{
 		width: calc((100% / 3) - 22px);
 		height: 520px;

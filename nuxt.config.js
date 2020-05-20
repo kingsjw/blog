@@ -69,6 +69,12 @@ module.exports = {
         name: 'movie-edit',
         path: ':popFlag?',
       });
+      parent = routes.find(route => route.path === '/tech');
+      parent.children = [];
+      parent.children.push({
+        name: 'tech-edit',
+        path: ':popFlag?',
+      });
     },
   },
 };

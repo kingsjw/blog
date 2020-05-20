@@ -13,7 +13,7 @@
         <div class="menu">
           <ul>
             <li><button @click="$router.push('/profile')" :class="$route.path && $route.path.indexOf('profile') >= 0 ? 'active' : ''">Profile</button></li>
-            <!--<li><button>Tech</button></li> -->
+            <li><button @click="$router.push('/tech')" :class="$route.path && $route.path.indexOf('tech') >= 0 ? 'active' : ''">Tech</button></li>
             <li><button @click="$router.push('/movie')" :class="$route.path && $route.path.indexOf('movie') >= 0 ? 'active' : ''">Movie</button></li>
             <li><button @click="$router.push('/travel')" :class="$route.path && $route.path.indexOf('travel') >= 0 ? 'active' : ''">Travel</button></li>
           </ul>

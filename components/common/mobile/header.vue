@@ -36,16 +36,20 @@
         </div>
         <div class="pages">
           <div @click="move('profile')" class="list" :class="pageName.indexOf('profile') !== -1 ? 'active' : ''">
-            <div v-if="pageName.indexOf('profile') === -1" class="icon profile"></div>
-            <div class="name">Profile</div>
+            <i v-if="pageName.indexOf('profile') === -1" class="icon profile"></i>
+            <span class="name">Profile</span>
+          </div>
+          <div @click="move('tech')" class="list" :class="pageName.indexOf('tech') !== -1 ? 'active' : ''">
+            <i v-if="pageName.indexOf('tech') === -1" class="icon tech"></i>
+            <span class="name">Tech</span>
           </div>
           <div @click="move('movie')" class="list" :class="pageName.indexOf('movie') !== -1 ? 'active' : ''">
-            <div v-if="pageName.indexOf('movie') === -1" class="icon movie"></div>
-            <div class="name">Movie</div>
+            <i v-if="pageName.indexOf('movie') === -1" class="icon movie"></i>
+            <span class="name">Movie</span>
           </div>
           <div @click="move('travel')" class="list" :class="pageName.indexOf('travel') !== -1 ? 'active' : ''">
-            <div v-if="pageName.indexOf('travel') === -1" class="icon travel"></div>
-            <div class="name">Travel</div>
+            <i v-if="pageName.indexOf('travel') === -1" class="icon travel"></i>
+            <span class="name">Travel</span>
           </div>
         </div>
       </div>
@@ -180,6 +184,7 @@
           padding: 4px 16px;
           min-height: 48px;
           align-items: center;
+          justify-content: space-between;
           &.active{
             background-color: rgba(129, 107, 255, 0.4);
             color: #816bff;
@@ -196,6 +201,9 @@
             &.profile{
               background-image: url(~assets/img/icons/account.svg);
             }
+            &.tech{
+              background-image: url(~assets/img/icons/code.svg);
+            }
             &.movie{
               background-image: url(~assets/img/icons/movie.svg);
             }
@@ -204,6 +212,7 @@
             }
           }
           .name {
+            font-weight: 400;
             font-size: 14px;
             line-height: 1.25em;
           }

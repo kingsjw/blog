@@ -1,6 +1,7 @@
 export const state = () => ({
   travel: [],
   movie: [],
+  tech: [],
 });
 
 export const mutations = {
