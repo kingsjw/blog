@@ -63,7 +63,7 @@
 				db.collection('travel').orderBy("date", "desc").get().then((querySnapshot) => {
 					this.list = [];
 					querySnapshot.forEach((doc) => {
-						const data = Object.assign({ id: doc.id }, doc.data());
+						const data = Object.assign({ id: doc.id, type: 'travel' }, doc.data());
 						this.list.push(data);
 					});
 					this.$store.commit('post/saveData', { travel: [...this.list] });

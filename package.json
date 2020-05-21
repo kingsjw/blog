@@ -16,6 +16,7 @@
   "dependencies": {
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "babel-polyfill": "^6.26.0",
+    "es6-promise": "^4.2.8",
     "eventsource-polyfill": "^0.9.6",
     "firebase": "^7.1.0",
     "github-markdown-css": "^3.0.1",

@@ -15,6 +15,7 @@
 					v-for="(val, index) in listing"
 					:key="index"
 					:list="val"
+					:class="val.type"
 					@click.native="selectView(val.id)"
 				></list>
 			</div>

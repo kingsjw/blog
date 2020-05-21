@@ -6,12 +6,12 @@
 			></listViewLoading>
 			<div
 				v-else
-				class="contents markdown-body" v-html="data.contents"
+				class="contents markdown-body" v-html="listViewData && listViewData.contents"
 			></div>
 		</div>
 		<editForm
 			v-else
-			:data="data"
+			:data="listViewData"
 			:flag="flag"
 		/>
 		<!-- {{data}} -->
@@ -58,12 +58,28 @@
 				editMode: false,
 			};
 		},
+		computed: {
+			listViewData() {
+				let viewData = '';
+				if (this.data) {
+					viewData = this.data;
+				} else {
+					viewData = this.$store.state.postView.data && this.$store.state.postView.data[this.$route.query.id];
+				}
+				return viewData;
+			},
+		},
 		async mounted() {
 			const db = Firebase.firestore();
 			this.loading = true;
-			const doc = await db.collection(this.flag).doc(this.$route.query.id).get();
-      const data = Object.assign({ id: doc.id }, doc.data());
-			this.data = data;
+			// console.log(this.$store.state.postView);
+			// console.log((this.$store.state.postView.data && this.$store.state.postView.data[this.$route.query.id]) === undefined);
+			if ((this.$store.state.postView.data && this.$store.state.postView.data[this.$route.query.id]) === undefined) {
+				const doc = await db.collection(this.flag).doc(this.$route.query.id).get();
+				const data = Object.assign({ id: doc.id }, doc.data());
+				this.data = data;
+				this.$store.commit('postView/saveData', this.data);
+			}
 			this.loading = false;
 		},
 	};

@@ -33,7 +33,8 @@ module.exports = {
     vender: [
       'vue2-editor',
       'eventsource-polyfill',
-      'babel-polyfill'
+      'babel-polyfill',
+      'es6-promise/auto'
     ],
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
@@ -47,6 +48,7 @@ module.exports = {
     }
   },
   plugins: [
+    { src: './plugins/polyfill.js', ssr: false },
     { src: './plugins/firebase.js', ssr: false },
     { src: './plugins/vue2-editor.js', ssr: false }
   ],

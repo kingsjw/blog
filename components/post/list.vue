@@ -22,17 +22,6 @@
 </script>
 
 <style lang="scss" scoped>
-	.tech{
-		.list{
-			.thumbnail{
-					width: 100%;
-					height: 82%;
-					background-size: contain;
-					background-position: center;
-					background-repeat: no-repeat;
-			}
-		}
-	}
 	.list{
 		width: calc((100% / 3) - 22px);
 		height: 520px;
@@ -43,6 +32,15 @@
 		cursor: pointer;
 		transition: .3s ease;
 		box-shadow: 0 1px 11px 0 rgba(0,0,0,.1);
+		&.tech{
+			.thumbnail{
+					width: 100%;
+					height: 82%;
+					background-size: contain;
+					background-position: center;
+					background-repeat: no-repeat;
+			}
+		}
     &:nth-child(n + 4) {
       margin-top: 30px;
     }
