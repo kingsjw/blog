@@ -36,7 +36,7 @@
 	export default {
 		props: ['flag'],
 		head() {
-			const name = this.data && this.data.title;
+			const name = this.listViewData && this.listViewData.title;
 			return {
 				title: `${name ? name : '리뷰'}`,
 				meta: [

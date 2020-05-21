@@ -91,7 +91,7 @@ export default {
           this.$store.commit('post/saveData', commitData);
         });
       });
-      console.log(this.$store.state.postView);
+      // console.log(this.$store.state.postView);
     },
     selectView(type, id) {
       this.$router.push({ path: `/${type}/view`, query: { id } });
