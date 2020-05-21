@@ -83,6 +83,7 @@
       home() {
         this.showNavigation = false;
         this.$router.replace('/');
+        window.document.body.style.overflowY = '';
       },
       openLogin() {
         this.showNavigation = false;
