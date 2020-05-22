@@ -13,6 +13,7 @@
 			v-else
 			:data="listViewData"
 			:flag="flag"
+			@getData="$emit('getData')"
 		/>
 		<!-- {{data}} -->
 		<div class="btn-wrap">

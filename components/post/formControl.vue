@@ -4,7 +4,7 @@
 			:formData="formData"
 		/>
     <div class="mainImageSet">
-      <div v-if="data && data.mainImage">
+      <div v-if="data && data.mainImage && data.mainImage.url">
         <div v-if="mainImageFixFlag">
           메인 이미지(수정): <input type="file" @change="onFileChange">
           <span @click="mainImageFixFlag = false" class="cancelBtn">취소</span>
@@ -129,10 +129,6 @@
             contents: '',
             imgArr: [],
             writer: 'kingsjw7',
-            mainImage: {
-              name: '',
-              url: '',
-            },
             date: new Date(),
           };
           if (this.mainImageFile) {
@@ -155,9 +151,11 @@
               console.log("Document successfully write!");
             }).catch((e) => {
                 console.log(e);
-              });
-            this.$emit('complete');
-            this.$router.push(`/${this.flag}`, { params: {popFlag: ''} });
+            });
+            this.$emit('getData');
+            setTimeout(() => {
+              this.$router.push(`/${this.flag}`);
+            }, 300);
           } else {
             submitData.imgArr = replaceImage.cdnUrl && replaceImage.cdnUrl.length > 0 ? replaceImage.cdnUrl : this.data.imgArr;
             //update
@@ -190,8 +188,10 @@
             // console.log(submitData);
             db.collection(this.flag).doc(this.data.id).update(submitData).then(() => {
               console.log("Document successfully update!");
-              this.$emit('complete');
-              this.$router.push(`/${this.flag}`, { params: {popFlag: ''} });
+              this.$emit('getData');
+              setTimeout(() => {
+                this.$router.push(`/${this.flag}`);
+              }, 300);
             }).catch((error) => {
               console.error("Error writing document: ", error);
               alert('실패');

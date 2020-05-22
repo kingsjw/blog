@@ -4,11 +4,9 @@
       v-if="!$store.state.common.isMobile"
     >
       <div class="wrap">
-        <div class="logo">
-          <a href="/">
-            kingsjw
-            <p>software engineer</p>
-          </a>
+        <div class="logo" @click="$router.replace('/')">
+          kingsjw
+          <p>software engineer</p>
         </div>
         <div class="menu">
           <ul>
@@ -56,17 +54,13 @@
         .logo{
           font-weight: bold;
           font-size: 22px;
-          a{
-            display: block;
-            text-decoration: none;
-            color: inherit;
-            p{
-              margin: 2px 0 0 0;
-              line-height: normal;
-              font-size: 10px;
-              font-weight: normal;
-              color: #aaa;
-            }
+          cursor: pointer;
+          p{
+            margin: 2px 0 0 0;
+            line-height: normal;
+            font-size: 10px;
+            font-weight: normal;
+            color: #aaa;
           }
         }
         .menu ul{

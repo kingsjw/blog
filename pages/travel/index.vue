@@ -3,12 +3,13 @@
 		<createForm
 			v-if="$route.params.popFlag === 'edit'"
 			:flag="'travel'"
-      @complete="getTravelList"
+      @getData="getTravelList"
 		></createForm>
 		<listView
 			v-else-if="$route.params.popFlag === 'view'"
 			:data="list"
 			:flag="'travel'"
+			@getData="getTravelList"
 		/>
 		<travelList
 			v-else
@@ -58,6 +59,7 @@
 		},
 		methods: {
 			getTravelList() {
+				// console.log('get');
 				const db = Firebase.firestore();
 				this.loading = true;
 				db.collection('travel').orderBy("date", "desc").get().then((querySnapshot) => {
