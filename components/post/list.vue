@@ -34,8 +34,6 @@
 		box-shadow: 0 1px 11px 0 rgba(0,0,0,.1);
 		&.tech{
 			.thumbnail{
-					width: 100%;
-					height: 82%;
 					background-size: contain;
 					background-position: center;
 					background-repeat: no-repeat;
@@ -59,11 +57,14 @@
         margin-top: 0;
       }
       .thumbnail{
-        height: 70%;
+        height: 78%;
       }
 			.errorImage{
-				height: 70%;
+				height: 78%;
 				background-size: 38%;
+			}
+			.info{
+				padding: 20px 18px;
 			}
     }
 		.thumbnail{
