@@ -3,12 +3,13 @@
 		<createForm
 			v-if="$route.params.popFlag === 'edit'"
 			:flag="'tech'"
-      @complete="getTechList"
+      @getData="getTechList"
 		></createForm>
 		<listView
 			v-else-if="$route.params.popFlag === 'view'"
 			:data="list"
 			:flag="'tech'"
+			@getData="getTechList"
 		/>
 		<listWrap
 			v-else
