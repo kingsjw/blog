@@ -1,6 +1,5 @@
 <template>
   <div
-    v-if="init"
     :class="{
       scrollDown,
       scrollDownTop,
