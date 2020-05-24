@@ -15,7 +15,6 @@
 			:flag="flag"
 			@getData="$emit('getData')"
 		/>
-		<!-- {{data}} -->
 		<div class="btn-wrap">
 			<button
         v-if="$store.state.user.isLogin"
