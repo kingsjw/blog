@@ -39,7 +39,7 @@
 				title: `여행 리뷰`,
 				meta: [
 					{ hid: 'description', name: 'description', content: `여행 리뷰` },
-					{ hid: 'og:image', name: 'og:image', content: 'https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Fflog.jpg?alt=media&token=5d7a96e9-b03a-47a9-a2ac-0267ca4a4939' },
+					{ hid: 'og:image', name: 'og:image', content: 'https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel.jpg?alt=media&token=fa352e6e-f0f3-4859-b7ce-07be728114d8' },
 					{ hid: 'og:title', name: 'og:title', content: `kingsjw - 여행 리뷰` },
 					{ hid: 'og:description', name: 'og:description', content: `여행 리뷰` },
 				],
@@ -79,7 +79,5 @@
 				this.$router.push({ params: { popFlag: 'edit' } });
 			},
 		},
-    mounted() {
-    },
   };
 </script>
