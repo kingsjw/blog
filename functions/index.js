@@ -13,7 +13,5 @@ const nuxt = new Nuxt(config);
 
 exports.kingsjw7 = functions.https.onRequest(async (req, res) => {
   await nuxt.ready();
-
-  const result = await nuxt.renderRoute(req.path); // Returns { html, error, redirected }
-  res.send(result.html); // Sends html as response
+  nuxt.render(req, res);
 });

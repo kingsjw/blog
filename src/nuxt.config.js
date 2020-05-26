@@ -26,7 +26,7 @@ module.exports = {
   */
   buildDir: 'nuxt',
   build: {
-    extractCSS: true,
+    // extractCSS: true,
     babel: {
       plugins: [
         '@babel/plugin-syntax-dynamic-import',

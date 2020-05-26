@@ -1,5 +1,5 @@
 <template>
-	<div class="list-view" :class="$store.state.common.isMobile ? 'mobile' : ''">
+	<div class="list-view" :class="$store.state.device.isMobile ? 'mobile' : ''">
 		<div v-if="!editMode">
 			<listViewLoading
 				v-if="loading"

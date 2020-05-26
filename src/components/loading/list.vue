@@ -1,5 +1,5 @@
 <template>
-	<div class="list" :class="$store.state.common.isMobile ? 'mobile' : ''">
+	<div class="list" :class="$store.state.device.isMobile ? 'mobile' : ''">
 		<div class="thumbnail">
       <div class="moveItem"></div>
     </div>

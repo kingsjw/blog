@@ -1,6 +1,6 @@
 <template>
   <profileWeb
-    v-if="!$store.state.common.isMobile"
+    v-if="!$store.state.device.isMobile"
     :myInfo="myInfo"
   ></profileWeb>
   <profileMobile

@@ -3,7 +3,7 @@
   <div
     @click.stop
     id="loginWrapper"
-    :class="$store.state.common.isMobile ? 'mobile' : ''"
+    :class="$store.state.device.isMobile ? 'mobile' : ''"
   >
     <div
       class="login"

@@ -7,7 +7,7 @@
     }"
   >
     <HeaderWeb
-      v-if="!$store.state.common.isMobile"
+      v-if="!$store.state.device.isMobile"
     ></HeaderWeb>
     <HeaderMobile
       v-else
@@ -21,7 +21,7 @@
 			@login="login"
 		/>
     <btn
-			v-if="authLoad && !$store.state.user.isLogin && !$store.state.common.isMobile"
+			v-if="authLoad && !$store.state.user.isLogin && !$store.state.device.isMobile"
       :type="'login'"
 			@click.native="openPop = true"
 		/>
@@ -42,9 +42,9 @@
 			loginForm,
       btn,
     },
+    middleware: 'device',
     data() {
       return {
-        init: false,
         authLoad: false,
 				userData: null,
 				openPop: false,
@@ -118,18 +118,15 @@
 				this.$store.commit('user/loginCheck', this.userData);
 				// console.log(this.userData);
 			},
-      resizeWindow(e) {
+      resizeWindow() {
         if (this.timeout) {
           clearTimeout(this.timeout);
         }
         this.timeout = setTimeout(() => {
-          if (e.currentTarget.innerWidth <= 768) {
-            this.isMobile = true;
+          if ((window.innerWidth <= 768) !== this.$store.state.device.isMobile) {
+            this.$store.commit('device/changeDevice', !this.$store.state.device.isMobile);
             this.timeout = '';
-          } else {
-            this.isMobile = false;
           }
-          this.$store.commit('common/changeDevice', this.isMobile);
         }, 300);
       },
     },
@@ -142,7 +139,7 @@
         || navigator.userAgent.match(/iPod/i)
         || navigator.userAgent.match(/BlackBerry/i)
         || navigator.userAgent.match(/Windows Phone/i));
-      this.$store.commit('common/changeDevice', this.isMobile);
+      this.$store.commit('device/changeDevice', this.isMobile);
       Firebase.auth().onAuthStateChanged((user) => {
 				this.authLoad = true;
 				if (user) {
@@ -150,7 +147,6 @@
 				}
     	});
       this.$nextTick(() => {
-        this.init = true;
         window.addEventListener('resize', this.resizeWindow);
       });
     },

@@ -1,5 +1,5 @@
 <template>
-  <div class="main" :class="$store.state.common.isMobile ? 'mobile' : ''">
+  <div class="main" :class="$store.state.device.isMobile ? 'mobile' : ''">
     <div class="wrap">
       <div class="searchWrap">
         <div class="search">

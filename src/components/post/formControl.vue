@@ -1,5 +1,5 @@
 <template>
-	<div class="edit" v-if="init" :class="$store.state.common.isMobile ? 'mobile' : ''">
+	<div class="edit" v-if="init" :class="$store.state.device.isMobile ? 'mobile' : ''">
 		<editForm
 			:formData="formData"
 		/>

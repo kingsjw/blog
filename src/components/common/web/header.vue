@@ -1,7 +1,7 @@
 <template>
   <div class="headerWrap">
     <header
-      v-if="!$store.state.common.isMobile"
+      v-if="!$store.state.device.isMobile"
     >
       <div class="wrap">
         <div class="logo" @click="$router.replace('/')">

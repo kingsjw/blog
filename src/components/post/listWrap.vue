@@ -1,7 +1,7 @@
 <template>
 	<div
     class="postWrap"
-    :class="[$store.state.common.isMobile ? 'mobile' : '', pageName]"
+    :class="[$store.state.device.isMobile ? 'mobile' : '', pageName]"
   >
 		<div class="wrap">
 			<p class="title">{{ utils.postPageTitle(pageName) }}</p>
