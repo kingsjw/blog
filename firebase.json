@@ -1,6 +1,15 @@
 {
+  "functions": {
+    "source": "functions",
+    "predeploy": [
+      "npm --prefix src run lint && npm --prefix src run build && rm -rf functions/nuxt && cp -r src/nuxt/ functions/nuxt/ && cp src/nuxt.config.js functions/"
+    ]
+  },
   "hosting": {
-    "public": "dist",
+    "predeploy": [
+      "rm -rf public/* && mkdir -p public/_nuxt && cp -a src/nuxt/dist/client/. public/_nuxt && cp -a src/static/. public/ && cp -a public_base/. public/"
+    ],
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -9,7 +18,7 @@
     "rewrites": [
       {
         "source": "**",
-        "destination": "/index.html"
+        "function": "kingsjw7"
       }
     ]
   }
