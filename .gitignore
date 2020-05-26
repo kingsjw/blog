@@ -12,6 +12,8 @@ dist
 
 .firebase
 
+public/ *
+
 .idea
 
 plugins/firebase.js
