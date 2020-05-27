@@ -8,14 +8,12 @@ firebase-debug.log
 # Nuxt build
 .nuxt
 
+nuxt
+
 # Nuxt generate
 dist
 
 .firebase
-
-public/*
-
-.firebaserc
 
 .idea
 
