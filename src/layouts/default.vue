@@ -1,11 +1,19 @@
 <template>
   <div
+    class="pageWrap"
     :class="{
       scrollDown,
       scrollDownTop,
       scrollWeb,
     }"
   >
+    <div class="menuGroup">
+      <a href="https://kingsjw7-f7e06.firebaseapp.com/">Home</a>
+      <a href="https://kingsjw7-f7e06.firebaseapp.com/profile">Profile</a>
+      <a href="https://kingsjw7-f7e06.firebaseapp.com/tech">Tech</a>
+      <a href="https://kingsjw7-f7e06.firebaseapp.com/movie">Movie</a>
+      <a href="https://kingsjw7-f7e06.firebaseapp.com/travel">Travel</a>
+    </div>
     <HeaderWeb
       v-if="!$store.state.device.isMobile"
     ></HeaderWeb>
@@ -152,6 +160,17 @@
     },
   }
 </script>
+
+<style lang="scss" scoped>
+  .pageWrap{
+    overflow-x: hidden;
+    position: relative;
+    .menuGroup{
+      left: 1000%;
+      position: absolute;
+    }
+  }
+</style>
 
 <style lang="scss">
   *, *:before, *:after {

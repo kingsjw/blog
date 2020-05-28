@@ -38,10 +38,10 @@
 			return {
 				title: `Tech`,
 				meta: [
-					{ hid: 'description', name: 'description', content: `Tech` },
+					{ hid: 'description', name: 'description', content: `개발자 서재우의 기술 블로그` },
 					{ hid: 'og:image', name: 'og:image', content: 'https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Fwhy.jpg?alt=media&token=aa6e1c2f-d496-4d03-8f1d-896b965ae5e5' },
 					{ hid: 'og:title', name: 'og:title', content: `kingsjw - Tech` },
-					{ hid: 'og:description', name: 'og:description', content: `Tech` },
+					{ hid: 'og:description', name: 'og:description', content: `개발자 서재우의 기술 블로그` },
 				],
 			};
 		},
