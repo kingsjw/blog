@@ -18,7 +18,12 @@
             </transition>
           </div>
         </div>
-        <transition-group name='slide-bottom-fade' tag='div' class='itemWrap'>
+        <transition-group
+          v-if="allPostData && allPostData.length > 0"
+          name='fade'
+          tag='div'
+          class='itemWrap'
+        >
           <list
             v-for="(val, index) in search && (searchPostData && searchPostData.length > 0) ? searchPostData : allPostData"
             :key="`${val}${index}`"
@@ -27,6 +32,14 @@
             @click.native="selectView(val.type, val.id)"
           ></list>
         </transition-group>
+        <div
+          v-else
+          class="itemWrap"
+        >
+          <listLoading
+            v-for="x in 6" :key="x"
+          ></listLoading>
+        </div>
       </div>
     </div>
   </div>
@@ -35,10 +48,12 @@
 <script>
 import Firebase from 'firebase';
 import list from '../components/post/list.vue';
+import listLoading from '../components/loading/list.vue';
 
 export default {
   components: {
     list,
+    listLoading,
   },
   data() {
     const postStoreData =  this.$store.state.post;
@@ -77,7 +92,7 @@ export default {
         return { name: v, query: db.collectionGroup(v) };
       });
       // console.log(groupQueryObj);
-      Object.values(groupQueryObj).forEach((obj) => {
+      Object.values(groupQueryObj).forEach((obj, index) => {
         obj.query.get().then((querySnapshot) => {
           const list = [];
           const commitData = {};
