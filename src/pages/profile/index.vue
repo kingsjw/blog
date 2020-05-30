@@ -34,7 +34,7 @@ export default {
       myInfo: {
         intro: {
           name: 'Seo jae woo',
-          self: 'hi im software engineer',
+          self: '안녕하세요! 프론트엔드 엔지니어입니다.',
         },
         social: {
           gitHub: 'https://github.com/kingsjw',
