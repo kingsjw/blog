@@ -36,7 +36,7 @@
 	export default {
 		head() {
 			return {
-				title: `여행 리뷰`,
+				title: `서재우의 여행 리뷰`,
 				meta: [
 					{ hid: 'description', name: 'description', content: `개발자 서재우의 여행 리뷰` },
 					{ hid: 'og:image', name: 'og:image', content: 'https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel.jpg?alt=media&token=fa352e6e-f0f3-4859-b7ce-07be728114d8' },

@@ -36,7 +36,7 @@
   export default {
 		head() {
 			return {
-				title: `영화 리뷰`,
+				title: `서재우의 영화 리뷰`,
 				meta: [
 					{ hid: 'description', name: 'description', content: `강북의 이동진 영화인 서재우의 날카로운 리뷰` },
 					{ hid: 'og:image', name: 'og:image', content: 'https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Fai.jpg?alt=media&token=52d7d579-d0b6-433c-8f5a-d8fa9ebc04d8' },
