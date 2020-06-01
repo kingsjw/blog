@@ -15,7 +15,44 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+    __dangerouslyDisableSanitizers: ['script'],
+    script: [
+      {
+        innerHTML: `{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://kingsjw7-f7e06.firebaseapp.com/"
+          },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Profile",
+            "item": "https://kingsjw7-f7e06.firebaseapp.com/profile"
+          },{
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Tech",
+            "item": "https://kingsjw7-f7e06.firebaseapp.com/tech"
+          },{
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Movie",
+            "item": "https://kingsjw7-f7e06.firebaseapp.com/movie"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Travel",
+            "item": "https://kingsjw7-f7e06.firebaseapp.com/travel"
+          }]
+        }`,
+        type: 'application/ld+json'
+      }
+    ],
   },
   /*
   ** Customize the progress bar color
