@@ -8,7 +8,7 @@
     }"
   >
     <div class="menuGroup">
-      <a href="https://kingsjw7-f7e06.firebaseapp.com/">Home</a>
+      <a href="https://kingsjw7-f7e06.firebaseapp.com">Home</a>
       <a href="https://kingsjw7-f7e06.firebaseapp.com/profile">Profile</a>
       <a href="https://kingsjw7-f7e06.firebaseapp.com/tech">Tech</a>
       <a href="https://kingsjw7-f7e06.firebaseapp.com/movie">Movie</a>
