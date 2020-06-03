@@ -71,7 +71,7 @@ export default {
       if (this.listData && this.listData.length > 0) {
         allData = this.listData;
       } else {
-        allData = allData.concat(this.postStoreData['travel'], this.postStoreData['movie'], this.postStoreData['tech']);
+        allData = allData.concat(this.postStoreData['tech'], this.postStoreData['travel'], this.postStoreData['movie']);
       }
       return allData;
     },
