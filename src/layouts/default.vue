@@ -7,13 +7,23 @@
       scrollWeb,
     }"
   >
-    <div class="menuGroup">
-      <a href="https://kingsjw7-f7e06.firebaseapp.com">Home</a>
-      <a href="https://kingsjw7-f7e06.firebaseapp.com/profile">Profile</a>
-      <a href="https://kingsjw7-f7e06.firebaseapp.com/tech">Tech</a>
-      <a href="https://kingsjw7-f7e06.firebaseapp.com/movie">Movie</a>
-      <a href="https://kingsjw7-f7e06.firebaseapp.com/travel">Travel</a>
-    </div>
+    <ul class="menuGroup">
+      <li>
+        <a href="https://kingsjw7-f7e06.firebaseapp.com">Home</a>
+      </li>
+      <li>
+        <a href="https://kingsjw7-f7e06.firebaseapp.com/profile">Profile</a>
+      </li>
+      <li>
+        <a href="https://kingsjw7-f7e06.firebaseapp.com/tech">Tech</a>
+      </li>
+      <li>
+        <a href="https://kingsjw7-f7e06.firebaseapp.com/movie">Movie</a>
+      </li>
+      <li>
+        <a href="https://kingsjw7-f7e06.firebaseapp.com/travel">Travel</a>
+      </li>
+    </ul>
     <HeaderWeb
       v-if="!$store.state.device.isMobile"
     ></HeaderWeb>
