@@ -15,7 +15,7 @@
         <div
           class="inputWrapper">
           <p class="input-title input-email">이메일주소</p>
-          <input type="text" class="email" v-bind:value="id" v-on:input="id = $event.target.value">
+          <input type="text" class="email" v-bind:value="id" v-on:input="id = $event.target.value" ref="idInput">
           <p class="input-title input-password">비밀번호</p>
           <input v-bind:value="pw" v-on:input="pw = $event.target.value" type="password" class="password">
         </div>
@@ -44,6 +44,11 @@ export default {
     login() {
       this.$emit('login', { userId: this.id, userPw: this.pw });
     },
+  },
+  mounted() {
+    this.$nextTick(() => {
+      this.$refs.idInput.focus();
+    });
   },
 };
 </script>
