@@ -19,14 +19,6 @@
       {
         "source": "**",
         "function": "kingsjw7"
-      },
-      {
-        "source": "/sitemap.xml",
-        "function": "https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/sitemap.xml?alt=media&token=feed0525-fb87-4219-9f41-4cda48431b03"
-      },
-      {
-        "source": "/robots.txt",
-        "function": "https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/robots.txt?alt=media&token=784a6521-0de5-45e2-b203-c240ecc43a54"
       }
     ]
   }
