@@ -62,7 +62,7 @@
 				// console.log('get');
 				const db = Firebase.firestore();
 				this.loading = true;
-				db.collection('travel').orderBy("date", "desc").get().then((querySnapshot) => {
+				db.collection('travel').orderBy("title", "asc").get().then((querySnapshot) => {
 					this.list = [];
 					querySnapshot.forEach((doc) => {
 						const data = Object.assign({ id: doc.id, type: 'travel' }, doc.data());

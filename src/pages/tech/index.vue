@@ -61,7 +61,7 @@
 			getTechList() {
 				const db = Firebase.firestore();
 				this.loading = true;
-				db.collection('tech').orderBy("date", "desc").get().then((querySnapshot) => {
+				db.collection('tech').orderBy("title", "asc").get().then((querySnapshot) => {
 					this.list = [];
 					querySnapshot.forEach((doc) => {
 						const data = Object.assign({ id: doc.id, type: 'tech' }, doc.data());

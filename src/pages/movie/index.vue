@@ -61,7 +61,7 @@
       getMovieList() {
         const db = Firebase.firestore();
         this.loading = true;
-        db.collection('movie').orderBy("date", "desc").get().then((querySnapshot) => {
+        db.collection('movie').orderBy("title", "asc").get().then((querySnapshot) => {
           this.list = [];
           querySnapshot.forEach((doc) => {
             const data = Object.assign({ id: doc.id, type: 'movie' }, doc.data());

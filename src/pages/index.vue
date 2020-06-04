@@ -90,11 +90,11 @@ export default {
       const db = Firebase.firestore();
       const collectionList = this.necessaryCollectionList;
       const groupQueryObj = collectionList.map((v) => {
-        return { name: v, query: db.collectionGroup(v) };
+        return { name: v, query: db.collection(v) };
       });
       // console.log(groupQueryObj);
       Object.values(groupQueryObj).forEach((obj, index) => {
-        obj.query.get().then((querySnapshot) => {
+        obj.query.orderBy('title', 'asc').get().then((querySnapshot) => {
           const list = [];
           const commitData = {};
           querySnapshot.forEach((doc) => {
@@ -103,6 +103,7 @@ export default {
               this.postList.push(data);
               this.$store.commit('postView/saveData', data);
           });
+          console.log(list);
           commitData[obj.name] = [...list];
           this.$store.commit('post/saveData', commitData);
         });
