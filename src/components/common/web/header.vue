@@ -3,6 +3,25 @@
     <header
       v-if="!$store.state.device.isMobile"
     >
+      <nav class="menuGroup">
+        <ul>
+          <li>
+            <a href="https://kingsjw7-f7e06.firebaseapp.com">Home</a>
+          </li>
+          <li>
+            <a href="https://kingsjw7-f7e06.firebaseapp.com/profile">Profile</a>
+          </li>
+          <li>
+            <a href="https://kingsjw7-f7e06.firebaseapp.com/tech">Tech</a>
+          </li>
+          <li>
+            <a href="https://kingsjw7-f7e06.firebaseapp.com/movie">Movie</a>
+          </li>
+          <li>
+            <a href="https://kingsjw7-f7e06.firebaseapp.com/travel">Travel</a>
+          </li>
+        </ul>
+      </nav>
       <div class="wrap">
         <div class="logo" @click="$router.replace('/')">
           kingsjw

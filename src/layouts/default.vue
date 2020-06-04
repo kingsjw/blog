@@ -7,23 +7,6 @@
       scrollWeb,
     }"
   >
-    <ul class="menuGroup">
-      <li>
-        <a href="https://kingsjw7-f7e06.firebaseapp.com">Home</a>
-      </li>
-      <li>
-        <a href="https://kingsjw7-f7e06.firebaseapp.com/profile">Profile</a>
-      </li>
-      <li>
-        <a href="https://kingsjw7-f7e06.firebaseapp.com/tech">Tech</a>
-      </li>
-      <li>
-        <a href="https://kingsjw7-f7e06.firebaseapp.com/movie">Movie</a>
-      </li>
-      <li>
-        <a href="https://kingsjw7-f7e06.firebaseapp.com/travel">Travel</a>
-      </li>
-    </ul>
     <HeaderWeb
       v-if="!$store.state.device.isMobile"
     ></HeaderWeb>
@@ -171,7 +154,7 @@
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   .pageWrap{
     overflow-x: hidden;
     position: relative;
