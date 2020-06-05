@@ -50,6 +50,7 @@
 				data: '',
 				loading: false,
 				editMode: false,
+        error: false,
 			};
 		},
 		computed: {
@@ -63,18 +64,37 @@
 				return viewData;
 			},
 		},
-		async mounted() {
-			const db = Firebase.firestore();
+    methods: {
+      getListViewQuery(id) {
+        const db = Firebase.firestore();
+        return db.collection(this.flag).doc(id);
+      },
+    },
+		mounted() {
 			this.loading = true;
 			// console.log(this.$store.state.postView);
 			// console.log((this.$store.state.postView.data && this.$store.state.postView.data[this.$route.query.id]) === undefined);
 			if ((this.$store.state.postView.data && this.$store.state.postView.data[this.$route.query.id]) === undefined) {
-				const doc = await db.collection(this.flag).doc(this.$route.query.id).get();
-				const data = Object.assign({ id: doc.id }, doc.data());
-				this.data = data;
-				this.$store.commit('postView/saveData', this.data);
+			  try {
+          const query = this.getListViewQuery(this.$route.query.id);
+          query.get().then((doc) => {
+            const loadedData = doc.data();
+            if (loadedData) {
+              this.data = Object.assign({ id: doc.id }, loadedData);
+              this.$store.commit('postView/saveData', this.data);
+              this.loading = false;
+            } else {
+              console.log('load error');
+              this.$nuxt.error({ statusCode: 404, message: 'Post not found' });
+            }
+          });
+        } catch (err) {
+          if (err) {
+            console.log('load error');
+            this.$nuxt.error({ statusCode: 404, message: 'Post not found' });
+          }
+        }
 			}
-			this.loading = false;
 		},
 	};
 </script>
