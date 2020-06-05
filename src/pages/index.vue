@@ -103,7 +103,7 @@ export default {
               this.postList.push(data);
               this.$store.commit('postView/saveData', data);
           });
-          console.log(list);
+          // console.log(list);
           commitData[obj.name] = [...list];
           this.$store.commit('post/saveData', commitData);
         });
