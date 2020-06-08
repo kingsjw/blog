@@ -84,13 +84,13 @@
               this.$store.commit('postView/saveData', this.data);
               this.loading = false;
             } else {
-              console.log('load error');
+              // console.log('load error');
               this.$nuxt.error({ statusCode: 404, message: 'Post not found' });
             }
           });
         } catch (err) {
           if (err) {
-            console.log('load error');
+            // console.log('load error');
             this.$nuxt.error({ statusCode: 404, message: 'Post not found' });
           }
         }
