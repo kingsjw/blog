@@ -155,17 +155,6 @@
 </script>
 
 <style lang="scss">
-  .pageWrap{
-    overflow-x: hidden;
-    position: relative;
-    .menuGroup{
-      left: 1000%;
-      position: absolute;
-    }
-  }
-</style>
-
-<style lang="scss">
   *, *:before, *:after {
     box-sizing: border-box;
     margin: 0;

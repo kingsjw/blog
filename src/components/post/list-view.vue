@@ -71,11 +71,11 @@
       },
     },
 		mounted() {
-			this.loading = true;
 			// console.log(this.$store.state.postView);
 			// console.log((this.$store.state.postView.data && this.$store.state.postView.data[this.$route.query.id]) === undefined);
 			if ((this.$store.state.postView.data && this.$store.state.postView.data[this.$route.query.id]) === undefined) {
 			  try {
+          this.loading = true;
           const query = this.getListViewQuery(this.$route.query.id);
           query.get().then((doc) => {
             const loadedData = doc.data();
