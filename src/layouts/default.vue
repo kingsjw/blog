@@ -159,7 +159,7 @@
     overflow-x: hidden;
     position: relative;
     .menuGroup{
-      left: 1000%;
+      top: -200%;
       position: absolute;
     }
   }

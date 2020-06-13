@@ -16,7 +16,7 @@ import profileMobile from '~/components/profile/mobile/profile.vue';
 export default {
   head() {
     return {
-      title: '개발자 서재우',
+      title: '프로필',
       meta: [
         { hid: 'description', name: 'description', content: `개발자 서재우의 프로필 입니다.` },
         { hid: 'og:image', name: 'og:image', content: 'https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Fflog.jpg?alt=media&token=5d7a96e9-b03a-47a9-a2ac-0267ca4a4939' },
