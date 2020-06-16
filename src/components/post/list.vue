@@ -2,7 +2,8 @@
 	<div class="list" :class="$store.state.device.isMobile ? 'mobile' : ''">
 		<div
 			v-if="list && list.mainImage && list.mainImage.url"
-			class="thumbnail">
+			class="thumbnail"
+    >
 				<div v-if="imageSrc" :style="{ backgroundImage: `url(${list.mainImage.url})`}" class="image"></div>
 				<div v-else class="spinnerWrap">
 					<div class="spinner"></div>
@@ -37,7 +38,10 @@
 			},
 		},
 		mounted() {
-			this.imageLoad(this.list.mainImage && this.list.mainImage.url);
+		  const imageUrl = this.list.mainImage && this.list.mainImage.url;
+		  if (imageUrl) {
+			  this.imageLoad(imageUrl);
+      }
 		},
   };
 </script>

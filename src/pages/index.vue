@@ -77,7 +77,7 @@ export default {
     },
     searchPostData() {
       const searchText = this.search.trim();
-      const data = this.allPostData.filter((v) => {
+      const data = this.allPostData.filter((v ) => {
         const title = v.title.toLowerCase();
         const contentsText = v.contents.replace(/(<([^>]+)>)/ig, '').toLowerCase();
         return title.indexOf(searchText) >= 0 || contentsText.indexOf(searchText) >= 0;

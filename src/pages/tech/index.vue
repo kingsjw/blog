@@ -78,8 +78,6 @@
 				this.$router.push({ params: { popFlag: 'edit' } });
 			},
 		},
-    mounted() {
-    },
   };
 </script>
 

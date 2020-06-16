@@ -6,7 +6,18 @@
     <div class="mainImageSet">
       <div v-if="data && data.mainImage && data.mainImage.url">
         <div v-if="mainImageFixFlag">
-          메인 이미지(수정): <input type="file" @change="onFileChange">
+          <div v-if="isTech">
+            tech category:
+            <select name="categories" v-model="mainImageFile">
+              <option value="vue">vue</option>
+              <option value="bringprice">bringprice</option>
+              <option value="javascript">javascript</option>
+            </select>
+          </div>
+          <div v-else>
+            메인 이미지:
+            <input type="file" @change="onFileChange">
+          </div>
           <span @click="mainImageFixFlag = false" class="cancelBtn">취소</span>
         </div>
         <div v-else class="mainImage" :style="{ backgroundImage: `url(${data.mainImage.url})` }">
@@ -14,8 +25,18 @@
         </div>
       </div>
       <div v-else>
-        메인 이미지:
-        <input type="file" @change="onFileChange">
+        <div v-if="isTech">
+          tech category:
+          <select name="categories" v-model="mainImageFile">
+            <option value="vue">vue</option>
+            <option value="bringprice">bringprice</option>
+            <option value="javascript">javascript</option>
+          </select>
+        </div>
+        <div v-else>
+          메인 이미지:
+          <input type="file" @change="onFileChange">
+        </div>
       </div>
     </div>
 		<button @click="submit" class="md-button success submit-btn">
@@ -52,6 +73,7 @@
         formImage: [],
         mainImageFixFlag: false,
         mainImageFile: '',
+        isTech: this.$route.path.indexOf('/tech') >= 0,
 			};
 		},
 		methods: {
@@ -132,11 +154,16 @@
             date: new Date(),
           };
           if (this.mainImageFile) {
-            const imageName = Date.now();
-            await this.uploadImage(this.mainImageFile, imageName);
+            let imageName = '';
+            if (!this.isTech) {
+              imageName = Date.now();
+              await this.uploadImage(this.mainImageFile, imageName);
+            } else {
+              imageName = this.mainImageFile;
+            }
             submitData.mainImage = {
               name: imageName,
-              url: await this.getImageUrl(imageName),
+              url: await this.getImageUrl(this.isTech ? `/categories/${imageName}.png` : imageName),
             };
           }
           const replaceImage = await this.replaceContentsImage();
@@ -160,7 +187,7 @@
             submitData.imgArr = replaceImage.cdnUrl && replaceImage.cdnUrl.length > 0 ? replaceImage.cdnUrl : this.data.imgArr;
             //update
             // console.log(this.formImage);
-            if (this.mainImageFile && this.data && this.data.mainImage) {
+            if (this.mainImageFile && this.data && this.data.mainImage && !this.isTech) {
               this.removeImage(this.data.mainImage.name);
             }
             if (this.formImage && this.formImage.length > 0) {

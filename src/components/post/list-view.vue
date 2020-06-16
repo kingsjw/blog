@@ -85,13 +85,13 @@
               this.loading = false;
             } else {
               // console.log('load error');
-              this.$nuxt.error({ statusCode: 404, message: 'Post not found' });
+              this.$nuxt.error({ statusCode: 404, message: 'PAGE NOT FOUND' });
             }
           });
         } catch (err) {
           if (err) {
             // console.log('load error');
-            this.$nuxt.error({ statusCode: 404, message: 'Post not found' });
+            this.$nuxt.error({ statusCode: 500, message: '무슨 에러지??' });
           }
         }
 			}
