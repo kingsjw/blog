@@ -8,7 +8,6 @@
 
   export default {
     name: 'nuxt-error',
-    layout: 'blog', // optional
     props: {
       error: {
         type: Object,
