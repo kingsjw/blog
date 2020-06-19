@@ -66,6 +66,10 @@ export default {
             url: 'https://www.google.com/search?q=Node.js',
           },
           {
+            name: 'PHP',
+            url: 'https://www.google.com/search?q=php',
+          },
+          {
             name: 'Bitbucket',
             url: 'https://www.google.com/search?q=Bitbucket',
           },
