@@ -3,16 +3,16 @@
 		<div class="thumbnail">
       <div class="moveItem"></div>
     </div>
-			<div>
-				<div class="info">
-					<div class="title">
-            <div class="moveItem"></div>
-          </div>
-					<div class="writer">
-            <div class="moveItem"></div>
-          </div>
-				</div>
-			</div>
+    <div>
+      <div class="info">
+        <div class="title">
+          <div class="moveItem"></div>
+        </div>
+        <div class="writer">
+          <div class="moveItem"></div>
+        </div>
+      </div>
+    </div>
 	</div>
 </template>
 
