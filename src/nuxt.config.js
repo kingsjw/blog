@@ -8,6 +8,7 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover' },
+      { hid: 'description', name: 'description', content: '개발자 서재우의 개인 블로그입니다.' },
       { hid: 'og:image', name: 'og:image', content: 'https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Fflog.jpg?alt=media&token=5d7a96e9-b03a-47a9-a2ac-0267ca4a4939' },
       { hid: 'og:title', name: 'og:title', content: '개발자 서재우' },
       { hid: 'og:description', name: 'og:description', content: '개발자 서재우의 개인 블로그입니다.' },

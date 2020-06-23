@@ -5,13 +5,15 @@
     >
       <div class="wrap">
         <div class="logo" @click="$router.replace('/')">
-          kingsjw
-          <p>software engineer</p>
+          <h1>
+            kingsjw
+            <p>software engineer</p>
+          </h1>
         </div>
         <nav class="menu">
           <ul>
             <li><nuxt-link to="/profile" :class="$route.path && $route.path.indexOf('profile') >= 0 ? 'active' : ''">Profile</nuxt-link></li>
-            <li><nuxt-link to="/tech" :class="$route.path && $route.path.indexOf('tech') >= 0 ? 'active' : ''">tech</nuxt-link></li>
+            <li><nuxt-link to="/tech" :class="$route.path && $route.path.indexOf('tech') >= 0 ? 'active' : ''">Tech</nuxt-link></li>
             <li><nuxt-link to="/movie" :class="$route.path && $route.path.indexOf('movie') >= 0 ? 'active' : ''">Movie</nuxt-link></li>
             <li><nuxt-link to="/travel" :class="$route.path && $route.path.indexOf('travel') >= 0 ? 'active' : ''">Travel</nuxt-link></li>
           </ul>
@@ -51,6 +53,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        h1{
+          font-size: inherit;
+          margin: 0;
+        }
         .logo{
           font-weight: bold;
           font-size: 22px;

@@ -11,7 +11,9 @@
         class="menu back"
         @click="$router.back()"
       ></button>
-      <div class="title">kingsjw {{ pageName ? `- ${pageName}` : '' }}</div>
+      <div class="title">
+        <h1>kingsjw {{ pageName ? `- ${pageName}` : '' }}</h1>
+      </div>
     </div>
     <transition
       name="slide-left"
@@ -133,6 +135,11 @@
         vertical-align: top;
         margin-left: 20px;
         color: #fff;
+        h1{
+          font-size: inherit;
+          font-weight: normal;
+          margin: 0;
+        }
       }
       .menu{
         width: 40px;

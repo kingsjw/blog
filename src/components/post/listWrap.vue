@@ -4,7 +4,7 @@
     :class="[$store.state.device.isMobile ? 'mobile' : '', pageName]"
   >
 		<div class="wrap">
-			<p class="title">{{ utils.postPageTitle(pageName) }}</p>
+			<h2><p class="title">{{ utils.postPageTitle(pageName) }}</p></h2>
       <div v-if="loading" class="itemWrap">
         <listLoading
           v-for="x in 3" :key="x"

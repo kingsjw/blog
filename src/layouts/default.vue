@@ -166,6 +166,9 @@
 </style>
 
 <style lang="scss">
+  h2{
+    font-size: inherit;
+  }
   *, *:before, *:after {
     box-sizing: border-box;
     margin: 0;

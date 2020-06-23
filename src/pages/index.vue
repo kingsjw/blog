@@ -12,7 +12,7 @@
       <div class="listWrap">
         <div class="title">
           <div>
-            <span class="bold">{{ search ? `"${search}"` : 'All' }} Topic</span>
+            <h2><span class="bold">{{ search ? `"${search}"` : 'All' }} Topic</span></h2>
             <transition name='fade'>
               <span v-if="search && (searchPostData && 0 >= searchPostData.length)" class="no">- no result</span>
             </transition>
