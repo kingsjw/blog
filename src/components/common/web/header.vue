@@ -3,38 +3,19 @@
     <header
       v-if="!$store.state.device.isMobile"
     >
-      <nav class="menuGroup">
-        <ul>
-          <li>
-            <a href="https://kingsjw7-f7e06.firebaseapp.com">Home</a>
-          </li>
-          <li>
-            <a href="https://kingsjw7-f7e06.firebaseapp.com/profile">Profile</a>
-          </li>
-          <li>
-            <a href="https://kingsjw7-f7e06.firebaseapp.com/tech">Tech</a>
-          </li>
-          <li>
-            <a href="https://kingsjw7-f7e06.firebaseapp.com/movie">Movie</a>
-          </li>
-          <li>
-            <a href="https://kingsjw7-f7e06.firebaseapp.com/travel">Travel</a>
-          </li>
-        </ul>
-      </nav>
       <div class="wrap">
         <div class="logo" @click="$router.replace('/')">
           kingsjw
           <p>software engineer</p>
         </div>
-        <div class="menu">
+        <nav class="menu">
           <ul>
-            <li><button @click="$router.push('/profile')" :class="$route.path && $route.path.indexOf('profile') >= 0 ? 'active' : ''">Profile</button></li>
-            <li><button @click="$router.push('/tech')" :class="$route.path && $route.path.indexOf('tech') >= 0 ? 'active' : ''">Tech</button></li>
-            <li><button @click="$router.push('/movie')" :class="$route.path && $route.path.indexOf('movie') >= 0 ? 'active' : ''">Movie</button></li>
-            <li><button @click="$router.push('/travel')" :class="$route.path && $route.path.indexOf('travel') >= 0 ? 'active' : ''">Travel</button></li>
+            <li><nuxt-link to="/profile" :class="$route.path && $route.path.indexOf('profile') >= 0 ? 'active' : ''">Profile</nuxt-link></li>
+            <li><nuxt-link to="/tech" :class="$route.path && $route.path.indexOf('tech') >= 0 ? 'active' : ''">tech</nuxt-link></li>
+            <li><nuxt-link to="/movie" :class="$route.path && $route.path.indexOf('movie') >= 0 ? 'active' : ''">Movie</nuxt-link></li>
+            <li><nuxt-link to="/travel" :class="$route.path && $route.path.indexOf('travel') >= 0 ? 'active' : ''">Travel</nuxt-link></li>
           </ul>
-        </div>
+        </nav>
       </div>
     </header>
   </div>
@@ -91,10 +72,12 @@
             &:first-of-type{
               margin-left: 0;
             }
-            > button{
+            > a{
               font-weight: 800;
               white-space: nowrap;
               height: 36px;
+              color: inherit;
+              text-decoration: none;
               &.active{
                 color: #816bff;
               }

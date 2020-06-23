@@ -1,24 +1,5 @@
 <template>
   <div class="headerWrap">
-    <nav class="menuGroup">
-      <ul>
-        <li>
-          <a href="https://kingsjw7-f7e06.firebaseapp.com">Home</a>
-        </li>
-        <li>
-          <a href="https://kingsjw7-f7e06.firebaseapp.com/profile">Profile</a>
-        </li>
-        <li>
-          <a href="https://kingsjw7-f7e06.firebaseapp.com/tech">Tech</a>
-        </li>
-        <li>
-          <a href="https://kingsjw7-f7e06.firebaseapp.com/movie">Movie</a>
-        </li>
-        <li>
-          <a href="https://kingsjw7-f7e06.firebaseapp.com/travel">Travel</a>
-        </li>
-      </ul>
-    </nav>
     <div class="content">
       <button
         v-if="pageDepth.length < 2"
@@ -53,24 +34,34 @@
             class="logout"
           >Log out</span>
         </div>
-        <div class="pages">
-          <div @click="move('profile')" class="list" :class="pageName.indexOf('profile') !== -1 ? 'active' : ''">
-            <i v-if="pageName.indexOf('profile') === -1" class="icon profile"></i>
-            <span class="name">Profile</span>
-          </div>
-          <div @click="move('tech')" class="list" :class="pageName.indexOf('tech') !== -1 ? 'active' : ''">
-            <i v-if="pageName.indexOf('tech') === -1" class="icon tech"></i>
-            <span class="name">Tech</span>
-          </div>
-          <div @click="move('movie')" class="list" :class="pageName.indexOf('movie') !== -1 ? 'active' : ''">
-            <i v-if="pageName.indexOf('movie') === -1" class="icon movie"></i>
-            <span class="name">Movie</span>
-          </div>
-          <div @click="move('travel')" class="list" :class="pageName.indexOf('travel') !== -1 ? 'active' : ''">
-            <i v-if="pageName.indexOf('travel') === -1" class="icon travel"></i>
-            <span class="name">Travel</span>
-          </div>
-        </div>
+        <nav class="pages">
+          <ul>
+            <li>
+              <nuxt-link to="profile" class="list" :class="pageName.indexOf('profile') !== -1 ? 'active' : ''">
+                <i v-if="pageName.indexOf('profile') === -1" class="icon profile"></i>
+                <span class="name">Profile</span>
+              </nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to="tech" class="list" :class="pageName.indexOf('tech') !== -1 ? 'active' : ''">
+                <i v-if="pageName.indexOf('tech') === -1" class="icon tech"></i>
+                <span class="name">Tech</span>
+              </nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to="movie" class="list" :class="pageName.indexOf('movie') !== -1 ? 'active' : ''">
+                <i v-if="pageName.indexOf('movie') === -1" class="icon movie"></i>
+                <span class="name">Movie</span>
+              </nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to="travel" class="list" :class="pageName.indexOf('travel') !== -1 ? 'active' : ''">
+                <i v-if="pageName.indexOf('travel') === -1" class="icon travel"></i>
+                <span class="name">Travel</span>
+              </nuxt-link>
+            </li>
+          </ul>
+        </nav>
       </div>
     </transition>
     <transition name="fade">
@@ -204,6 +195,8 @@
           padding: 4px 16px;
           min-height: 48px;
           align-items: center;
+          color: inherit;
+          text-decoration: none;
           &.active{
             background-color: rgba(129, 107, 255, 0.4);
             color: #816bff;
