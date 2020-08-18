@@ -2,3 +2,4 @@
 
 ## Nuxt: FE-Dev
 ## Firebase: Dynamic hosting, db, storage
+[링크](https://kingsjw7-f7e06.firebaseapp.com/)
