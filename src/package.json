@@ -20,7 +20,7 @@
     "eventsource-polyfill": "^0.9.6",
     "firebase": "^7.1.0",
     "github-markdown-css": "^3.0.1",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "nuxt": "^2.12.2",
     "nuxt-sass-resources-loader": "^2.0.5",
     "sass-loader": "^8.0.0",
