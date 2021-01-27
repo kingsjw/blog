@@ -28,7 +28,7 @@
 </template>
 
 <script>
-  import 'github-markdown-css/github-markdown.css';
+  import '~/assets/css/github-markdown.css';
 	import Firebase from 'firebase';
 	import editForm from './formControl.vue';
 	import listViewLoading from '../loading/list-view-loading.vue';
