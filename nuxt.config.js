@@ -25,9 +25,10 @@ module.exports = {
   /*
   ** Build configuration
   */
-  buildDir: 'docs',
+  generate: {
+    dir: 'docs',
+  },
   build: {
-    // extractCSS: true,
     babel: {
       plugins: [
         '@babel/plugin-syntax-dynamic-import',
