@@ -68,5 +68,8 @@ module.exports = {
     '~/assets/css/github-markdown.css',
     '~/assets/css/normalize.css',
   ],
+  router: {
+    base: '/blog/',
+  },
 };
 
