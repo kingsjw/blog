@@ -25,6 +25,7 @@ module.exports = {
   /*
   ** Build configuration
   */
+  buildDir: 'docs',
   build: {
     // extractCSS: true,
     babel: {

@@ -1,0 +1,30 @@
+[
+  {
+    "name": "profile",
+    "path": "/profile",
+    "component": "/Users/kingsjw/blog/pages/profile/index.vue",
+    "chunkName": "pages/profile/index",
+    "_name": "_3e8e6b5c"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/kingsjw/blog/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_fbbf2d90"
+  },
+  {
+    "name": "category",
+    "path": "/:category",
+    "component": "/Users/kingsjw/blog/pages/_category/index.vue",
+    "chunkName": "pages/_category/index",
+    "_name": "_5ca03af4"
+  },
+  {
+    "name": "category-id",
+    "path": "/:category/:id",
+    "component": "/Users/kingsjw/blog/pages/_category/_id/index.vue",
+    "chunkName": "pages/_category/_id/index",
+    "_name": "_51284a71"
+  }
+]
