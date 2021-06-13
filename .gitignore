@@ -11,7 +11,7 @@ firebase-debug.log
 # Nuxt generate
 dist
 
-.firebase
+nuxt
 
 public/*
 
