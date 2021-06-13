@@ -2,6 +2,7 @@ module.exports = {
   /*
   ** Headers of the page
   */
+  target: 'static',
   head: {
     titleTemplate: '개발자 서재우 - %s',
     title: '메인',
