@@ -8,11 +8,7 @@
     }"
   >
     <HeaderWeb v-if="!$store.state.device.isMobile"></HeaderWeb>
-    <HeaderMobile
-      v-else
-      @openLogin="openPop = true"
-      @logout="logout"
-    ></HeaderMobile>
+    <HeaderMobile v-else></HeaderMobile>
     <nuxt />
   </div>
 </template>

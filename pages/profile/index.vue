@@ -1,5 +1,10 @@
 <template>
-  <Profile :profile="profile"></Profile>
+  <div
+    class="profilePage"
+    :class="$store.state.device.isMobile ? 'mobile' : ''"
+  >
+    <Profile :profile="profile"></Profile>
+  </div>
 </template>
 
 <script>
@@ -42,8 +47,19 @@ export default {
       profile,
     };
   },
-  data() {
-    return {};
-  },
 };
 </script>
+
+<style lang='scss' scoped>
+.profilePage {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 0 80px;
+  z-index: -1;
+  position: relative;
+  &.mobile {
+    padding: 20px;
+  }
+}
+</style>

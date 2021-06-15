@@ -15,16 +15,10 @@
       <div v-if="showNavigation" class="navWrap">
         <div class="titleWrap">
           <span class="title" @click="home">my topic</span>
-          <div
-            v-if="!$store.state.user.isLogin"
-            @click="openLogin"
-            class="login"
-          ></div>
-          <span v-else @click="$emit('logout')" class="logout">Log out</span>
         </div>
         <nav class="pages">
           <ul>
-            <li>
+            <li @click="close">
               <nuxt-link
                 to="profile"
                 class="list"
@@ -37,7 +31,7 @@
                 <span class="name">Profile</span>
               </nuxt-link>
             </li>
-            <li>
+            <li @click="close">
               <nuxt-link
                 to="tech"
                 class="list"
@@ -47,7 +41,7 @@
                 <span class="name">Tech</span>
               </nuxt-link>
             </li>
-            <li>
+            <li @click="close">
               <nuxt-link
                 to="movie"
                 class="list"
@@ -60,7 +54,7 @@
                 <span class="name">Movie</span>
               </nuxt-link>
             </li>
-            <li>
+            <li @click="close">
               <nuxt-link
                 to="travel"
                 class="list"
@@ -107,10 +101,6 @@ export default {
       this.showNavigation = false;
       this.$router.replace('/');
       window.document.body.style.overflowY = '';
-    },
-    openLogin() {
-      this.showNavigation = false;
-      this.$emit('openLogin');
     },
     open() {
       this.showNavigation = true;
@@ -193,18 +183,6 @@ export default {
       padding: 0 16px;
       .title {
         font-size: 20px;
-      }
-      .login {
-        width: 16px;
-        height: 16px;
-        background-image: url(~assets/img/icons/login.png);
-        background-size: 16px;
-        background-repeat: no-repeat;
-        background-position: center;
-      }
-      .logout {
-        text-decoration: underline;
-        font-size: 14px;
       }
     }
     .pages {

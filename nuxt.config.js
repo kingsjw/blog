@@ -1,3 +1,5 @@
+const baseDir = process.env.NODE_ENV === 'production' ? '/blog' : '/';
+
 module.exports = {
   /*
   ** Headers of the page
@@ -16,7 +18,7 @@ module.exports = {
       { name: 'google-site-verification', content: 'lBJohKMHlGpwP9qnoSEDvOnl4QR56H-2_TYkzC5O9So' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: `${baseDir}favicon.ico` }
     ],
   },
   /*
@@ -36,7 +38,6 @@ module.exports = {
       ],
     },
     vender: [
-      'vue2-editor',
       'eventsource-polyfill',
       'babel-polyfill',
       'es6-promise/auto'
@@ -54,9 +55,13 @@ module.exports = {
   },
   plugins: [
     { src: './plugins/polyfill.js', ssr: false },
-    { src: './plugins/vue2-editor.js', ssr: false }
   ],
-  modules: ['nuxt-sass-resources-loader', '@nuxt/content'],
+  modules: ['@nuxtjs/style-resources', '@nuxt/content'],
+  styleResources: {
+    scss: [
+      '~/assets/scss/global.scss',
+    ],
+  },
   content: {
     markdown: {
       prism: {
@@ -69,7 +74,7 @@ module.exports = {
     '~/assets/css/normalize.css',
   ],
   router: {
-    base: '/blog/',
+    base: baseDir,
   },
 };
 
