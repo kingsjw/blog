@@ -1,4 +1,4 @@
-const baseDir = process.env.NODE_ENV === 'production' ? '/blog' : '/';
+const baseDir = process.env.NODE_ENV === 'production' ? '/blog/' : '/';
 
 module.exports = {
   /*
