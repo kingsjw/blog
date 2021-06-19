@@ -6,7 +6,7 @@
         <div class="inputWrap">
           <input
             type="text"
-            placeholder="what are you looking for?"
+            placeholder="어떤 글을 찾으시나요?"
             v-bind:value="search"
             v-on:input="search = $event.target.value"
           />
@@ -44,7 +44,7 @@ export default {
       )
     );
     return {
-      posts: [...posts].filter((v) => v.length).flat(),
+      posts: posts ? [...posts].filter((v) => v.length).flat() : [],
     };
   },
   data() {
@@ -54,10 +54,12 @@ export default {
   },
   computed: {
     searchedPost() {
-      const searchText = this.search.trim();
-      return this.posts.filter(({ title, description }) =>
-        [title, description].some((v) => v.includes(searchText))
-      );
+      const searchText = this.search.trim().toLowerCase();
+      return this.posts.filter(({ title, description }) => {
+        return [title, description].some(
+          (v) => v && v.toLowerCase().includes(searchText)
+        );
+      });
     },
   },
 };
