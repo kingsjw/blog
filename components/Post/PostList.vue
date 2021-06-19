@@ -11,16 +11,19 @@
       ></div>
     </div>
     <div v-else class="errorImage"></div>
-    <div>
-      <div class="info">
-        <div class="title">{{ post.title }}</div>
+    <div class="info">
+      <div class="title">{{ post.title }}</div>
+      <div class="writing">
         <div class="writer">작성자: {{ post.writer }}</div>
+        <div class="date">{{ ymdDateFormat(post.createdAt) }}</div>
       </div>
     </div>
   </nuxt-link>
 </template>
 
 <script>
+import { ymdDateFormat } from '../../utils';
+
 export default {
   props: {
     post: {
@@ -35,6 +38,11 @@ export default {
       }),
     },
   },
+  data() {
+    return {
+      ymdDateFormat,
+    };
+  },
 };
 </script>
 
@@ -47,6 +55,8 @@ export default {
   overflow: hidden;
   cursor: pointer;
   box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  position: relative;
   &:nth-child(n + 4) {
     margin-top: 30px;
   }
@@ -96,15 +106,22 @@ export default {
     background-repeat: no-repeat;
   }
   .info {
-    padding: 32px 16px;
+    padding: 24px 16px;
     color: #494c62;
     line-height: 20px;
     .title {
       font-size: 16px;
       font-weight: 600;
     }
-    .writer {
-      font-size: 10px;
+    .writing {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 12px;
+      .date,
+      .writer {
+        font-size: 11px;
+      }
     }
   }
 }

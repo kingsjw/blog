@@ -1,4 +1,10 @@
-function postPageTitle(pageName) {
+function zeros(n) {
+  const length = n.toString().length;
+  return `${length < 2 ? '0' : ''}${n}`;
+}
+
+
+function getPostPageTitle(pageName) {
   let title = '';
   switch (pageName) {
     case 'travel':
@@ -17,6 +23,12 @@ function postPageTitle(pageName) {
   return title;
 }
 
-export default {
-  postPageTitle,
+function ymdDateFormat(date) {
+  const d = new Date(date);
+  return `${d.getFullYear()}-${zeros(d.getMonth() + 1)}-${zeros(d.getDate())}`;
+}
+
+export {
+  ymdDateFormat,
+  getPostPageTitle,
 };

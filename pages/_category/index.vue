@@ -4,14 +4,14 @@
     :class="$store.state.device.isMobile ? 'mobile' : ''"
   >
     <div class="contents">
-      <h2 class="pageTitle">{{ utils.postPageTitle(pageName) }}</h2>
+      <h2 class="pageTitle">{{ getPostPageTitle(pageName) }}</h2>
       <ListWrap :posts="posts"></ListWrap>
     </div>
   </div>
 </template>
 
 <script>
-import utils from '~/utils/index.js';
+import { getPostPageTitle } from '~/utils';
 import ListWrap from '../../components/Post/PostListWrap.vue';
 import Helmet from '../../Helmet.json';
 
@@ -34,7 +34,7 @@ export default {
   },
   data() {
     return {
-      utils,
+      getPostPageTitle,
     };
   },
   computed: {

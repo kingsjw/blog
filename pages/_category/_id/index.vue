@@ -1,5 +1,7 @@
 <template>
-  <PostView :post="post"></PostView>
+  <div>
+    <PostView :post="post"></PostView>
+  </div>
 </template>
 <script>
 import PostView from '../../../components/Post/PostView.vue';
