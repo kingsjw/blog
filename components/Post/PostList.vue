@@ -41,13 +41,11 @@ export default {
 <style lang="scss" scoped>
 .list {
   width: calc((100% / 3) - 22px);
-  height: 520px;
   margin-left: 30px;
   border: 1px solid #eee;
   border-radius: 2px;
   overflow: hidden;
   cursor: pointer;
-  transition: 0.3s ease;
   box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.1);
   &:nth-child(n + 4) {
     margin-top: 30px;
@@ -55,22 +53,19 @@ export default {
   &:nth-child(3n + 1) {
     margin-left: 0;
   }
-  &:not(.mobile):hover {
-    transform: scale(1.02);
-  }
   &.mobile {
     width: 100%;
-    height: 342px;
     margin-left: 0;
     margin-top: 20px;
     &:first-of-type {
       margin-top: 0;
     }
     .thumbnail {
-      height: 78%;
+      .image {
+        padding-bottom: 100%;
+      }
     }
     .errorImage {
-      height: 78%;
       background-size: 38%;
     }
     .info {
@@ -79,13 +74,17 @@ export default {
   }
   .thumbnail {
     width: 100%;
-    height: 82%;
     .image {
       width: 100%;
-      height: 100%;
+      padding-bottom: 110%;
       background-size: 100% auto;
       background-position: center;
       background-repeat: no-repeat;
+      transition: 0.3s ease;
+      z-index: -1;
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
   .errorImage {

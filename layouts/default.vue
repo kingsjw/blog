@@ -92,6 +92,7 @@ export default {
 .pageWrap {
   overflow-x: hidden;
   position: relative;
+  padding-bottom: 80px;
   .menuGroup {
     top: -200%;
     position: absolute;

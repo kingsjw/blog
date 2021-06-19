@@ -4,22 +4,27 @@
       <div class="search">
         <div class="title">개발자 서재우</div>
         <div class="inputWrap">
-          <input type="text" placeholder="Search Topic" />
+          <input
+            type="text"
+            placeholder="what are you looking for?"
+            v-bind:value="search"
+            v-on:input="search = $event.target.value"
+          />
         </div>
       </div>
     </div>
     <div class="contents">
       <div class="searchKeyword">
         <div>
-          <h2>
-            <span class="bold">{{ search ? `"${search}"` : 'All' }} Topic</span>
+          <h2 class="bold">
+            <span>{{ search ? `"${search}"` : 'All' }}</span>
+            <transition name="fade">
+              <span v-if="!searchedPost.length"> - no result</span>
+            </transition>
           </h2>
-          <transition name="fade">
-            <span v-if="search" class="no">- no result</span>
-          </transition>
         </div>
       </div>
-      <ListWrap :posts="posts"></ListWrap>
+      <ListWrap :posts="search ? searchedPost : posts"></ListWrap>
     </div>
   </div>
 </template>
@@ -46,6 +51,14 @@ export default {
     return {
       search: '',
     };
+  },
+  computed: {
+    searchedPost() {
+      const searchText = this.search.trim();
+      return this.posts.filter(({ title, description }) =>
+        [title, description].some((v) => v.includes(searchText))
+      );
+    },
   },
 };
 </script>
