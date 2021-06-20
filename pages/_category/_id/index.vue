@@ -1,9 +1,16 @@
 <template>
-  <div>
+  <div class="postViewPage">
     <PostView :post="post"></PostView>
+    <PostSideMenu
+      v-if="!$store.state.device.isMobile"
+      :menus="
+        post.toc.map(({ id, text, depth }) => ({ id, text, depth, path }))
+      "
+    ></PostSideMenu>
   </div>
 </template>
 <script>
+import PostSideMenu from '../../../components/Post/PostSideMenu.vue';
 import PostView from '../../../components/Post/PostView.vue';
 
 export default {
@@ -12,16 +19,18 @@ export default {
     const post = await $content(`${category}/${id}`, {
       deep: true,
     }).fetch();
-    const { title, description, coverImage } = post;
+    const { title, description, coverImage, path } = post;
     return {
       title,
       description,
       coverImage,
       post,
+      path,
     };
   },
   components: {
     PostView,
+    PostSideMenu,
   },
   head() {
     return {

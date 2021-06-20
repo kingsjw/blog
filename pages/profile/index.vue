@@ -52,8 +52,7 @@ export default {
 
 <style lang='scss' scoped>
 .profilePage {
-  width: 100%;
-  max-width: 1200px;
+  @include contentsWidth;
   margin: 0 auto;
   padding: 0 0 80px;
   z-index: -1;

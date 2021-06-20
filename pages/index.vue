@@ -81,7 +81,7 @@ export default {
     padding: 60px 20px;
     border-bottom: 1px solid #e9e9e9;
     .search {
-      width: 1200px;
+      @include contentsWidth;
       margin: 0 auto;
       .title {
         font-size: 20px;

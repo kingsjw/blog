@@ -91,7 +91,6 @@ export default {
       background-position: center;
       background-repeat: no-repeat;
       transition: 0.3s ease;
-      z-index: -1;
       &:hover {
         transform: scale(1.1);
       }

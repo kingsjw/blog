@@ -90,7 +90,7 @@
     background-color: #fff;
     top: 0;
     .wrap {
-      width: 1200px;
+      @include contentsWidth;
       height: 100%;
       display: flex;
       justify-content: space-between;
@@ -117,6 +117,7 @@
         li {
           font-size: 16px;
           margin-left: 27px;
+          list-style: none;
           &:first-of-type {
             margin-left: 0;
           }

@@ -131,6 +131,7 @@ export default {
     position: fixed;
     display: flex;
     align-items: center;
+    z-index: 2;
     .title {
       font-size: 20px;
       vertical-align: top;
