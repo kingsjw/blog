@@ -66,7 +66,7 @@ module.exports = {
     markdown: {
       prism: {
         theme: 'prism-themes/themes/prism-material-oceanic.css'
-      }
+      },
     }
   },
   css: [
@@ -75,6 +75,12 @@ module.exports = {
   ],
   router: {
     base: baseDir,
+    scrollBehavior(to) {
+      const target = document.querySelector(to.hash);
+      if (to.hash && target) {
+        return window.scrollTo({ top: target.offsetTop, behavior: 'smooth' });
+      }
+    }
   },
 };
 

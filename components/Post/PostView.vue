@@ -1,4 +1,4 @@
-<template>
+<template lang="md">
   <div
     class="postView markdown-body"
     :class="$store.state.device.isMobile ? 'mobile' : ''"

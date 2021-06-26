@@ -3,7 +3,7 @@
     <div class="wrap">
       <div class="pepe"></div>
       <div class="message">
-        <div class="title">???: 404 {{ error.message }}</div>
+        <div class="title">???: ERROR {{ error.message }}</div>
         <div v-if="isPageView && isPageView === 'view'">
           이미 삭제되었거나 존재하지 않는 글
         </div>
