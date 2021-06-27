@@ -13,6 +13,7 @@
     <div v-else class="errorImage"></div>
     <div class="info">
       <div class="title">{{ post.title }}</div>
+      <div class="description">{{ post.description }}</div>
       <div class="writing">
         <div class="writer">작성자: {{ post.writer }}</div>
         <div class="date">{{ ymdDateFormat(post.createdAt) }}</div>
@@ -84,10 +85,11 @@ export default {
   }
   .thumbnail {
     width: 100%;
+    overflow: hidden;
     .image {
       width: 100%;
       padding-bottom: 110%;
-      background-size: 100% auto;
+      background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       transition: 0.3s ease;
@@ -107,10 +109,16 @@ export default {
   .info {
     padding: 24px 16px;
     color: #494c62;
-    line-height: 20px;
+    background-color: #fff;
     .title {
       font-size: 16px;
       font-weight: 600;
+      line-height: 20px;
+    }
+    .description {
+      margin-top: 4px;
+      font-size: 11px;
+      line-height: 16px;
     }
     .writing {
       display: flex;
