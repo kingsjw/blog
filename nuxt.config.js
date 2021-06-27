@@ -76,8 +76,8 @@ module.exports = {
   router: {
     base: baseDir,
     scrollBehavior(to) {
-      const target = document.querySelector(to.hash);
-      if (to.hash && target) {
+      if (to.hash) {
+        const target = document.querySelector(decodeURIComponent(to.hash));
         return window.scrollTo({ top: target.offsetTop, behavior: 'smooth' });
       }
     }
