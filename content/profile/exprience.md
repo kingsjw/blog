@@ -25,8 +25,8 @@
   > 2020.06 ~ 2021.01
   >
   > ![Javascript](https://img.shields.io/badge/Javascript-F7DF1E?style=flat-square&logo=Javascript&logoColor=white)
-  > ![Nuxt](https://img.shields.io/badge/Nuxt-00C58E?style=flat-square&logo=Nuxt-dot-js&logoColor=white)
-  > ![Vue](https://img.shields.io/badge/Vue-4FC08D?style=flat-square&logo=vue-dot-js&logoColor=white)
+  > ![Nuxt](https://img.shields.io/badge/Nuxt-00C58E?style=flat-square&logo=Nuxt.js&logoColor=white)
+  > ![Vue](https://img.shields.io/badge/Vue-4FC08D?style=flat-square&logo=vue.js&logoColor=white)
   > ![Node.js](https://img.shields.io/badge/Nodejs-339933?style=flat-square&logo=Node-dot-js&logoColor=white)
   > ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white)
   > ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white)
@@ -41,8 +41,8 @@
   > 2019.10 ~ 2021.03
   >
   > ![Javascript](https://img.shields.io/badge/Javascript-F7DF1E?style=flat-square&logo=Javascript&logoColor=white)
-  > ![Nuxt](https://img.shields.io/badge/Nuxt-00C58E?style=flat-square&logo=Nuxt-dot-js&logoColor=white)
-  > ![Vue](https://img.shields.io/badge/Vue-4FC08D?style=flat-square&logo=vue-dot-js&logoColor=white)
+  > ![Nuxt](https://img.shields.io/badge/Nuxt-00C58E?style=flat-square&logo=Nuxt.js&logoColor=white)
+  > ![Vue](https://img.shields.io/badge/Vue-4FC08D?style=flat-square&logo=vue.js&logoColor=white)
   > ![Node.js](https://img.shields.io/badge/Nodejs-339933?style=flat-square&logo=Node-dot-js&logoColor=white)
   > ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white)
   > ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white)
@@ -68,8 +68,8 @@
   > 2018.10 ~ 2019.03
   >
   > ![Javascript](https://img.shields.io/badge/Javascript-F7DF1E?style=flat-square&logo=Javascript&logoColor=white)
-  > ![Nuxt](https://img.shields.io/badge/Nuxt-00C58E?style=flat-square&logo=Nuxt-dot-js&logoColor=white)
-  > ![Vue](https://img.shields.io/badge/Vue-4FC08D?style=flat-square&logo=vue-dot-js&logoColor=white)
+  > ![Nuxt](https://img.shields.io/badge/Nuxt-00C58E?style=flat-square&logo=Nuxt.js&logoColor=white)
+  > ![Vue](https://img.shields.io/badge/Vue-4FC08D?style=flat-square&logo=vue.js&logoColor=white)
   > ![Node.js](https://img.shields.io/badge/Nodejs-339933?style=flat-square&logo=Node-dot-js&logoColor=white)
   > ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white)
   > ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white)
