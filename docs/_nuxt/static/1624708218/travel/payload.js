@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/travel", {data:[{category:"travel",posts:[]}],fetch:{},mutations:[]});
