@@ -107,18 +107,6 @@ writer: kingsjw7
 
 <img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%86%E1%85%A9%E1%84%8E%E1%85%B3%E1%84%82%E1%85%A1%E1%84%87%E1%85%A6.jpeg?alt=media&token=9c40f94c-4fd0-44f7-9b29-49fe876b263b" alt="모츠나베" width="480px" height="240px">
 
-### 하카타 역 지브리 굿즈 구경
-
-저녁을 먹고 숙소로 돌아가는 길에 하카타 역을 지나며 들러보았다.
-
-고양이 버스 ㅋㅋ
-
-<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%8C%E1%85%B5%E1%84%87%E1%85%B3%E1%84%85%E1%85%B52.jpeg?alt=media&token=c76c47a0-74c0-4150-8ef4-d76f4ee26afa" alt="고양이버스" width="450px" height="220px">
-
-큰 토토로 ㄷㄷ 저것도 파는건가?
-
-<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%8C%E1%85%B5%E1%84%87%E1%85%B3%E1%84%85%E1%85%B53.jpeg?alt=media&token=0674ecc8-9719-4868-bb82-cb334364176f" alt="토토로" width="250px" height="450px">
-
 ### 야식
 후쿠오카 첫날 일정이 모두 끝났다.
 
@@ -132,3 +120,166 @@ writer: kingsjw7
 
 <img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%80%E1%85%A5%E1%86%AF%E1%84%8B%E1%85%B3%E1%86%B7.jpeg?alt=media&token=906f3f4c-c308-4904-99a2-22b8dc1efffa" alt="걸음" width="200px" height="400px">
 
+## 둘째 날
+오늘은 고양이섬이라고 불리는 곳에 갈 예정이다.
+
+섬 이름은 아이노시마라고한다.
+
+사람보다 고양이가 더 많이 산다고 한다.
+
+우리는 고양이를 좋아한다.
+
+### 가는법
+가는 법은 크게 어렵지 않다.
+
+1. 후쿠오카 숙소 근처에서 버스든 지하철이든 타고 훗코다이마에 역으로 간다.
+2. 항구까지 가는 버스가 있으나 사람도 굉장히 많고 좁기 때문에 택시를 이용하는게 편하고 요금도 생각보다 별로 안나온다.
+3. 항구에 도착하면 매표소에 가서 아이노시마 가는 배편을 구매한다.(자판기를 통해 구매했다)
+4. 운행 시간표에 맞춰 배에 탑승하고 2 ~ 30분 정도 바다를 달리다 보면 도착한다.
+
+주의할 점이 한가지 있다.
+
+배 운행시간은 정해져 있고 탑승 인원은 선착순이기 때문에 표를 구매하고 선착장에서 미리 줄 서있는게 좋다.
+
+예를들어 11시 배를 타려고 했는데 이미 내 앞에서 만원이 되어버렸다면 다음 배를 기다려야한다.
+
+우린 11시 쯤 항구에 도착했는데 이미 만원이 되어버려서 1시간 기다렸다... 아침 일찍 가는걸 추천한다.
+
+### 고양이섬 가는중
+날씨가 정말 정말 좋았다.
+
+버스 정류장에서 연예인 처럼 보이는 분들을 보았다. ㄷㄷ
+
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%87%E1%85%A5%E1%84%89%E1%85%B3.jpeg?alt=media&token=66e6716f-4f40-4d6f-9dc7-f28043e9fabf" alt="버스" width="440px" height="220px">
+
+항구에서 배를 기다리며 바다를 구경했다.
+
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%87%E1%85%A1%E1%84%83%E1%85%A11.jpeg?alt=media&token=2609501a-c5c5-44c4-a2a7-a0eab5a4f4f7" alt="바다1" width="440px" height="220px">
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%87%E1%85%A1%E1%84%83%E1%85%A12.jpeg?alt=media&token=38792867-ec5f-4fa9-a0fb-2ff4bec884d8" alt="바다2" width="440px" height="220px">
+<video controls>
+  <source src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%80%E1%85%A9%E1%84%8B%E1%85%A3%E1%86%BC%E1%84%8B%E1%85%B5%E1%84%89%E1%85%A5%E1%86%B7%E1%84%87%E1%85%A2.mp4?alt=media&token=614b2b99-4a46-4e45-8463-521e8aa59bd8" type="video/mp4">
+</video>
+
+### 고양이섬
+생각보다 별거 없다.
+
+고양이들도 생각보다 안씻은 고양이들이 많다. 흑흑
+
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%80%E1%85%A9%E1%84%8B%E1%85%A3%E1%86%BC%E1%84%8B%E1%85%B51.jpeg?alt=media&token=1d8046ee-29a5-4e0a-9279-ff5a0eeb419a" alt="고양이1" width="500px" height="300px">
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%80%E1%85%A9%E1%84%8B%E1%85%A3%E1%86%BC%E1%84%8B%E1%85%B52.jpeg?alt=media&token=1b4f3125-e8db-4458-8f6a-719ba7fa351b" alt="고양이2" width="500px" height="300px">
+
+가장 깔끔한 친구 2마리를 골라보았다.
+
+가만히 앉아 있으면 옆에와서 몸을 비벼된다 ㅋㅋ
+
+한번쯤은 가볼만한 곳인거 같다.
+
+### 장어덮밥
+고양섬에서 후쿠오카로 돌아왔더니 어느새 날이 저물었다.
+
+저녁으로 후쿠오카 맛집 리스트에 항상 껴있는 장어덮밥 집을 갔다.
+
+가격이 꽤 비쌌지만 맛은 그럭저럭 ㅍㅌㅊ인거 같다.
+
+오른쪽에 긴 물컵은 따로 시킨 하이볼인데 맛 없다.
+
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%8B%E1%85%A5%E1%84%83%E1%85%A5%E1%87%81%E1%84%87%E1%85%A1%E1%86%B82.jpeg?alt=media&token=b33cb304-2979-4d9d-b4e5-459acd034e06" alt="장어덮밥" width="500px" height="280px">
+
+### 하카타 역 지브리 굿즈 구경
+저녁을 먹고 숙소로 돌아가는 길에 하카타 역을 지나며 들러보았다.
+
+고양이 버스 ㅋㅋ
+
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%8C%E1%85%B5%E1%84%87%E1%85%B3%E1%84%85%E1%85%B52.jpeg?alt=media&token=c76c47a0-74c0-4150-8ef4-d76f4ee26afa" alt="고양이버스" width="450px" height="220px">
+
+큰 토토로 ㄷㄷ 저것도 파는건가?
+
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%8C%E1%85%B5%E1%84%87%E1%85%B3%E1%84%85%E1%85%B53.jpeg?alt=media&token=0674ecc8-9719-4868-bb82-cb334364176f" alt="토토로" width="250px" height="450px">
+
+### 야식
+둘째 날도 가볍게 편맥 조지고 잠들었다.
+
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%8B%E1%85%A3%E1%84%89%E1%85%B5%E1%86%A82.jpeg?alt=media&token=d19a46da-f658-4426-b3ac-5f9b4ff44dd0" alt="야식2" width="500px" height="240px">
+
+## 셋째 날
+오늘은 나가사키를 가는 날이다.
+
+북큐슈 레일패스 권을 사용하여 후쿠오카 역에서 카모메?라는 열차를 타고 이동했다.
+
+지정석이 매진이라 선착순 좌석표였는데 운좋게 자리가 남아 앉아서 갔다.
+
+### 나가사키 역
+역 간판이 맘에 들어서 찍었다.
+
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%82%E1%85%A1%E1%84%80%E1%85%A1%E1%84%89%E1%85%A1%E1%84%8F%E1%85%B5%E1%84%8B%E1%85%A7%E1%86%A8.jpeg?alt=media&token=6f791688-f481-43da-9270-2db527fac07b" alt="나가사키역" width="500px" height="240px">
+
+### 이동하면서 본 것
+커여운 길고양이
+
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%82%E1%85%A1%E1%84%80%E1%85%A1%E1%84%89%E1%85%A1%E1%84%8F%E1%85%B5%E1%84%8B%E1%85%A3%E1%84%8B%E1%85%A9%E1%86%BC.jpeg?alt=media&token=d641644d-c0fb-47de-9736-d6ea33e4a013" alt="나가사키야옹" width="500px" height="240px">
+
+메가네바시라는 관광지 관심은 없는데 동선에 있어서 지나갔다
+
+다리 모양이 안경과 비슷하다하여 말 그대로 메가네바시라고한다. ㅋㅋ..
+
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%86%E1%85%A6%E1%84%80%E1%85%A1%E1%84%82%E1%85%A6%E1%84%87%E1%85%A1%E1%84%89%E1%85%B5.jpeg?alt=media&token=63b05280-1629-442a-b920-3fbeb599c9c9" alt="메가네바시" width="500px" height="240px">
+
+### 고로케
+구글지도로 여기 저기 리뷰를 보며 찾아낸 나가사키 맛집이다.
+
+가게 공간이 작아서 20 ~ 30분 정도 웨이팅을 했다.
+
+직원분들이 굉장히 친절하고 맛도 있었다.
+
+계산할 때 한국어로 고맙다고 하셨다. ㅎㅎ ㄱㅅㄱㅅ
+
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%80%E1%85%A9%E1%84%85%E1%85%A9%E1%84%8F%E1%85%A61.jpeg?alt=media&token=0d0be6de-c18b-4ade-8fb8-426d75f087b4" alt="고로케1" width="500px" height="250px">
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%80%E1%85%A9%E1%84%85%E1%85%A9%E1%84%8F%E1%85%A62.jpeg?alt=media&token=e66c545a-8f68-4171-a0aa-a08531b57147" alt="고로케2" width="500px" height="250px">
+
+### 돈카츠
+오늘은 5끼 식사가 목표이다.
+
+고로케 먹고 바로 3분 거리에 있는 돈카츠 집으로 갔다.
+
+고로케도 특으로 먹고 돈카츠도 특으로 먹었다.
+
+친구들이 배가 불러 맛을 느끼지 못하겠다고 남자라면 먹어야하지 않겠는가?
+
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%83%E1%85%A9%E1%86%AB%E1%84%8F%E1%85%A1%E1%84%8E%E1%85%B3.jpeg?alt=media&token=b888e680-3509-459a-b16f-b8a70cb0eb03" alt="돈카츠" width="500px" height="250px">
+
+### 산책
+40분 동안 2끼 식사를 마치고 나가사키 관광지 중 하나인 오우라 성당 근처를 산책했다.
+
+오우라 성당을 가진 않았다.
+
+산책 중에 나가사키 특산품인 분메이도 카스테라를 구매했다.
+
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%82%E1%85%A1%E1%84%80%E1%85%A1%E1%84%89%E1%85%A1%E1%84%8F%E1%85%B5%E1%84%89%E1%85%A1%E1%86%AB%E1%84%8E%E1%85%A2%E1%86%A8.jpeg?alt=media&token=b468192c-c060-4050-8e48-63034a92b310" alt="나가사키산책" width="500px" height="250px">
+
+### 원폭 자료관
+1945년 8월 9일 11시 2분에 투하된 원폭으로 약 15만 명의 사상자를 발생시킨 사건을 기록하기 위한 곳이다.
+
+슬픈 역사이다. 흑흑
+
+20분 정도 관람했다.
+
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%8B%E1%85%AF%E1%86%AB%E1%84%91%E1%85%A9%E1%86%A8%E1%84%87%E1%85%A1%E1%86%A8%E1%84%86%E1%85%AE%E1%86%AF%E1%84%80%E1%85%AA%E1%86%AB.jpeg?alt=media&token=b7aad29d-cd29-4354-addc-6c6adc84bf36" alt="원폭자료관" width="500px" height="250px">
+
+### 멘타이쥬
+후쿠오카로 돌아왔더니 저녁이 되었다.
+
+숙소 근처에 있는 식당인데 지나갈 때 마다 길게 줄 서있길래 가보았다.
+
+알고보니 유명한 명란 요리 식당이였다.
+
+~~원래 나가사키에서 스시를 먹고 오려 했는데 문을 닫아서 ㅜㅜ~~
+
+시끄럽게 떠드는 한국인들이 많아서 별로였다.
+
+음식은 나쁘지 않았다. ㅍㅌㅊ
+
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%86%E1%85%A6%E1%86%AB%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B2.jpeg?alt=media&token=03bda758-ddb3-4377-8f9c-39b59955ce4a" alt="멘타이쥬" width="500px" height="250px">
+
+너무 피곤해서 식사를 마치고 피곤해서 바로 숙소로 돌아가 잠들었다.
+
+셋째 날까지 이렇게 마무리하고 마지막 유후인 일정만 남아있는데 **후쿠오카 여행기(2019) - 유후인편**으로 따로 글을 작성하고자한다.
