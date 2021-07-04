@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/movie", {data:[{category:"movie",posts:[]}],fetch:{},mutations:[]});
