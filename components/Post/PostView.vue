@@ -18,6 +18,18 @@ export default {
 };
 </script>
 
+<style lang="scss">
+.markdown-body {
+  &.mobile {
+    img,
+    video {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+</style>
+
 <style lang="scss" scoped>
 .postView {
   @include contentsWidth;
