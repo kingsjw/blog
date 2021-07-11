@@ -35,7 +35,7 @@
   > 숙박, 레저 서비스
   >> 상품(숙박, 레저) 검색, 검색 결과, 지도 검색, 상품 상세, 결제(예약), 결제(예약) 완료, 본인 인증, 예약(목록, 취소 및 환불), 기획전 등 클라이언트 사이드 전반의 서비스 개발
   >
-  > [프로젝트 회고](https://github.com/kingsjw/md-hub/blob/master/yan-wht-review.md)
+  > [프로젝트 회고](https://kingsjw.github.io/blog/tech/yan-wht-review)
 
 ### [브링프라이스 - 항공, 호텔 메타서치 서비스(유지보수)](bringprice.com)
   > 2019.10 ~ 2021.03
