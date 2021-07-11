@@ -26,7 +26,10 @@ export default {
   width: 250px;
   position: fixed;
   right: 0;
+  bottom: 0;
   top: 100px;
+  overflow-y: auto;
+  padding: 10px 0;
   .depth-2 {
     font-weight: 500;
   }
