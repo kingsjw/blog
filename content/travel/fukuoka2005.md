@@ -93,7 +93,8 @@ writer: kingsjw7
 
 <img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%89%E1%85%A1%E1%86%AB%E1%84%8E%E1%85%A2%E1%86%A83.jpeg?alt=media&token=e0e925dd-d7e1-433c-bbf3-7484af8e32bc" alt="산책3" width="400px" height="200px">
 
-### 스타벅스
+산책하면서 스타벅스가 보이길래 자바칩 프라푸치노 하나 때렸다.
+
 ㄹㅇ 다른건 모르겠고 종이 빨대가 아니어서 좋았다.
 
 <img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%89%E1%85%B3%E1%84%87%E1%85%A5%E1%86%A8.jpeg?alt=media&token=ceb56c45-fd5a-4251-9b8a-09c1bcd3db6f" alt="스벅" width="200px" height="400px">
@@ -208,14 +209,19 @@ writer: kingsjw7
 
 지정석이 매진이라 선착순 좌석표였는데 운좋게 자리가 남아 앉아서 갔다.
 
+### 아침밥
+역에서 기차 기다리며 밥을 먹었는데 별루였다.
+
+간단하게 편의점 샌드위치 먹는게 더 나은듯..
+
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%8B%E1%85%A1%E1%84%8E%E1%85%B5%E1%86%B7%E1%84%87%E1%85%A1%E1%86%B81.jpeg?alt=media&token=c77839c8-32ad-481d-99bb-16f1ad764d22" alt="아침밥" width="500px" height="240px">
+
+
 ### 나가사키 역
 역 간판이 맘에 들어서 찍었다.
+역에서 나오면서 커여운 길고양이도 보았다
 
 <img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%82%E1%85%A1%E1%84%80%E1%85%A1%E1%84%89%E1%85%A1%E1%84%8F%E1%85%B5%E1%84%8B%E1%85%A7%E1%86%A8.jpeg?alt=media&token=6f791688-f481-43da-9270-2db527fac07b" alt="나가사키역" width="500px" height="240px">
-
-### 이동하면서 본 것
-커여운 길고양이
-
 <img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%82%E1%85%A1%E1%84%80%E1%85%A1%E1%84%89%E1%85%A1%E1%84%8F%E1%85%B5%E1%84%8B%E1%85%A3%E1%84%8B%E1%85%A9%E1%86%BC.jpeg?alt=media&token=d641644d-c0fb-47de-9736-d6ea33e4a013" alt="나가사키야옹" width="500px" height="240px">
 
 메가네바시라는 관광지 관심은 없는데 동선에 있어서 지나갔다
@@ -243,7 +249,7 @@ writer: kingsjw7
 
 고로케도 특으로 먹고 돈카츠도 특으로 먹었다.
 
-친구들이 배가 불러 맛을 느끼지 못하겠다고 남자라면 먹어야하지 않겠는가?
+친구들이 배가 불러 맛을 느끼지 못하겠다고 했지만 남자라면 먹어야하지 않겠는가?
 
 <img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%83%E1%85%A9%E1%86%AB%E1%84%8F%E1%85%A1%E1%84%8E%E1%85%B3.jpeg?alt=media&token=b888e680-3509-459a-b16f-b8a70cb0eb03" alt="돈카츠" width="500px" height="250px">
 
@@ -280,6 +286,104 @@ writer: kingsjw7
 
 <img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%86%E1%85%A6%E1%86%AB%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B2.jpeg?alt=media&token=03bda758-ddb3-4377-8f9c-39b59955ce4a" alt="멘타이쥬" width="500px" height="250px">
 
-너무 피곤해서 식사를 마치고 피곤해서 바로 숙소로 돌아가 잠들었다.
+식사를 마치고 피곤해서 바로 숙소로 돌아가 잠들었다.
 
-셋째 날까지 이렇게 마무리하고 마지막 유후인 일정만 남아있는데 **후쿠오카 여행기(2019) - 유후인편**으로 따로 글을 작성하고자한다.
+## 넷째 날
+본 힐링 여행에 메인 컨텐츠인 유후인 가는 날이다.
+
+숙소도 유후인에 있는 료칸으로 가서 1박을 할 것이다.
+### 유후인 역
+도착했다!
+
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%8B%E1%85%B2%E1%84%92%E1%85%AE%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%8B%E1%85%A7%E1%86%A8.jpeg?alt=media&token=2f843a3c-486b-4c72-aa49-3e52eae8e433" alt="유후인역" width="500px" height="250px">
+
+### 풍경
+날씨도 정말 좋았고 풍경도 매우 좋았다.
+
+이게 힐링이지.. ㄹㅇ
+
+근데 저 노랑옷 친구가 폰을 기차에 두고 내렸다고 해서 역무원 눈나한테 짧은 일본어로 기차에 두고 내렸어요 ㅜㅜ
+
+기종은 갤럭시s8이고 색은... ㅜㅜ 했더니 종점인 뱃푸 역에서 보관 처리중이라고 알려주셨다. 그리고 저 친구 혼자 뱃푸까지 가서 폰 찾아왔다. ㅋㅋ;
+
+역무원 눈나 감사합니다... 감사합니다... ㅜ
+
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%8B%E1%85%B2%E1%84%92%E1%85%AE%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%80%E1%85%A5%E1%84%85%E1%85%B51.jpeg?alt=media&token=8826b771-b696-463d-ac64-849b280b5577" alt="유후인거리1" width="500px" height="250px">
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%8B%E1%85%B2%E1%84%92%E1%85%AE%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%80%E1%85%A5%E1%84%85%E1%85%B52.jpeg?alt=media&token=8c43b872-6968-43fe-8901-2372b002d8a1" alt="유후인거리2" width="500px" height="250px">
+
+### 료칸 
+료칸에 도착했다.
+
+직원분들이 과하다 싶을 정도로 매우 친절했다.
+
+료칸 간판 흔들렸네 ㅋㅋ;
+
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%85%E1%85%AD%E1%84%8F%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A1%E1%86%AB%E1%84%91%E1%85%A1%E1%86%AB.jpeg?alt=media&token=81e7cd23-34f4-4dd5-9943-3c89d920526b" alt="료칸간판" width="500px" height="250px">
+
+웰컴 드링크
+
+치즈 푸딩인가? 그랬는데 치즈 못먹어서 친구 줬다. 흑흑
+
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%8B%E1%85%B0%E1%86%AF%E1%84%8F%E1%85%A5%E1%86%B7%E1%84%83%E1%85%B3%E1%84%85%E1%85%B5%E1%86%BC%E1%84%8F%E1%85%B3.jpeg?alt=media&token=4eab9660-fc07-48d5-a7b3-c37b3821b43c" alt="웰컴드링크" width="500px" height="250px">
+
+### 유노츠보 거리 ~ 긴린코 호수
+유후인에 왔다면 꼭 가야하는 관광지이다.
+
+관광지가 여기 한 곳뿐이기 때문이다.
+
+일본 휴가철이라 일본인분들도 많았다.
+
+사람들이 많아서 시끄럽긴 했지만 풍경이 매우 좋았다.
+
+유노츠보 거리는 먹을거리 팔고 이런 곳이고 사진 찍을 만한 곳은 긴린코 호수이다.
+
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%80%E1%85%B5%E1%86%AB%E1%84%85%E1%85%B5%E1%86%AB%E1%84%8F%E1%85%A9%E1%84%92%E1%85%A9%E1%84%89%E1%85%AE1.jpeg?alt=media&token=4a53b012-c7ef-479b-9e9e-5e9b95db65a8" alt="긴린코호수1" width="500px" height="250px">
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%8B%E1%85%A9%E1%84%85%E1%85%B5.jpeg?alt=media&token=db7a2db1-d3b4-4b7f-a926-3897d3f9d3e8" alt="긴린코호수오리" width="500px" height="250px">
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%80%E1%85%B5%E1%86%AB%E1%84%85%E1%85%B5%E1%86%AB%E1%84%8F%E1%85%A9%E1%84%92%E1%85%A9%E1%84%89%E1%85%AE2.jpeg?alt=media&token=3db1c950-fe93-47e8-9e5a-9bc4ab1ee41c" alt="긴린코호수2" width="500px" height="250px">
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%80%E1%85%B5%E1%86%AB%E1%84%85%E1%85%B5%E1%86%AB%E1%84%8F%E1%85%A9%E1%84%92%E1%85%A9%E1%84%89%E1%85%AE3.jpeg?alt=media&token=402d2cce-4ef9-484d-9ba7-9e76c0ab4ef2" alt="긴린코호수3" width="500px" height="250px">
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%80%E1%85%B5%E1%86%AB%E1%84%85%E1%85%B5%E1%86%AB%E1%84%8F%E1%85%A9%E1%84%92%E1%85%A9%E1%84%89%E1%85%AE4.jpeg?alt=media&token=813d81c5-4217-477a-a740-35948684ddc9" alt="긴린코호수4" width="500px" height="250px">
+
+### 료칸 가이세키
+유노츠보 거리 갔다가 료칸으로 돌아와 휴식 후 식사가 준비되었다.
+
+저녁 식사가 코스로 준비된다.
+
+방으로 직접 음식을 하나씩 가져다 주었다.
+
+보기보다 별 맛 없다.
+
+
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%89%E1%85%A6%E1%84%8F%E1%85%B51.jpeg?alt=media&token=847741e3-aa19-4ba3-95c3-553643125cf3" alt="가이세키1" width="500px" height="250px">
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%89%E1%85%A6%E1%84%8F%E1%85%B52.jpeg?alt=media&token=430c298a-65de-4b2f-a374-54ce6e3ccc9c" alt="가이세키2" width="500px" height="250px">
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%89%E1%85%A6%E1%84%8F%E1%85%B53.jpeg?alt=media&token=93957f08-5c17-4ca8-a4d3-c38107eae6a0" alt="가이세키3" width="500px" height="250px">
+
+### 료칸 온천
+크으 이게 리얼 온천인가?
+
+이곳엔 4 ~ 5개 온천이 있는데 뽕 뽑으려고 밥 먹고 들어가고 쉬었다가 들어가고 야식 먹고 들어가고 자기전에 들어가고 아침에 일어나서 들어가고 했던거 같다.
+
+아래 사진은 프라이빗 온천으로 선착순으로 들어가면 일행만 같이 이용할 수 있다.
+
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%85%E1%85%AD%E1%84%8F%E1%85%A1%E1%86%AB%E1%84%8B%E1%85%A9%E1%86%AB%E1%84%8E%E1%85%A5%E1%86%AB.jpeg?alt=media&token=6f87ce3a-8d9d-44d8-990a-aed5f504f962" alt="료칸온천" width="500px" height="250px">
+
+이게 인스타 감성인가?
+
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%8B%E1%85%A9%E1%86%AB%E1%84%8E%E1%85%A5%E1%86%AB%E1%84%89%E1%85%AE%E1%86%AF.jpeg?alt=media&token=eb522ad6-4a54-44af-9a35-f54abd4e6ff5" alt="료칸온천술" width="480px" height="500px">
+
+### 이부자리
+이게 료칸이지 ㄹㅇ
+
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%8B%E1%85%B5%E1%84%87%E1%85%AE%E1%84%8C%E1%85%A1%E1%84%85%E1%85%B5.jpeg?alt=media&token=8376bed9-dedb-49f5-90eb-d8635341b5be" alt="이부자리" width="550px" height="300px">
+
+## 마지막 날
+
+### 아침식사
+조식도 생각보다 별맛 없다.
+
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%20%EC%97%AC%ED%96%89%EA%B8%B0(2019)%2F%E1%84%85%E1%85%AD%E1%84%8F%E1%85%A1%E1%86%AB%E1%84%8B%E1%85%A1%E1%84%8E%E1%85%B5%E1%86%B7%E1%84%87%E1%85%A1%E1%86%B8.jpeg?alt=media&token=3dfc4e75-2e99-47cc-bc4c-51d5e8c92a44" alt="료칸조식" width="550px" height="300px">
+
+이거 먹고 온천 한번 빠르게 들어갔다가 후쿠오카 공항가서 집으로 갔다.
+
+개인적으로 유후인만 3박 4일 해도 괜찮을거 같다.
+
+서재우의 힐링 여행.. 다음은 어디루 가지?
