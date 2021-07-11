@@ -55,7 +55,6 @@ export default {
   @include contentsWidth;
   margin: 0 auto;
   padding: 0 0 80px;
-  z-index: -1;
   position: relative;
   &.mobile {
     padding: 20px;
