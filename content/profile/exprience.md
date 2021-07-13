@@ -1,6 +1,6 @@
 ## Exprience
 
-### [클래스101](https://mall.yanolja.com/samsungcard)
+### [클래스101](https://class101.net/)
   > 자신의 일을 사랑하는 크리에이터들을 위한 온라인 유료 클래스 플랫폼입니다.
   >
   > 2020.03 ~ 진행중
