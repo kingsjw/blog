@@ -1,6 +1,6 @@
 ---
 title: 야놀자 화이트 라벨 프로젝트 회고
-description: 프로젝트 참여 후기
+description: 프로젝트 회고
 coverImage: https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Fyan-logo.png?alt=media&token=188f2b7e-4707-4849-84dc-8ba7a8c452a7
 writer: kingsjw7
 ---
