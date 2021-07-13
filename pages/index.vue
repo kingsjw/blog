@@ -37,7 +37,7 @@ export default {
     ListWrap,
   },
   async asyncData({ $content }) {
-    const categories = ['movie', 'travel', 'tech'];
+    const categories = ['tech', 'travel', 'movie'];
     const posts = await Promise.all(
       categories.map(
         async (category) => await $content(category, { deep: true }).fetch()
