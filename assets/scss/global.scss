@@ -1,4 +1,9 @@
+$headerHeight: 80;
 @mixin contentsWidth {
   width: 100%;
   max-width: 1120px;
 }
+
+:export {
+  headerHeight: $headerHeight;
+};
