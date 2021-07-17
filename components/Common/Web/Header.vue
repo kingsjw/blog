@@ -72,7 +72,7 @@
 <style lang="scss" scoped>
 .headerWrap {
   width: 100%;
-  height: $headerHeight;
+  height: $headerHeight * 1px;
   a {
     color: inherit;
     text-decoration: none;
@@ -81,7 +81,7 @@
     transition: 0.3s ease;
     z-index: 1;
     width: 100%;
-    height: $headerHeight;
+    height: $headerHeight * 1px;
     display: flex;
     justify-content: center;
     align-items: center;
