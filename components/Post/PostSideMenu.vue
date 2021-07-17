@@ -1,7 +1,11 @@
 <template>
   <div class="postSideMenu">
     <ul>
-      <li v-for="({ id, text, depth, path }, index) in menus" :key="index">
+      <li
+        v-for="({ id, text, depth, path }, index) in menus"
+        :key="index"
+        @click="moveToAticle(id)"
+      >
         <nuxt-link :to="{ path, hash: id }" :class="`depth-${depth}`">{{
           text
         }}</nuxt-link>
@@ -16,6 +20,17 @@ export default {
     menus: {
       type: Array,
       default: () => [],
+    },
+  },
+  methods: {
+    moveToAticle(id) {
+      if (id) {
+        const target = document.querySelector(decodeURIComponent(`#${id}`));
+        return window.scrollTo({
+          top: target.offsetTop,
+          behavior: 'smooth',
+        });
+      }
     },
   },
 };
