@@ -1,6 +1,6 @@
 ---
 title: 후쿠오카 여행기(2019)
-description: 후쿠오카 여행기(작성중인 글 입니다)
+description: 후쿠오카 여행기
 coverImage: https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftravel%2F%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%EC%97%AC%ED%96%89%EA%B8%B0-2019%2F%E1%84%92%E1%85%AE%E1%84%8F%E1%85%AE%E1%84%8B%E1%85%A9%E1%84%8B%E1%85%A7%E1%84%92%E1%85%A2%E1%86%BC%E1%84%8F%E1%85%A5%E1%84%87%E1%85%A5.jpg?alt=media&token=a3e645fa-788f-4504-bb05-49e3717e11ce
 writer: kingsjw7
 ---
