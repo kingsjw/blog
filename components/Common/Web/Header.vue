@@ -72,7 +72,7 @@
 <style lang="scss" scoped>
 .headerWrap {
   width: 100%;
-  height: $headerWrap;
+  height: $headerHeight;
   a {
     color: inherit;
     text-decoration: none;
