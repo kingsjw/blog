@@ -1,4 +1,4 @@
-import { headerHeight } from '../assets/scss/global.scss';
+import { headerHeight } from '~/assets/scss/global.scss';
 
 export default function (to, from, savedPosition) {
   if (savedPosition) {
