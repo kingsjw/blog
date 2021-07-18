@@ -1,8 +1,8 @@
 <template>
   <div class="postViewPage">
-    <PostView :post="post"></PostView>
+    <PostView :post="post" ref="postView"></PostView>
     <PostSideMenu
-      v-if="!$store.state.device.isMobile"
+      v-if="isSideMenuOpen"
       :menus="
         post.toc.map(({ id, text, depth }) => ({ id, text, depth, path }))
       "
@@ -26,6 +26,11 @@ export default {
       coverImage,
       post,
       path,
+    };
+  },
+  data() {
+    return {
+      isOverWindowHeight: false,
     };
   },
   components: {
@@ -58,6 +63,15 @@ export default {
         },
       ],
     };
+  },
+  computed: {
+    isSideMenuOpen() {
+      return !this.$store.state.device.isMobile && this.isOverWindowHeight;
+    },
+  },
+  mounted() {
+    this.isOverWindowHeight =
+      window.innerHeight < this.$refs.postView.$el.clientHeight;
   },
 };
 </script>
