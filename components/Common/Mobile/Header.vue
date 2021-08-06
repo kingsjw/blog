@@ -20,7 +20,7 @@
           <ul>
             <li @click="close">
               <nuxt-link
-                to="profile"
+                to="/profile"
                 class="list"
                 :class="pageName.indexOf('profile') !== -1 ? 'active' : ''"
               >
@@ -33,7 +33,7 @@
             </li>
             <li @click="close">
               <nuxt-link
-                to="tech"
+                to="/tech"
                 class="list"
                 :class="pageName.indexOf('tech') !== -1 ? 'active' : ''"
               >
@@ -43,7 +43,7 @@
             </li>
             <li @click="close">
               <nuxt-link
-                to="movie"
+                to="/movie"
                 class="list"
                 :class="pageName.indexOf('movie') !== -1 ? 'active' : ''"
               >
@@ -56,7 +56,7 @@
             </li>
             <li @click="close">
               <nuxt-link
-                to="travel"
+                to="/travel"
                 class="list"
                 :class="pageName.indexOf('travel') !== -1 ? 'active' : ''"
               >
