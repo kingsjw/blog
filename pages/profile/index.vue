@@ -19,18 +19,26 @@ export default {
         {
           hid: 'description',
           name: 'description',
+          property: 'description',
           content: '개발자 서재우의 프로필 입니다.',
         },
         {
           hid: 'og:image',
           name: 'og:image',
+          property: 'og:image',
           content:
             'https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Fflog.jpg?alt=media&token=5d7a96e9-b03a-47a9-a2ac-0267ca4a4939',
         },
-        { hid: 'og:title', name: 'og:title', content: '개발자 서재우' },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          property: 'og:title',
+          content: '개발자 서재우',
+        },
         {
           hid: 'og:description',
           name: 'og:description',
+          property: 'og:description',
           content: '개발자 서재우의 프로필 입니다.',
         },
       ],
