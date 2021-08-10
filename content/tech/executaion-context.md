@@ -15,7 +15,7 @@ writer: kingsjw7
 - Java Script 엔진이 코드를 실행할 때 필요한 정보를 의미한다.
 
 ## 실행 컨텍스트(Execution Context)는 언제 만들어질까?
-Java Script 엔진은 소스 코드를 평가와 실행. 2가지의 과정을 나누어 동작한다.
+Java Script 엔진은 소스 코드를 평가와 실행, 2가지의 과정으로 나누어 동작한다.
 
 평가 과정에서 **실행 가능한 코드(Execution Code)** 를 만나면 그 코드를 평가해서 **실행 컨텍스트(Execution Context)** 로 만든다.
 
