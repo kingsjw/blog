@@ -121,7 +121,7 @@ ExecutionContext = {
 
 ### 렉시컬 환경(Lexical Environment)
 > Lexical Environment는 스펙에만 존재하는 '이론상의'객체이다.  
-> 따라서 직접 Lexical Environment를 조회하거나 조작하는 것은 불가능하다.
+> 따라서 직접 Lexical Environment를 조회하거나 조작하는 것은 불가능하다.  
 이제 _렉시컬 환경은 식별자와 식별자에 바인딩된 값, 그리고 상위 스코프에 대한 참조를 기록하는 자료구조로 실행 컨텍스트를 구성하는 컴포넌트이다._ 라고 위에서 언급한 내용이 이해가 될 것이다.
 
 렉시컬 환경은 다음과 같은 역할을 한다.
@@ -138,3 +138,5 @@ ExecutionContext = {
 - Environment Record
 - Outer (reference to the outer environment)
 - This binding (ES6부터 This 바인딩은 Lexical Environment가 담당한다) 
+
+작성중...
