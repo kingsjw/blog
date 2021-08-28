@@ -6,7 +6,8 @@ writer: kingsjw7
 ---
 
 # JS Execution Context
-> Java Script의 핵심 동작원리 중 하나인 Execution Context(실행 컨텍스트)에 대해 내가 이해한 만큼 기록해보자
+> Java Script의 핵심 동작원리 중 하나인 Execution Context(실행 컨텍스트)에 대해 내가 이해한 만큼 기록해보자  
+> 이 글은 [모던 자바스크립트 Deep Dive 책](https://book.naver.com/bookdb/book_detail.nhn?bid=16710547)을 참조한 글이다.
 
 ## 실행 컨텍스트(Execution Context)는 무엇일까?
 - 자바스크립트 기본 동작 원리 중 하나이다.
@@ -120,7 +121,7 @@ ExecutionContext = {
 > 처음에는 같은 Lexical Environment를 참조하나 코드 상황에 따라 참조가 바뀌기도 한다. [참고](http://dmitrysoshnikov.com/ecmascript/es5-chapter-3-2-lexical-environments-ecmascript-implementation/)
 
 ### 렉시컬 환경(Lexical Environment)
-> Lexical Environment는 스펙에만 존재하는 '이론상의'객체이다.  
+> Lexical Environment는 스펙에만 존재하는 추상적인 개념이다.  
 > 따라서 직접 Lexical Environment를 조회하거나 조작하는 것은 불가능하다.  
 이제 _렉시컬 환경은 식별자와 식별자에 바인딩된 값, 그리고 상위 스코프에 대한 참조를 기록하는 자료구조로 실행 컨텍스트를 구성하는 컴포넌트이다._ 라고 위에서 언급한 내용이 이해가 될 것이다.
 
@@ -134,9 +135,28 @@ ExecutionContext = {
 - 외부 렉시컬 환경에 대한 참조는 상위 스코프를 가리킨다.  
    → 단방향 링크드 리스트인 스코프 체인 구성
 
-각 렉시컬 환경은 3가지의 컴포넌트로 구성된다.
+각 렉시컬 환경은 크게 3가지의 컴포넌트로 구성되며, 전역 렉시컬 환경과, 함수 렉시컬 환경이 존재한다.
+> 전역 렉시컬 환경과 함수 렉시컬 환경의 내부 구조(모양)는 같지만 동작은 서로 다르다.  
+> 내부 동작 내용을 모두 정리하면 글이 매우 길어질 것이 우려되어 이 글에선 개념적인 내용만 다루도록하겠다.  
+> 추후 렉시컬 환경 내부 동작 내용을 다루는 글 작성할 것이다.  
 - Environment Record
 - Outer (reference to the outer environment)
 - This binding (ES6부터 This 바인딩은 Lexical Environment가 담당한다) 
+
+#### 1. Environment Record
+환경 레코드는 스코프에 포함된 식별자를 등록하고 식별자에 바인딩된 값을 관리하는 저장소이다.  
+환경 레코드는 소스코드의 타입에 따라 관리하는 내용에 차이가 있다.  
+전역 환경 레코드인 경우 기존 var 키워드로 선언한 전역 변수와 ES6의 let, const로 선언한 전역 변수를 구분하여 관리하기 위해 전역 스코프를 관리하기 위해 Object Environment Record, Declarative Environment Record이 있다.  
+
+##### 1.1 Object Environment Record
+전역 환경 레코드를 구성하는 컴포넌트 중 하나인 객체 환경 레코드는 BindingObject(전역 객체가 생성될 때 생성되는 객체)라고 부르는 객체와 연결된다.  
+var 키워드로 선언한 전역 변수와 함수 선언문으로 정의된 전역 함수는 전역 환경 레코드의 객체 환경 레코드에 연결된 BindingObject를 통해 전역 객체의 프로퍼티와 메서드가 된다.  
+이 때 등록된 식별자를 전역 환경 레코드의 객체 환경 레코드에서 검색하면 전역 객체의 프로퍼티를 검색하여 반환한다.
+이것이 var 키워드로 선언된 전역 변수와 함수 선언문으로 정의된 전역 함수가 전역 객체의 프로퍼티를 참조할 수 있는 메커니즘이다.
+> 예: window.alert을 alert만으로 참조 가능함
+      
+##### 1.2 Declarative Environment Record
+
+#### Outer (reference to the outer environment)
 
 작성중...
