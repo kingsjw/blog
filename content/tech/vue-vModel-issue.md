@@ -1,5 +1,5 @@
 ---
-title: 안드로이드에서 v-model 사용시 data 바인딩 이슈
+title: AOS에서 v-model data 바인딩 이슈
 description: Vue 개발 관련 이슈
 coverImage: https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftech%2Fcategories%2Fvue.png?alt=media&token=66e525dd-a850-43e2-85ce-19059891f8ee
 writer: kingsjw7
@@ -7,7 +7,7 @@ writer: kingsjw7
 
 # 안드로이드에서 v-model 사용시 data 바인딩 이슈
 
-v-model은 사용자 입력에 대한 데이터 값을 쉽게 양방향 바인딩을 할 수 있게해주는 vue 디렉티브입니다.
+v-model은 사용자 입력에 대한 데이터 값을 쉽게 양방향 바인딩을 할 수 있게해주는 vue 디렉티브이다.
 
 <br/>
 
