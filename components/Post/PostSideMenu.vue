@@ -23,7 +23,7 @@ export default {
 
 <style lang="scss" scoped>
 .postSideMenu {
-  width: 250px;
+  width: 300px;
   position: fixed;
   right: 0;
   bottom: 0;
