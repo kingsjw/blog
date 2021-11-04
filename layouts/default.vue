@@ -22,6 +22,7 @@ export default {
     HeaderWeb,
     HeaderMobile,
   },
+  middleware: ['device'],
   data() {
     return {
       scrollDown: false,
