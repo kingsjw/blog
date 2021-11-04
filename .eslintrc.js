@@ -19,6 +19,7 @@ module.exports = {
 		"vue"
 	],
 	"rules": {
+		"no-console": 'off',
 		"indent": ['error', 2, { 'SwitchCase': 1 }],
 		"quotes": [2, 'single'],
 	}
