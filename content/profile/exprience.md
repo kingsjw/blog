@@ -57,7 +57,9 @@
   >
   > [프로젝트 회고](https://kingsjw.github.io/blog/tech/yan-wht-review)
 
-### [브링프라이스 - 항공, 호텔 메타서치 서비스(유지보수)](bringprice.com)
+### [브링프라이스 - 항공, 호텔 메타서치 서비스(유지보수)](https://bringprice.com)
+  > 서비스 중단됨
+  >
   > 2019.10 ~ 2021.03
   >
   > ![Javascript](https://img.shields.io/badge/Javascript-F7DF1E?style=flat-square&logo=Javascript&logoColor=white)
@@ -82,8 +84,8 @@
   >> aws s3 정적 호스팅 -> aws ec2 동적 호스팅 \
   >> 수동 배포 -> jenkins를 활용한 배포 자동화
 
-### [브링프라이스 - 항공, 호텔 메타서치 서비스](bringprice.com)
-  > Skyscanner, Agoda, booking.com, Expedia 데이터를 활용해 항공, 호텔 상품을 메타서치 형태로 제공하는 서비스입니다.
+### [브링프라이스 - 항공, 호텔 메타서치 서비스](https://bringprice.com)
+  > Skyscanner, Agoda, booking.com, Expedia 데이터를 활용해 항공, 호텔 상품을 메타서치 형태로 제공하는 서비스입니다.(서비스 중단됨)
   >
   > 2018.10 ~ 2019.03
   >
