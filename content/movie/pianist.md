@@ -1,7 +1,7 @@
 ---
 title: '[영화] 파이니스트 리뷰'
 description: '감독: 로만 폴란스키'
-coverImage: https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Fmovie%2Fpainist%2Fpianist.jpeg?alt=media&token=272fcd99-3bfb-4417-a1f4-24912a97933d
+coverImage: https://firebasestorage.googleapis.com/v0/b/kingsjw7-8d984.appspot.com/o/movie%2Fpianist1.jpeg?alt=media&token=2a69f0e1-e73a-49a7-a7e5-8cd093e0f0b3
 writer: kingsjw7
 ---
 
@@ -48,4 +48,4 @@ writer: kingsjw7
 > 독일군 장교 앞에서 피아노를 연주하는 스필만
 >> [![pianist-best](https://img.youtube.com/vi/VIWxJl0BmHY/0.jpg)](https://www.youtube.com/watch?v=VIWxJl0BmHY)
 
-![pianist-best](https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Fmovie%2Fpainist%2Fpianist-best.gif?alt=media&token=8044ffff-2e8f-4d0c-a0c6-b5002498dcf2)
+![pianist-best](https://firebasestorage.googleapis.com/v0/b/kingsjw7-8d984.appspot.com/o/movie%2Fpianist2.gif?alt=media&token=3dc3ac63-f583-4a70-afde-fd959073795a)

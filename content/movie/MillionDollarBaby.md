@@ -1,7 +1,7 @@
 ---
 title: '[영화] 밀리언 달러 베이비 리뷰'
 description: '감독: 클린트 이스트우드'
-coverImage: https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Fmovie%2FmillionDollarBaby%2FMillionDollarBaby.jpeg?alt=media&token=0d1e9633-9b89-47f9-b981-50aa368666ad
+coverImage: https://firebasestorage.googleapis.com/v0/b/kingsjw7-8d984.appspot.com/o/movie%2FmillonDollorBaby1.jpeg?alt=media&token=33710eb6-3396-4208-8c7d-60dd47e4f7b3
 writer: kingsjw7
 ---
 
@@ -43,4 +43,4 @@ writer: kingsjw7
 
 극복하고 이겨내는 것이 더 중요하다.
 
-![millionDollarBaby-best](https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Fmovie%2FmillionDollarBaby%2FMillionDollarBaby-best.gif?alt=media&token=4a18426b-dcd4-4a74-9fef-cc2df0cda536)
+![millionDollarBaby-best](https://firebasestorage.googleapis.com/v0/b/kingsjw7-8d984.appspot.com/o/movie%2FmillonDollarBaby2.gif?alt=media&token=0810e9a4-e090-497c-90ca-b09782d366d4)

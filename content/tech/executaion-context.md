@@ -1,7 +1,7 @@
 ---
 title: JS Execution Context
 description: JS 실행 컨텍스트 이해하기(작성중)
-coverImage: https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftech%2Fcategories%2Fjavascript.png?alt=media&token=8e6d3d30-1416-4484-bb0a-163d529a5d99
+coverImage: https://firebasestorage.googleapis.com/v0/b/kingsjw7-8d984.appspot.com/o/tech%2FjsLogo.jpeg?alt=media&token=eea440eb-b480-47a3-85ce-89b9b9b14981
 writer: kingsjw7
 ---
 
@@ -94,7 +94,7 @@ console.log(x + y);
 
 이 동작을 시각화하면 아래와 같다.
 
-<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Ftech%2Fexecution-context%2FcallStack2.png?alt=media&token=aabfb72b-5d4c-4dbe-a82c-a2d6bc622e31" width="700px" height="auto" alt="callStack" >
+<img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-8d984.appspot.com/o/tech%2Fcallstack.png?alt=media&token=3aeb19f0-9e98-4834-b742-c1a714e6a7b2" width="700px" height="auto" alt="callStack" >
 
 
 

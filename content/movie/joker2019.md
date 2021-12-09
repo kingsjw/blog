@@ -1,7 +1,7 @@
 ---
 title: '[영화] 조커'
 description: '감독: 토드 필립스'
-coverImage: https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Fmovie%2Fjoker-2019%2Fjoker2019.jpeg?alt=media&token=e77483af-6ae7-4c37-b048-3281cb43ff35
+coverImage: https://firebasestorage.googleapis.com/v0/b/kingsjw7-8d984.appspot.com/o/movie%2Fjoker1.jpg?alt=media&token=fc6e3109-fd65-4a82-a0fe-f587214495f9
 writer: kingsjw7
 ---
 
@@ -48,4 +48,4 @@ writer: kingsjw7
 
 영화 자체는 돈 아깝지 않고 재밌었다. 굿굿
 
-![joker2019-best](https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Fmovie%2Fjoker-2019%2Fjoker2019-best.gif?alt=media&token=712feb9d-369f-464e-8012-4569ae90aa31)
+![joker2019-best](https://firebasestorage.googleapis.com/v0/b/kingsjw7-8d984.appspot.com/o/movie%2Fjoker2.gif?alt=media&token=c0f22f8c-529b-4730-b779-4e573b71a4ce)

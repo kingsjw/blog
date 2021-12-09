@@ -1,7 +1,7 @@
 ---
 title: '[영화] 캐치미이프유캔'
 description: '감독: 스티븐 스필버그'
-coverImage: https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Fmovie%2FcatcheMeIfYouCan%2FcatchMeIfYouCan.jpeg?alt=media&token=4224078a-b75a-41a2-b483-623e989e3665
+coverImage: https://firebasestorage.googleapis.com/v0/b/kingsjw7-8d984.appspot.com/o/movie%2FcatchMeIfYouCan1.gif?alt=media&token=898b52c2-12ec-4574-b426-aa70236546c5
 writer: kingsjw7
 ---
 
@@ -52,4 +52,4 @@ writer: kingsjw7
 
 > 포스터만 보고 안끌린다고 망성이는 당신! 후회합니다. 바로 보십쇼!
 
-![catcheMeIfYouCan-best](https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Fmovie%2FcatcheMeIfYouCan%2FcatcheMeIfYouCan-best.gif?alt=media&token=6e7c5911-95a1-4460-a359-3c6bbea6db3e)
+![catcheMeIfYouCan-best](https://firebasestorage.googleapis.com/v0/b/kingsjw7-8d984.appspot.com/o/movie%2FcatchMeIfYouCan2.jpeg?alt=media&token=50bf2ce5-2b54-4924-bf83-78b0b196e040)

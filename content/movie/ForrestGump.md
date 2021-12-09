@@ -1,7 +1,7 @@
 ---
 title: '[영화] 포레스트 검프 리뷰'
 description: '감독: 로버트 저메키스'
-coverImage: https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Fmovie%2FForrestGump%2FForrestGump.jpeg?alt=media&token=3d65a394-ac6f-420c-8093-9769ff5e0aa4
+coverImage: https://firebasestorage.googleapis.com/v0/b/kingsjw7-8d984.appspot.com/o/movie%2FforrestGump1.jpeg?alt=media&token=939ddd57-937f-4659-a5d3-ec3a576edb1a
 writer: kingsjw7
 ---
 
@@ -54,4 +54,4 @@ writer: kingsjw7
 
 영화는 영화다. 인생에 드라마는 극히 드물다.
 
-![ForrestGump-best](https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Fmovie%2FForrestGump%2FForrestGump-best.gif?alt=media&token=cdbffc08-270e-4ce0-84d0-b27cce30551c)
+![ForrestGump-best](https://firebasestorage.googleapis.com/v0/b/kingsjw7-8d984.appspot.com/o/movie%2FforrestGump2.gif?alt=media&token=ecf0f499-8eb7-4b07-be3c-f97bafdb3378)

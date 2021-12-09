@@ -1,7 +1,7 @@
 ---
 title: 클래스101 이직 후기
 description: 클래스101 이직 과정과 느낀점
-coverImage: https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Fclass101-logo.jpeg?alt=media&token=5ac85787-a68b-4f9f-a870-78468b5c6b8a
+coverImage: https://firebasestorage.googleapis.com/v0/b/kingsjw7-8d984.appspot.com/o/tech%2Fclass101Logo.png?alt=media&token=f413e113-d7e7-4e2f-9a9e-38fc1bc9e67d
 writer: kingsjw7
 ---
 
