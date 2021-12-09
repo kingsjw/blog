@@ -4,6 +4,11 @@ $headerHeight: 80;
   max-width: 1120px;
 }
 
+@mixin postViewWidth {
+  width: 100%;
+  max-width: 1040px;
+}
+
 :export {
   headerHeight: $headerHeight;
 };

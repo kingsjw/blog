@@ -32,7 +32,7 @@ export default {
 
 <style lang="scss" scoped>
 .postView {
-  @include contentsWidth;
+  @include postViewWidth;
   margin: 0 auto;
   padding: 0 0 80px;
   &.mobile {
