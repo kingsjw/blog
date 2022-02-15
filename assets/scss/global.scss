@@ -1,4 +1,9 @@
 $headerHeight: 80;
+
+$breakpoint-mobile: 330px;
+$breakpoint-tablet: 720px;
+$breakpoint-desktop: 1040px;
+
 @mixin contentsWidth {
   width: 100%;
   max-width: 1120px;
@@ -7,6 +12,24 @@ $headerHeight: 80;
 @mixin postViewWidth {
   width: 100%;
   max-width: 1040px;
+}
+
+@mixin mobile {
+  @media (max-width: #{$breakpoint-mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$breakpoint-tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-desktop}) {
+    @content;
+  }
 }
 
 :export {
