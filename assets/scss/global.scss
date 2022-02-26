@@ -1,7 +1,8 @@
 $headerHeight: 80;
+$headerMobileHeight: 110;
 
-$breakpoint-mobile: 330px;
-$breakpoint-tablet: 720px;
+$breakpoint-mobile: 500px;
+$breakpoint-tablet: 960px;
 $breakpoint-desktop: 1040px;
 
 @mixin contentsWidth {
@@ -34,4 +35,5 @@ $breakpoint-desktop: 1040px;
 
 :export {
   headerHeight: $headerHeight;
+  headerMobileHeight: $headerMobileHeight;
 };
