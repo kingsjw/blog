@@ -29,9 +29,9 @@ export default {
 <style lang="scss" scoped>
 .itemWrap {
   width: 100%;
-  display: flex;
-  flex-basis: 33.33%;
+  display: inline-flex;
   flex-wrap: wrap;
   margin-top: 30px;
+  gap: 30px;
 }
 </style>

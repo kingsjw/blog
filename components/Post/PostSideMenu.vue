@@ -30,6 +30,12 @@ export default {
   top: 100px;
   overflow-y: auto;
   padding: 10px 0;
+  @include mobile {
+    display: none;
+  }
+  @include tablet {
+    display: none;
+  }
   .depth-2 {
     font-weight: 500;
   }

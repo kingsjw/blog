@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="postView markdown-body"
-    :class="$store.state.device.isMobile ? 'mobile' : ''"
-  >
+  <div class="postView markdown-body">
     <nuxt-content :document="post"></nuxt-content>
   </div>
 </template>
@@ -19,8 +16,15 @@ export default {
 </script>
 
 <style lang="scss">
-.markdown-body {
-  &.mobile {
+.postView .markdown-body {
+  @include tablet {
+    img,
+    video {
+      width: 100%;
+      height: auto;
+    }
+  }
+  @include mobile {
     img,
     video {
       width: 100%;
@@ -35,7 +39,12 @@ export default {
   @include postViewWidth;
   margin: 0 auto;
   padding: 0 0 80px;
-  &.mobile {
+
+  @include mobile {
+    padding: 0 20px 80px;
+  }
+
+  @include tablet {
     padding: 0 20px 80px;
   }
 }

@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="profilePage"
-    :class="$store.state.device.isMobile ? 'mobile' : ''"
-  >
+  <div class="profilePage">
     <Profile :profile="profile"></Profile>
   </div>
 </template>
@@ -64,7 +61,10 @@ export default {
   margin: 0 auto;
   padding: 0 0 80px;
   position: relative;
-  &.mobile {
+  @include tablet {
+    padding: 20px;
+  }
+  @include mobile {
     padding: 20px;
   }
 }

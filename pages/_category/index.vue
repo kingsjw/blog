@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="categoryPage"
-    :class="$store.state.device.isMobile ? 'mobile' : ''"
-  >
+  <div class="categoryPage">
     <div class="contents">
       <h2 class="pageTitle">{{ getPostPageTitle(pageName) }}</h2>
       <ListWrap :posts="posts"></ListWrap>
@@ -49,7 +46,10 @@ export default {
 
 <style lang='scss' scoped>
 .categoryPage {
-  &.mobile {
+  @include mobile {
+    padding: 0 20px;
+  }
+  @include tablet {
     padding: 0 20px;
   }
   .contents {

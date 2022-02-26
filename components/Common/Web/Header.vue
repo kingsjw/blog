@@ -1,6 +1,6 @@
 <template>
-  <div class="headerWrap">
-    <header v-if="!$store.state.device.isMobile">
+  <header>
+    <div class="content">
       <div class="wrap">
         <nuxt-link :to="'/'" class="logo">
           <h1>
@@ -11,54 +11,22 @@
         <nav class="menu">
           <ul>
             <li>
-              <nuxt-link
-                to="/profile"
-                :class="
-                  $route.path && $route.path.indexOf('profile') >= 0
-                    ? 'active'
-                    : ''
-                "
-                >Profile</nuxt-link
-              >
+              <nuxt-link to="/profile">Profile</nuxt-link>
             </li>
             <li>
-              <nuxt-link
-                to="/tech"
-                :class="
-                  $route.path && $route.path.indexOf('tech') >= 0
-                    ? 'active'
-                    : ''
-                "
-                >Tech</nuxt-link
-              >
+              <nuxt-link to="/tech">Tech</nuxt-link>
             </li>
             <li>
-              <nuxt-link
-                to="/movie"
-                :class="
-                  $route.path && $route.path.indexOf('movie') >= 0
-                    ? 'active'
-                    : ''
-                "
-                >Movie</nuxt-link
-              >
+              <nuxt-link to="/movie">Movie</nuxt-link>
             </li>
             <li>
-              <nuxt-link
-                to="/travel"
-                :class="
-                  $route.path && $route.path.indexOf('travel') >= 0
-                    ? 'active'
-                    : ''
-                "
-                >Travel</nuxt-link
-              >
+              <nuxt-link to="/travel">Travel</nuxt-link>
             </li>
           </ul>
         </nav>
       </div>
-    </header>
-  </div>
+    </div>
+  </header>
 </template>
 
 <style lang="scss">
@@ -70,31 +38,44 @@
 </style>
 
 <style lang="scss" scoped>
-.headerWrap {
+a {
+  color: inherit;
+  text-decoration: none;
+}
+header {
   width: 100%;
   height: $headerHeight * 1px;
-  a {
-    color: inherit;
-    text-decoration: none;
+  @include mobile {
+    height: $headerMobileHeight * 1px;
+    padding: 14px 0;
   }
-  header {
-    transition: 0.3s ease;
-    z-index: 1;
+  .content {
     width: 100%;
     height: $headerHeight * 1px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-bottom: 1px solid #f2f2f2;
-    position: fixed;
     background-color: #fff;
+    display: flex;
+    align-items: center;
+    position: fixed;
     top: 0;
+    z-index: 1;
+    @include tablet {
+      padding: 0 14px;
+    }
+    @include mobile {
+      height: $headerMobileHeight * 1px;
+      padding: 14px 0;
+    }
     .wrap {
       @include contentsWidth;
-      height: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin: 0 auto;
+      @include mobile {
+        height: auto;
+        flex-direction: column;
+      }
       h1 {
         font-size: inherit;
         margin: 0;
@@ -111,27 +92,32 @@
           color: #aaa;
         }
       }
-      .menu ul {
-        display: flex;
-        align-items: center;
-        li {
-          font-size: 16px;
-          margin-left: 27px;
-          list-style: none;
-          &:first-of-type {
-            margin-left: 0;
-          }
-          > a {
-            font-weight: 800;
-            white-space: nowrap;
-            height: 36px;
-            color: inherit;
-            text-decoration: none;
-            &.active {
-              color: #816bff;
+      .menu {
+        @include mobile {
+          margin-top: 20px;
+        }
+        ul {
+          display: flex;
+          align-items: center;
+          li {
+            font-size: 16px;
+            margin-left: 27px;
+            list-style: none;
+            &:first-of-type {
+              margin-left: 0;
             }
-            &:hover {
-              color: #816bff;
+            > a {
+              font-weight: 800;
+              white-space: nowrap;
+              height: 36px;
+              color: inherit;
+              text-decoration: none;
+              &.nuxt-link-active {
+                color: #816bff;
+              }
+              &:hover {
+                color: #816bff;
+              }
             }
           }
         }

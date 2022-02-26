@@ -79,3 +79,15 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.postViewPage {
+  @include mobile {
+    padding: 0 14px;
+  }
+
+  @include tablet {
+    padding: 0 14px;
+  }
+}
+</style>

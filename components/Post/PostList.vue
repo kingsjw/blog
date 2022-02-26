@@ -1,9 +1,5 @@
 <template>
-  <nuxt-link
-    :to="post.path"
-    class="list"
-    :class="$store.state.device.isMobile ? 'mobile' : ''"
-  >
+  <nuxt-link :to="post.path" class="list">
     <div v-if="post && post.coverImage" class="thumbnail">
       <div
         :style="{ backgroundImage: `url(${post.coverImage})` }"
@@ -49,8 +45,6 @@ export default {
 
 <style lang="scss" scoped>
 .list {
-  width: calc((100% / 3) - 22px);
-  margin-left: 30px;
   border: 1px solid #eee;
   border-radius: 2px;
   overflow: hidden;
@@ -58,30 +52,12 @@ export default {
   box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.1);
   text-decoration: none;
   position: relative;
-  &:nth-child(n + 4) {
-    margin-top: 30px;
+  width: calc(33.33% - 20px);
+  @include tablet {
+    width: calc(50% - 15px);
   }
-  &:nth-child(3n + 1) {
-    margin-left: 0;
-  }
-  &.mobile {
+  @include mobile {
     width: 100%;
-    margin-left: 0;
-    margin-top: 20px;
-    &:first-of-type {
-      margin-top: 0;
-    }
-    .thumbnail {
-      .image {
-        padding-bottom: 100%;
-      }
-    }
-    .errorImage {
-      background-size: 38%;
-    }
-    .info {
-      padding: 20px 18px;
-    }
   }
   .thumbnail {
     width: 100%;
@@ -101,7 +77,8 @@ export default {
   .errorImage {
     width: 100%;
     height: 82%;
-    background-image: url('https://firebasestorage.googleapis.com/v0/b/kingsjw7-f7e06.appspot.com/o/images%2Fno-image.png?alt=media&token=b92dd35f-3bb6-4f70-b809-3015ae981df7');
+    min-height: 300px;
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/kingsjw7-8d984.appspot.com/o/common%2Fno-image.jpeg?alt=media&token=8986b7c8-8fd0-4cab-990f-801dabb9a8fd');
     background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;

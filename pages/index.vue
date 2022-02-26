@@ -1,5 +1,5 @@
 <template>
-  <div class="main" :class="$store.state.device.isMobile ? 'mobile' : ''">
+  <div class="main">
     <div class="searchWrap">
       <div class="search">
         <div class="title">개발자 서재우</div>
@@ -67,7 +67,7 @@ export default {
 
 <style lang="scss" scoped>
 .main {
-  &.mobile {
+  @include mobile {
     padding: 0 20px;
     .searchWrap {
       padding: 40px 0;
@@ -108,6 +108,12 @@ export default {
   .contents {
     @include contentsWidth;
     margin: 20px auto 0;
+    @include tablet {
+      padding: 0 14px;
+    }
+    @include mobile {
+      padding: 0 14px;
+    }
     .searchKeyword {
       padding: 20px 0 0;
       .bold {
