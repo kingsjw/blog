@@ -17,7 +17,9 @@ export default {
     const { category } = route.params;
     const posts = await $content(route.params.category, {
       deep: true,
-    }).fetch();
+    })
+      .sortBy('date', 'desc')
+      .fetch();
     return {
       category,
       posts,

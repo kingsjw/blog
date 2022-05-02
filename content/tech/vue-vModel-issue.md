@@ -3,6 +3,7 @@ title: AOS에서 v-model data 바인딩 이슈
 description: Vue 개발 관련 이슈
 coverImage: https://firebasestorage.googleapis.com/v0/b/kingsjw7-8d984.appspot.com/o/tech%2FvueLogo.png?alt=media&token=18c0c08e-6641-4b1d-950a-f8417cdf2aab
 writer: kingsjw7
+date: 2020-02-01
 ---
 
 # AOS에서 v-model data 바인딩 이슈

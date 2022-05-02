@@ -3,6 +3,7 @@ title: '[영화] 밀리언 달러 베이비 리뷰'
 description: '감독: 클린트 이스트우드'
 coverImage: https://firebasestorage.googleapis.com/v0/b/kingsjw7-8d984.appspot.com/o/movie%2FmillonDollorBaby1.jpeg?alt=media&token=33710eb6-3396-4208-8c7d-60dd47e4f7b3
 writer: kingsjw7
+date: 2021-10-10
 ---
 
 # [영화] 밀리언 달러 베이비 리뷰

@@ -3,6 +3,7 @@ title: JS Execution Context
 description: JS 실행 컨텍스트 이해하기
 coverImage: https://firebasestorage.googleapis.com/v0/b/kingsjw7-8d984.appspot.com/o/tech%2FjsLogo.jpeg?alt=media&token=eea440eb-b480-47a3-85ce-89b9b9b14981
 writer: kingsjw7
+date: 2021-12-01
 ---
 
 # JS Execution Context

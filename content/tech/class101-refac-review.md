@@ -3,6 +3,7 @@ title: 클래스101 성능 최적화 프로젝트 참여 회고
 description: 프로젝트 회고 
 coverImage: https://firebasestorage.googleapis.com/v0/b/kingsjw7-8d984.appspot.com/o/tech%2Fclass101Logo.png?alt=media&token=f413e113-d7e7-4e2f-9a9e-38fc1bc9e67d
 writer: kingsjw7
+date: 2021-07-01
 ---
 
 # 클래스101 성능 최적화 프로젝트 참여 회고

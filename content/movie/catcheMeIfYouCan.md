@@ -3,6 +3,7 @@ title: '[영화] 캐치미이프유캔'
 description: '감독: 스티븐 스필버그'
 coverImage: https://firebasestorage.googleapis.com/v0/b/kingsjw7-8d984.appspot.com/o/movie%2FcatchMeIfYouCan1.gif?alt=media&token=898b52c2-12ec-4574-b426-aa70236546c5
 writer: kingsjw7
+date: 2020-12-01
 ---
 
 # [영화] 캐치미이프유캔 리뷰

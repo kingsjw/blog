@@ -3,6 +3,7 @@ title: '[영화] 파이니스트 리뷰'
 description: '감독: 로만 폴란스키'
 coverImage: https://firebasestorage.googleapis.com/v0/b/kingsjw7-8d984.appspot.com/o/movie%2Fpianist1.jpeg?alt=media&token=2a69f0e1-e73a-49a7-a7e5-8cd093e0f0b3
 writer: kingsjw7
+date: 2019-01-02
 ---
 
 # [영화] 피아니스트 리뷰

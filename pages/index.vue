@@ -40,7 +40,10 @@ export default {
     const categories = ['tech', 'travel', 'movie'];
     const posts = await Promise.all(
       categories.map(
-        async (category) => await $content(category, { deep: true }).fetch()
+        async (category) =>
+          await $content(category, { deep: true })
+            .sortBy('date', 'desc')
+            .fetch()
       )
     );
     return {

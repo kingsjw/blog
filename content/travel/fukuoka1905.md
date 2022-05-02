@@ -3,6 +3,7 @@ title: 후쿠오카 여행기(2019)
 description: 후쿠오카 여행기
 coverImage: https://firebasestorage.googleapis.com/v0/b/kingsjw7-8d984.appspot.com/o/travel%2Ffukuoka2019%2FKakaoTalk_Image_2021-12-26-16-59-45_004.jpeg?alt=media&token=712c908e-adfa-4710-8c82-c10fb1988ac0
 writer: kingsjw7
+date: 2019-06-01
 ---
 
 # 후쿠오카 여행기(2019)

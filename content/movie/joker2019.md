@@ -3,6 +3,7 @@ title: '[영화] 조커'
 description: '감독: 토드 필립스'
 coverImage: https://firebasestorage.googleapis.com/v0/b/kingsjw7-8d984.appspot.com/o/movie%2Fjoker1.jpg?alt=media&token=fc6e3109-fd65-4a82-a0fe-f587214495f9
 writer: kingsjw7
+date: 2019-11-01
 ---
 
 # [영화] 조커 리뷰

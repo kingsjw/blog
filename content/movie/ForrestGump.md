@@ -3,6 +3,7 @@ title: '[영화] 포레스트 검프 리뷰'
 description: '감독: 로버트 저메키스'
 coverImage: https://firebasestorage.googleapis.com/v0/b/kingsjw7-8d984.appspot.com/o/movie%2FforrestGump1.jpeg?alt=media&token=939ddd57-937f-4659-a5d3-ec3a576edb1a
 writer: kingsjw7
+date: 2019-03-10
 ---
 
 # [영화] 포레스트 검프 리뷰
