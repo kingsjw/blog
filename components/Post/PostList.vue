@@ -12,7 +12,7 @@
       <div class="description">{{ post.description }}</div>
       <div class="writing">
         <div class="writer">작성자: {{ post.writer }}</div>
-        <div class="date">{{ ymdDateFormat(post.createdAt) }}</div>
+        <div class="date">{{ ymdDateFormat(post.date) }}</div>
       </div>
     </div>
   </nuxt-link>
@@ -31,6 +31,7 @@ export default {
         coverImage: '',
         writer: '',
         createdAt: '',
+        date: '',
         path: '',
       }),
     },

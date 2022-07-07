@@ -2,10 +2,10 @@
   <div class="itemWrap">
     <List
       v-for="(
-        { title, coverImage, description, writer, createdAt, path }, index
+        { title, coverImage, description, writer, createdAt, path, date }, index
       ) in posts"
       :key="`${title}-${index}`"
-      :post="{ title, writer, coverImage, description, createdAt, path }"
+      :post="{ title, writer, coverImage, description, createdAt, path, date }"
     ></List>
   </div>
 </template>
