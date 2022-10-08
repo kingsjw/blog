@@ -1,16 +1,9 @@
 <template>
   <div class="postViewPage">
-    <PostView :post="post" ref="postView"></PostView>
-    <PostSideMenu
-      v-if="isSideMenuOpen"
-      :menus="
-        post.toc.map(({ id, text, depth }) => ({ id, text, depth, path }))
-      "
-    ></PostSideMenu>
+    <PostView :post="post"></PostView>
   </div>
 </template>
 <script>
-import PostSideMenu from '../../../components/Post/PostSideMenu.vue';
 import PostView from '../../../components/Post/PostView.vue';
 
 export default {
@@ -28,14 +21,8 @@ export default {
       path,
     };
   },
-  data() {
-    return {
-      isOverWindowHeight: false,
-    };
-  },
   components: {
     PostView,
-    PostSideMenu,
   },
   head() {
     return {
@@ -67,15 +54,6 @@ export default {
         },
       ],
     };
-  },
-  computed: {
-    isSideMenuOpen() {
-      return !this.$store.state.device.isMobile && this.isOverWindowHeight;
-    },
-  },
-  mounted() {
-    this.isOverWindowHeight =
-      window.innerHeight < this.$refs.postView.$el.clientHeight;
   },
 };
 </script>

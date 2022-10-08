@@ -1,10 +1,15 @@
 <template>
   <div class="postSideMenu">
     <ul>
-      <li v-for="({ id, text, depth, path }, index) in menus" :key="index">
-        <nuxt-link :to="{ path, hash: id }" :class="`depth-${depth}`">{{
-          text
-        }}</nuxt-link>
+      <li v-for="({ id, text, depth, path }, index) in toc" :key="index">
+        <nuxt-link
+          :to="{ path, hash: id }"
+          :class="[
+            `depth-${depth}`,
+            currentlyActiveTocId === id ? 'nuxt-link-active' : '',
+          ]"
+          >{{ text }}</nuxt-link
+        >
       </li>
     </ul>
   </div>
@@ -13,9 +18,13 @@
 <script>
 export default {
   props: {
-    menus: {
+    toc: {
       type: Array,
       default: () => [],
+    },
+    currentlyActiveTocId: {
+      type: String,
+      default: () => '',
     },
   },
 };
