@@ -62,13 +62,12 @@ export default {
       this.isOverWindowHeight =
         window.innerHeight < this.$refs.postView.clientHeight;
     }
-
+    console.log(100 - (80 / window.innerHeight) * 100);
     // TODO(Kingsjw): intersection obserber hook으로 분리하자
     this.observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           const section = this.getSectionTarget(entry.target);
-          console.log(section);
           const sectionId = section ? section.getAttribute('id') : undefined;
           if (entry.isIntersecting && sectionId) {
             this.currentlyActiveTocId = sectionId;
@@ -77,8 +76,8 @@ export default {
       },
       {
         root: this.$refs.nustContent,
-        rootMargin: '-80px 0px -40% 0px',
-        threshold: 1,
+        rootMargin: `0px 0px -${100 - (210 / window.innerHeight) * 100}% 0px`,
+        threshold: 0.8,
       }
     );
 

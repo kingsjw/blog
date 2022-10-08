@@ -6,7 +6,7 @@
           :to="{ path, hash: id }"
           :class="[
             `depth-${depth}`,
-            currentlyActiveTocId === id ? 'nuxt-link-active' : '',
+            currentlyActiveTocId === id ? 'active' : '',
           ]"
           >{{ text }}</nuxt-link
         >
@@ -65,7 +65,7 @@ export default {
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
   }
-  .nuxt-link-active {
+  .active {
     color: #816bff;
   }
 }
