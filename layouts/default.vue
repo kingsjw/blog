@@ -9,18 +9,23 @@
   >
     <HeaderWeb v-if="!$store.state.device.isMobile"></HeaderWeb>
     <HeaderMobile v-else></HeaderMobile>
-    <nuxt />
+    <div class="contentWrap">
+      <nuxt />
+    </div>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
 import HeaderWeb from '@/components/Common/Web/Header.vue';
 import HeaderMobile from '@/components/Common/Mobile/Header.vue';
+import Footer from '@/components/Common/Footer.vue';
 
 export default {
   components: {
     HeaderWeb,
     HeaderMobile,
+    Footer,
   },
   data() {
     return {
@@ -75,10 +80,12 @@ export default {
 .pageWrap {
   overflow-x: hidden;
   position: relative;
-  padding-bottom: 80px;
   .menuGroup {
     top: -200%;
     position: absolute;
+  }
+  .contentWrap {
+    padding-bottom: 80px;
   }
 }
 </style>
