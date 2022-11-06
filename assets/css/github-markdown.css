@@ -351,6 +351,7 @@
 .markdown-body p {
   margin-bottom: 10px;
   margin-top: 0;
+  font-size: 14px;
 }
 
 .markdown-body blockquote {
@@ -362,6 +363,7 @@
   margin-bottom: 0;
   margin-top: 0;
   padding-left: 0;
+  font-size: 14px;
 }
 
 .markdown-body ol ol,
