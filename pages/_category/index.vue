@@ -20,9 +20,10 @@ export default {
     })
       .sortBy('date', 'desc')
       .fetch();
+
     return {
       category,
-      posts,
+      posts: posts.filter((post) => !post.disabled),
     };
   },
   components: {

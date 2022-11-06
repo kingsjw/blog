@@ -38,7 +38,7 @@ export default {
   },
   async asyncData({ $content }) {
     const categories = ['tech', 'travel', 'movie'];
-    const posts = await Promise.all(
+    const postResponse = await Promise.all(
       categories.map(
         async (category) =>
           await $content(category, { deep: true })
@@ -46,8 +46,13 @@ export default {
             .fetch()
       )
     );
+
+    const posts = postResponse
+      ? [...postResponse].filter((post) => post.length).flat()
+      : [];
+
     return {
-      posts: posts ? [...posts].filter((v) => v.length).flat() : [],
+      posts: posts.filter((post) => !post.disabled),
     };
   },
   data() {
