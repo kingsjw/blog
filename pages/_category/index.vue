@@ -13,7 +13,7 @@ import ListWrap from '../../components/Post/PostListWrap.vue';
 import Helmet from '../../Helmet.json';
 
 export default {
-  async asyncData({ $content, route }) {
+  async asyncData({ $content, route, isDev }) {
     const { category } = route.params;
     const posts = await $content(route.params.category, {
       deep: true,
@@ -23,7 +23,7 @@ export default {
 
     return {
       category,
-      posts: posts.filter((post) => !post.disabled),
+      posts: isDev ? posts : posts.filter((post) => !post.disabled),
     };
   },
   components: {

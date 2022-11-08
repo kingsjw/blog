@@ -36,7 +36,7 @@ export default {
   components: {
     ListWrap,
   },
-  async asyncData({ $content }) {
+  async asyncData({ $content, isDev }) {
     const categories = ['tech', 'travel', 'movie'];
     const postResponse = await Promise.all(
       categories.map(
@@ -52,7 +52,7 @@ export default {
       : [];
 
     return {
-      posts: posts.filter((post) => !post.disabled),
+      posts: isDev ? posts : posts.filter((post) => !post.disabled),
     };
   },
   data() {
