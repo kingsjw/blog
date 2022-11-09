@@ -4,6 +4,7 @@ description: 랜덤 그룹 뽑기
 coverImage: https://firebasestorage.googleapis.com/v0/b/kingsjw7-8d984.appspot.com/o/tech%2Frandom-image.jpeg?alt=media&token=2fdd3889-e5cd-45ff-a6f7-e5a11aecf871
 writer: kingsjw7
 date: 2022-09-03
+disabled: true
 ---
 
 # 랜덤 그룹 뽑기 script
