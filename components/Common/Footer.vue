@@ -26,6 +26,12 @@ footer {
   color: #000;
   .container {
     @include contentsWidth;
+    @include mobile {
+      padding: 0 20px;
+    }
+    @include tablet {
+      padding: 0 20px;
+    }
     .siteFooterCopyright {
       text-transform: uppercase;
     }
