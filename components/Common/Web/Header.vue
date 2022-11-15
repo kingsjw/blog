@@ -5,7 +5,7 @@
         <nuxt-link :to="'/'" class="logo">
           <h1>
             kingsjw
-            <p>Front-end Engineer</p>
+            <p>Software Engineer</p>
           </h1>
         </nuxt-link>
         <nav class="menu">
