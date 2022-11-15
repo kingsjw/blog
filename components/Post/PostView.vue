@@ -62,7 +62,6 @@ export default {
       this.isOverWindowHeight =
         window.innerHeight < this.$refs.postView.clientHeight;
     }
-    console.log(100 - (80 / window.innerHeight) * 100);
     // TODO(Kingsjw): intersection obserber hook으로 분리하자
     this.observer = new IntersectionObserver(
       (entries) => {
