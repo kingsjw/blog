@@ -12,9 +12,13 @@
   > ![Sass](https://img.shields.io/badge/Sass-CC6699?style=flat-square&logo=Sass&logoColor=white)
   >
   > 클래스101 준비물 결제 플로우 개편
-  >> 참여 기간: 2022.07 ~ 진행중  
+  >> 참여 기간: 2022.07 ~ 2022.10  
   >> 담당 업무: 프론트 엔드 개발(React, Typescript, Apollo, Graphql)  
-  >> 업무 내용: 유지보수가 어려운 프론트엔드 레거시 상태 관리 라이브러리를 제거, 클래스 수강에 필요한 준비물 결제 경험을 단순화 시켜 결제 성공율을 증가시킨다.
+  >> 업무 내용: 유지보수가 어려운 프론트엔드 레거시 상태 관리 라이브러리를 제거, 클래스 수강에 필요한 준비물 결제 경험을 단순화 시켜 결제 성공율을 증가시킨다.  
+  >> 업무 성과
+  >>> AS-IS => TO-BE
+  >>>> <div style="font-size='0'"><img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-8d984.appspot.com/o/tech%2F2022-3-end%2F%E1%84%80%E1%85%B5%E1%84%8C%E1%85%A9%E1%86%AB%E1%84%8C%E1%85%AE%E1%86%AB%E1%84%87%E1%85%B5%E1%84%86%E1%85%AE%E1%86%AF%E1%84%89%E1%85%A5%E1%86%AB%E1%84%90%E1%85%A2%E1%86%A8%E1%84%91%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A9%E1%84%8B%E1%85%AE.gif?alt=media&token=3caa5338-45c6-449d-9c13-6e033e7bd60c" height="300px" alt="기존 준비물 선택 플로우" /><img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-8d984.appspot.com/o/tech%2F2022-3-end%2F%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AB%E1%84%83%E1%85%AC%E1%86%AB%E1%84%8C%E1%85%AE%E1%86%AB%E1%84%87%E1%85%B5%E1%84%86%E1%85%AE%E1%86%AF%E1%84%89%E1%85%A5%E1%86%AB%E1%84%90%E1%85%A2%E1%86%A8%E1%84%91%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A9%E1%84%8B%E1%85%AE-small.gif?alt=media&token=83378db5-0c38-4ff6-bb8d-fcc15a8db931" height="300px" alt="개선된 준비물 선택 플로우" /></div>
+  >>> [프로젝트 회고](https://kingsjw.github.io/blog/tech/2022-3-end#%ED%81%B4%EB%9E%98%EC%8A%A4101-%EC%A4%80%EB%B9%84%EB%AC%BC-%EC%84%A0%ED%83%9D-%ED%94%8C%EB%A1%9C%EC%9A%B0-%EA%B0%9C%EC%84%A0)
   >
   > 클래스101 구독 베타 서비스
   >> 참여 기간: 2022.05 ~ 2021.06  
