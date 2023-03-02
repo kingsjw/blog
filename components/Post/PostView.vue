@@ -101,7 +101,7 @@ export default {
   height: auto;
   transition: 0.3s ease;
 }
-.postView.markdown-body.mobile img:hover {
+.postView.markdown-body.mobile img[data-scale-effect='true']:hover {
   transform: scale(1.2);
 }
 </style>
