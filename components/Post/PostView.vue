@@ -1,6 +1,9 @@
 <template>
   <div ref="postView">
-    <div class="postView markdown-body">
+    <div
+      class="postView markdown-body"
+      :class="$store.state.device.isMobile ? 'mobile' : ''"
+    >
       <nuxt-content :document="post" ref="nuxtContent"></nuxt-content>
     </div>
     <PostSideMenu
@@ -91,22 +94,15 @@ export default {
 };
 </script>
 
-<style lang="scss">
-.postView .markdown-body {
-  @include tablet {
-    img,
-    video {
-      width: 100%;
-      height: auto;
-    }
-  }
-  @include mobile {
-    img,
-    video {
-      width: 100%;
-      height: auto;
-    }
-  }
+<style>
+.postView.markdown-body.mobile img,
+.postView.markdown-body.mobile video {
+  width: 100%;
+  height: auto;
+  transition: 0.3s ease;
+}
+.postView.markdown-body.mobile img:hover {
+  transform: scale(1.2);
 }
 </style>
 
