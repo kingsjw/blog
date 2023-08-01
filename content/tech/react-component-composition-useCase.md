@@ -1,7 +1,7 @@
 ---
 title: 리액트 컴포넌트 합성 활용하기
 description: 리액트 컴포넌트 개발 잘하기
-coverImage: https://firebasestorage.googleapis.com/v0/b/kingsjw7-8d984.appspot.com/o/tech%2Freact-logo.jpg?alt=media&token=8fb22581-810c-4451-b4c9-9ccac1eaa016
+coverImage: https://firebasestorage.googleapis.com/v0/b/kingsjw7-8d984.appspot.com/o/tech%2FreactLogo.png?alt=media&token=b1110d54-6d5b-47fc-afd0-cc5c6895af0a
 writer: kingsjw7
 date: 2023-07-31
 ---
