@@ -206,7 +206,7 @@ CPU가 컨트롤러가 인터럽트 요청 라인에 신호를 보낸 것을 감
 
 <img src="https://firebasestorage.googleapis.com/v0/b/kingsjw7-8d984.appspot.com/o/tech%2Foperating-system%2Fintel_event_proceser-vector-table.jpeg?alt=media&token=c1ffd8b7-cb19-485a-91cd-b9ba75f44149" width="500px" alt="인터럽트-구동 방식의 입출력 사이클">
 
-인터럽트 기법은 또한 인터럽트 "**수선순위 레벨**"을 구현한다.  
+인터럽트 기법은 또한 인터럽트 "**우선순위 레벨**"을 구현한다.  
 이러한 레벨을 통해 CPU는 모든 인터럽트를 마스킹하지 않고도 우선순위가 낮은 인터럽트를 처리를 연기할 수 있고, 우선순위가 높은 인터럽트가 우선순위가 낮은 인터럽트의 실행을 선점할 수 있다.
 
 요약하면, 인터럽트는 최신 운영체제에서 비동기 이벤트를 처리하기 위해 사용된다(다른 목적으로 사용되는 것에 관해서는 추후에 학습).  
