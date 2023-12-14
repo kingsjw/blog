@@ -1,6 +1,6 @@
 ---
 title: K-MOOC 서비스 취약점 분석
-description: 회고
+description: K-MOOC 서비스 취약점 분석과 대응 방법
 coverImage: https://firebasestorage.googleapis.com/v0/b/kingsjw7-8d984.appspot.com/o/tech%2FkmoocWeakPoint%2Fkmooc.png?alt=media&token=57dbe4c4-2613-42be-92f1-4f6ee86f441f
 writer: kingsjw7
 date: 2023-12-14
