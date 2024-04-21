@@ -77,61 +77,47 @@ export default {
 </script>
 
 <style lang="scss">
-.pageWrap {
-  overflow-x: hidden;
-  position: relative;
-  .menuGroup {
-    top: -200%;
-    position: absolute;
+  h2 {
+    font-size: inherit;
   }
-  .contentWrap {
-    padding-bottom: 80px;
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
-}
-</style>
-
-<style lang="scss">
-h2 {
-  font-size: inherit;
-}
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-input {
-  &:focus {
-    outline: none;
+  input {
+    &:focus {
+      outline: none;
+    }
   }
-}
-.slide-bottom-fade-enter-active,
-.slide-bottom-fade-leave-active,
-.slide-left-enter-active,
-.slide-left-leave-active {
-  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  will-change: transform, box-shadow;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.slide-left-enter, .slide-left-leave-to
-    /* .slide-leave-active below version 2.1.8 */ {
-  transform: translate3D(-100%, 0, 0);
-}
-.fade-enter-active,
-.fade-leave-active {
-  transition: all 0.3s ease;
-}
-.fade-enter, .fade-leave-to,
-  .slide-bottom-fade-enter, .slide-bottom-fade-leave-to
-    /* .slide-fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
-}
-.slide-bottom-fade-enter {
-  transform: translateY(100%);
-}
-.slide-bottom-fade-leave {
-  transform: translateY(-100%);
-}
+  .slide-bottom-fade-enter-active,
+  .slide-bottom-fade-leave-active,
+  .slide-left-enter-active,
+  .slide-left-leave-active {
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    will-change: transform, box-shadow;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .slide-left-enter, .slide-left-leave-to
+      /* .slide-leave-active below version 2.1.8 */ {
+    transform: translate3D(-100%, 0, 0);
+  }
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: all 0.3s ease;
+  }
+  .fade-enter, .fade-leave-to,
+    .slide-bottom-fade-enter, .slide-bottom-fade-leave-to
+      /* .slide-fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }
+  .slide-bottom-fade-enter {
+    transform: translateY(100%);
+  }
+  .slide-bottom-fade-leave {
+    transform: translateY(-100%);
+  }
 </style>
 

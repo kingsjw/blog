@@ -1,16 +1,19 @@
 <template>
-  <div ref="postView">
+  <div ref="postView" class="postViewWrap">
+    <div style="flex: 1;"></div>
     <div
       class="postView markdown-body"
       :class="$store.state.device.isMobile ? 'mobile' : ''"
     >
       <nuxt-content :document="post" ref="nuxtContent"></nuxt-content>
     </div>
-    <PostSideMenu
-      v-if="isSideMenuOpen"
-      :currentlyActiveTocId="currentlyActiveTocId"
-      :toc="toc"
-    ></PostSideMenu>
+    <div class="postSideMenu">
+      <PostSideMenu
+        v-if="isSideMenuOpen"
+        :currentlyActiveTocId="currentlyActiveTocId"
+        :toc="toc"
+      ></PostSideMenu>
+    </div>
   </div>
 </template>
 
@@ -107,17 +110,26 @@ export default {
 </style>
 
 <style lang="scss" scoped>
-.postView {
-  @include postViewWidth;
-  margin: 0 auto;
-  padding: 0 0 80px;
+.postViewWrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  .postView {
+    @include postViewWidth;
+    margin: 0 auto;
+    padding: 0 0 80px;
+    flex: 8;
 
-  @include mobile {
-    padding: 0 20px 80px;
+    @include mobile {
+      padding: 0 20px 80px;
+    }
+
+    @include tablet {
+      padding: 0 20px 80px;
+    }
   }
-
-  @include tablet {
-    padding: 0 20px 80px;
+  .postSideMenu {
+    flex: 1;
   }
 }
 </style>

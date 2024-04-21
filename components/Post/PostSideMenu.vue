@@ -32,17 +32,12 @@ export default {
 
 <style lang="scss" scoped>
 .postSideMenu {
-  width: 300px;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  top: 100px;
+  min-width: 200px;
+  height: calc(100vh - #{$headerHeight * 1px});
   overflow-y: auto;
-  padding: 10px 0;
-  @include mobile {
-    display: none;
-  }
-  @include tablet {
+  position: sticky;
+  top: calc(40px + #{$headerHeight * 1px});
+  @media (max-width: 1024px) {
     display: none;
   }
   .depth-2 {
