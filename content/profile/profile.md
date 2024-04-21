@@ -32,6 +32,6 @@ JavaScript와 브라우저의 동작원리를 이해하고 탁월하게 사용�
 <a href="https://github.com/kingsjw">
   <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white">
 </a>
-<a href="https://savory-cheque-111.notion.site/0b3ba9e9f5384869ad4c702bbb925809">
+<!-- <a href="https://savory-cheque-111.notion.site/0b3ba9e9f5384869ad4c702bbb925809">
   <img src="https://img.shields.io/badge/Resume-000?style=flat-square&logo=Readme&logoColor=white">
-</a>
+</a> -->
