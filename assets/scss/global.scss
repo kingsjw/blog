@@ -1,9 +1,9 @@
 $headerHeight: 80;
 $headerMobileHeight: 110;
 
-$breakpoint-mobile: 500px;
-$breakpoint-tablet: 960px;
-$breakpoint-desktop: 1040px;
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
 
 @mixin contentsWidth {
   width: 100%;
@@ -12,17 +12,17 @@ $breakpoint-desktop: 1040px;
 
 @mixin postViewWidth {
   width: 100%;
-  max-width: 1040px;
+  max-width: 1024px;
 }
 
 @mixin mobile {
-  @media (max-width: #{$breakpoint-mobile}) {
+  @media (min-width: 0px) and (max-width: #{$breakpoint-tablet - 1}) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media (max-width: #{$breakpoint-tablet}) {
+  @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - 1}) {
     @content;
   }
 }
