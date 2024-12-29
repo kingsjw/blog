@@ -26,7 +26,7 @@ JavaScript와 브라우저의 동작원리를 이해하고 탁월하게 사용�
 <a href="mailto:kingsjw7@gmail.com">
   <img src="https://img.shields.io/badge/kingsjw7@gmail.com-00B2FF?style=flat-square&logo=Messenger&logoColor=white">
 </a>
-<a href="https://savory-cheque-111.notion.site/0b3ba9e9f5384869ad4c702bbb925809">
+<a href="https://www.linkedin.com/in/jaewoo-seo-357a0b215/">
   <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=LinkedIn&logoColor=white">
 </a>
 <a href="https://github.com/kingsjw">

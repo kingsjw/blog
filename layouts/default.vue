@@ -1,6 +1,5 @@
 <template>
   <div
-    v-if="isMounted"
     class="pageWrap"
     :class="{
       scrollDown,
@@ -8,12 +7,14 @@
       scrollWeb,
     }"
   >
-    <HeaderWeb v-if="!$store.state.device.isMobile"></HeaderWeb>
-    <HeaderMobile v-else></HeaderMobile>
-    <div class="contentWrap">
-      <nuxt />
+    <div v-if="isMounted">
+      <HeaderWeb v-if="!$store.state.device.isMobile"></HeaderWeb>
+      <HeaderMobile v-else></HeaderMobile>
+      <div class="contentWrap">
+        <nuxt />
+      </div>
+      <Footer></Footer>
     </div>
-    <Footer></Footer>
   </div>
 </template>
 
