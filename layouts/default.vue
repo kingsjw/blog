@@ -6,15 +6,16 @@
       scrollDownTop,
       scrollWeb,
     }"
+    :style="computedStyledObject"
   >
-    <div v-if="isMounted">
-      <HeaderWeb v-if="!$store.state.device.isMobile"></HeaderWeb>
-      <HeaderMobile v-else></HeaderMobile>
-      <div class="contentWrap">
-        <nuxt />
-      </div>
-      <Footer></Footer>
+    
+    <HeaderWeb v-if="!$store.state.device.isMobile"></HeaderWeb>
+    <HeaderMobile v-else></HeaderMobile>
+
+    <div class="contentWrap">
+      <nuxt />
     </div>
+    <Footer></Footer>
   </div>
 </template>
 
@@ -38,6 +39,13 @@ export default {
       isMobile: false,
       isMounted: false,
     };
+  },
+  computed: {
+    computedStyledObject() {
+      return {
+        display: this.isMounted ? 'block' : 'none',
+      };
+    }
   },
   methods: {
     bodyScroll() {
