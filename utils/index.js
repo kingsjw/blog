@@ -8,7 +8,7 @@ function getPostPageTitle(pageName) {
   let title = '';
   switch (pageName) {
     case 'travel':
-      title = 'Travel is refresh';
+      title = 'Travel storage';
       break;
     case 'movie':
       title = 'Movie review';
