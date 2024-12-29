@@ -1,5 +1,6 @@
 <template>
   <div
+    v-if="isMounted"
     class="pageWrap"
     :class="{
       scrollDown,
@@ -34,6 +35,7 @@ export default {
       scrollWeb: false,
       timeout: '',
       isMobile: false,
+      isMounted: false,
     };
   },
   methods: {
@@ -72,6 +74,8 @@ export default {
       navigator.userAgent.match(/Windows Phone/i)
     );
     this.$store.commit('device/changeDevice', this.isMobile);
+
+    this.isMounted = true;
   },
 };
 </script>

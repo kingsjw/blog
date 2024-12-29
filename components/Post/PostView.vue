@@ -1,6 +1,6 @@
 <template>
   <div ref="postView" class="postViewWrap">
-    <div style="flex: 1;"></div>
+    <div class="leftSide"></div>
     <div
       class="postView markdown-body"
       :class="$store.state.device.isMobile ? 'mobile' : ''"
@@ -98,6 +98,7 @@ export default {
 </script>
 
 <style>
+.postView.markdown-body.mobile
 .postView.markdown-body.mobile img,
 .postView.markdown-body.mobile video {
   width: 100%;
@@ -114,6 +115,10 @@ export default {
   display: flex;
   justify-content: space-between;
   gap: 60px;
+  @include mobile {
+    gap: 0px;
+    justify-content: center;
+  }
   .postView {
     @include postViewWidth;
     margin: 0 auto;
@@ -128,8 +133,17 @@ export default {
       padding: 0 20px 80px;
     }
   }
+  .leftSide {
+    flex: 1;
+    @include mobile {
+      display: none;
+    }
+  }
   .postSideMenu {
     flex: 1;
+    @include mobile {
+      display: none;
+    }
   }
 }
 </style>
